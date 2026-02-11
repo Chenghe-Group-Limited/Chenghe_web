@@ -1274,7 +1274,7 @@
         <div class="tab-container">
             <div class="tab-list" id="fa-tabs">
                 <div class="tab-btn active" onclick="switchFaTab('HK')"><span class="t-en">HK - Chenghe Capital</span><span class="t-zh">香港 - 成和资本</span></div>
-                <div class="tab-btn" onclick="switchFaTab('US')"><span class="t-en">US - CBC Securities</span><span class="t-zh">美国 - CBC 证券</span></div>
+                <div class="tab-btn" onclick="switchFaTab('US')"><span class="t-en">US - CBC Securities</span><span class="t-zh">美国 - CBC Securities</span></div>
             </div>
         </div>
 
@@ -1393,8 +1393,8 @@
             btn.classList.toggle('active');
         }
 
-        // --- 页面路由逻辑 ---
-        function switchPage(pageId) {
+        // --- 页面路由逻辑（支持URL更新） ---
+        function switchPage(pageId, updateUrl = true) {
             document.querySelectorAll('.page-section').forEach(el => el.classList.remove('active'));
             document.getElementById('page-' + pageId).classList.add('active');
             
@@ -1410,13 +1410,110 @@
                 btn.classList.remove('active');
             }
             
+            // 更新URL（使用History API）
+            if (updateUrl) {
+                let newUrl;
+                if (pageId === 'home') {
+                    // 首页使用根URL，不添加hash
+                    newUrl = window.location.pathname;
+                } else {
+                    // 其他页面添加hash
+                    newUrl = window.location.pathname + '#' + pageId;
+                }
+                window.history.pushState({page: pageId}, '', newUrl);
+            }
+            
+            // 更新页面标题
+            updatePageTitle(pageId);
+            
             window.scrollTo(0,0);
         }
 
+        // 更新页面标题
+        function updatePageTitle(pageId) {
+            const titles = {
+                'home': 'Chenghe Capital - Official Website',
+                'about': 'About Us - Chenghe Capital',
+                'team': 'Our Team - Chenghe Capital',
+                'spac': 'SPAC - Chenghe Capital',
+                'fa': 'Financial Advisory - Chenghe Capital',
+                'contact': 'Contact Us - Chenghe Capital'
+            };
+            document.title = titles[pageId] || 'Chenghe Capital - Official Website';
+        }
+
+        // 从URL读取页面ID
+        function getPageFromUrl() {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                // 处理SPAC子页面格式：spac#Overview 或 spac#Chenghe
+                if (hash.startsWith('spac-')) {
+                    return hash;
+                }
+                // 处理FA子页面格式：fa-HK 或 fa-US
+                if (hash.startsWith('fa-')) {
+                    return hash;
+                }
+                return hash;
+            }
+            return 'home';
+        }
+
+        // 处理浏览器前进/后退
+        window.addEventListener('popstate', function(event) {
+            const pageId = getPageFromUrl();
+            loadPageFromUrl(pageId, false);
+        });
+
+        // 从URL加载页面
+        function loadPageFromUrl(pageId, updateUrl = false) {
+            // 处理SPAC子页面
+            if (pageId.startsWith('spac-')) {
+                const spacTab = pageId.substring(5).replace(/-/g, ' '); // 移除 "spac-" 前缀，将连字符替换为空格
+                // 处理特殊项目名称映射
+                const tabMap = {
+                    'Overview': 'Overview',
+                    'HHL': 'HHL',
+                    'Chenghe': 'Chenghe',
+                    'Chenghe I': 'Chenghe I',
+                    'Chenghe II': 'Chenghe II',
+                    'Chenghe III': 'Chenghe III'
+                };
+                const mappedTab = tabMap[spacTab] || spacTab;
+                switchPage('spac', updateUrl);
+                setTimeout(() => {
+                    switchSpacMainTab(mappedTab, false);
+                }, 100);
+                return;
+            }
+            
+            // 处理FA子页面
+            if (pageId.startsWith('fa-')) {
+                const region = pageId.split('-')[1];
+                switchPage('fa', updateUrl);
+                setTimeout(() => {
+                    switchFaTab(region, false);
+                }, 100);
+                return;
+            }
+            
+            // 普通页面
+            switchPage(pageId, updateUrl);
+        }
+
+        // 页面加载时根据URL初始化
+        window.addEventListener('DOMContentLoaded', function() {
+            const pageId = getPageFromUrl();
+            if (pageId !== 'home') {
+                loadPageFromUrl(pageId, false);
+            }
+        });
+
         let currentSpacProject = 'Overview'; 
 
-        function switchSpacMainTab(tabName) {
-            switchPage('spac'); 
+        function switchSpacMainTab(tabName, updateUrl = true) {
+            // 先切换页面（但不更新URL，因为后面会统一更新）
+            switchPage('spac', false); 
             currentSpacProject = tabName;
             
             // 更新：使用 data-tab 进行精确匹配
@@ -1438,6 +1535,12 @@
             }
 
             renderSpacContent('Overview');
+            
+            // 更新URL为 spac-[项目名]
+            if (updateUrl) {
+                const urlHash = 'spac-' + tabName.replace(/\s+/g, '-');
+                window.history.pushState({page: 'spac', tab: tabName}, '', window.location.pathname + '#' + urlHash);
+            }
         }
 
         function renderSpacContent(subTab) {
@@ -1547,8 +1650,9 @@
             contentDiv.innerHTML = subNavHtml + bodyHtml;
         }
 
-        function switchFaTab(region) {
-            switchPage('fa');
+        function switchFaTab(region, updateUrl = true) {
+            // 先切换页面（但不更新URL，因为后面会统一更新）
+            switchPage('fa', false);
             const tabs = document.querySelectorAll('#fa-tabs .tab-btn');
             tabs.forEach(t => t.classList.remove('active'));
             document.querySelectorAll('.fa-subpage').forEach(el => el.classList.remove('active'));
@@ -1558,6 +1662,11 @@
             } else {
                 document.getElementById('fa-us').classList.add('active');
                 tabs[1].classList.add('active');
+            }
+            
+            // 更新URL为 fa-[区域]
+            if (updateUrl) {
+                window.history.pushState({page: 'fa', region: region}, '', window.location.pathname + '#fa-' + region);
             }
         }
 
@@ -1586,4 +1695,3 @@
     </script>
 </body>
 </html>
-
