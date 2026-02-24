@@ -13,18 +13,19 @@ function getAboutPageHTML() {
             </div>
             <div class="about-float-text">
                 <h2>
-                    <span class="t-en">Who We Are</span>
-                    <span class="t-zh">我们是谁</span>
+                    <span class="t-en">About Chenghe</span>
+                    <span class="t-zh">关于成和</span>
                 </h2>
                 <div class="t-en">
-                    <p>Chenghe Capital is a premier asset management firm based in Hong Kong. We are dedicated to creating long-term value through disciplined investment strategies and deep industry insights.</p>
-                    <br>
-                    <p>Our philosophy is rooted in integrity, innovation, and a global perspective. We bridge the gap between Asian innovation and global capital markets.</p>
+                    <p>Chenghe Group is an international financial company operating through its subsidiaries established around the world. Our businesses cover financial advisory, private equity financing advisory, M&A and restructuring, asset management, securities underwriting, and more. We are committed to identifying, advising and partnering with outstanding companies in their growth, helping them access international capital markets and participating in building their long-term value on the global stage.</p>
                 </div>
                 <div class="t-zh">
-                    <p>成和资本是一家总部位于香港的一流资产管理公司。我们致力于通过严谨的投资策略和深刻的行业洞察创造长期价值。</p>
-                    <br>
-                    <p>我们的理念植根于诚信、创新和全球视野。我们连接着亚洲创新与全球资本市场。</p>
+                    <p>成和集团是一家国际性金融公司，由其旗下在全球各地设立的分支机构开展业务。我们的业务覆盖财务顾问、私募股权融资顾问、并购重组、资产管理、证券承销等，致力于发掘、协助并陪伴行业内优秀企业共同成长，助力其成功登陆国际资本市场，并积极参与公司未来在国际资本市场舞台的构建与价值实现。</p>
+                </div>
+                <div class="about-subsidiary-links">
+                    <a href="javascript:void(0)" onclick="switchFaTab('HK')" class="about-subsidiary-link"><span class="t-en">HK Subsidiary – Chenghe Capital</span><span class="t-zh">香港子公司 – 成和资本</span></a>
+                    <a href="javascript:void(0)" onclick="switchFaTab('US')" class="about-subsidiary-link"><span class="t-en">US Subsidiary – CBC Securities</span><span class="t-zh">美国子公司 – CBC证券</span></a>
+                    <a href="javascript:void(0)" onclick="switchSpacMainTab('Overview')" class="about-subsidiary-link"><span class="t-en">Cayman Subsidiary (SPAC)</span><span class="t-zh">开曼子公司(SPAC)</span></a>
                 </div>
             </div>
         </div>
