@@ -9,7 +9,7 @@ function getHomePageHTML() {
     <div class="hero">
         <div class="hero-news-box" id="hero-news-alert">
             <span class="news-badge">
-                <span class="t-en">Latest Updat</span>
+                <span class="t-en">Latest Update</span>
                 <span class="t-zh">最新动态</span>
             </span>
             <h3>
@@ -174,4 +174,5 @@ function getHomePageHTML() {
     </div>
     `;
 }
+
 
