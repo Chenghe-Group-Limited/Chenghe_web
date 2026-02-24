@@ -34,7 +34,7 @@ function getAboutPageHTML() {
     <div class="track-record-section">
         <div class="record-container">
             <h2 class="record-title">
-                <span class="t-en">Track Record</span>
+                <span class="t-en">Track Recor</span>
                 <span class="t-zh">过往业绩</span>
             </h2>
             <div class="news-item-horizontal" style="cursor: default;">
@@ -63,3 +63,4 @@ function getAboutPageHTML() {
     </div>
     `;
 }
+
