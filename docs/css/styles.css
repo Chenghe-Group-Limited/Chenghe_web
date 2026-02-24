@@ -464,10 +464,12 @@ nav ul li:hover .dropdown-content { display: block; animation: slideUp 0.2s ease
 
 /* --- 9. About Us --- */
 .about-hero-bg {
-    height: 550px;
+    min-height: 550px;
+    padding: 60px 0 80px;
     background-color: var(--color-teal-muted);
     background: linear-gradient(rgba(26, 92, 120, 0.8), rgba(45, 78, 108, 0.8));
     display: flex; align-items: center; justify-content: center;
+    box-sizing: border-box;
 }
 .about-floating-container {
     display: flex;
@@ -476,8 +478,9 @@ nav ul li:hover .dropdown-content { display: block; animation: slideUp 0.2s ease
     width: 90%;
     box-shadow: 0 30px 60px rgba(0,0,0,0.25);
     border-radius: 4px; overflow: hidden;
+    align-self: center;
 }
-.about-float-img { width: 45%; background-color: #ccc; min-height: 400px; display: flex; align-items: center; justify-content: center; color: white;}
+.about-float-img { width: 45%; background-color: #ccc; min-height: 380px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0;}
 .about-float-text { width: 55%; padding: 60px; display: flex; flex-direction: column; justify-content: center; }
 .about-float-text h2 { font-size: 32px; margin-bottom: 25px; color: var(--color-dark-blue); position: relative; }
 .about-float-text h2::after { content: ''; display: block; width: 60px; height: 3px; background: var(--color-gold); margin-top: 15px; }
