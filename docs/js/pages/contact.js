@@ -1,36 +1,65 @@
 /**
- * Contact Us 页面内容模块
- * 管理"联系我们"页面的所有HTML内容
- * 修改此文件即可更新Contact页面内容
+ * About Us 页面内容模块
+ * 管理"关于成和"页面的所有HTML内容
+ * 修改此文件即可更新About Us页面内容
  */
 
-function getContactPageHTML() {
+function getAboutPageHTML() {
     return `
-    <div class="contact-wrapper">
-        <div class="contact-form">
-            <h2 style="margin-bottom:40px; color:var(--color-dark-blue); font-size:32px;">
-                <span class="t-en">Inquiry Form</span>
-                <span class="t-zh">在线咨询</span>
-            </h2>
-            <div class="form-row"><label><span class="t-en">Name</span><span class="t-zh">姓名</span></label><input type="text"></div>
-            <div class="form-row"><label><span class="t-en">Email</span><span class="t-zh">邮箱</span></label><input type="email"></div>
-            <div class="form-row"><label><span class="t-en">Company</span><span class="t-zh">公司</span></label><input type="text"></div>
-            <div class="form-row"><label><span class="t-en">Message</span><span class="t-zh">留言</span></label><textarea placeholder="Please write your detailed message here..."></textarea></div>
-            <button class="submit-btn"><span class="t-en">Submit Inquiry</span><span class="t-zh">提交咨询</span></button>
-        </div>
-        <div class="contact-info">
-            <h2 style="margin-bottom:40px; color:var(--color-dark-blue); font-size:32px;">
-                <span class="t-en">Our Office</span>
-                <span class="t-zh">办公地点</span>
-            </h2>
-            <div class="contact-item">
-                <h4><span class="t-en">Hong Kong Headquarters</span><span class="t-zh">香港总部</span></h4>
-                <p>123 Finance Centre<br>Central, Hong Kong</p>
+    <div class="about-hero-bg">
+        <div class="about-floating-container">
+            <div class="about-float-img">
+                About Image
             </div>
-            <div class="contact-item">
-                <h4>Contact</h4>
-                <p>Email: info@chenghe.com</p>
-                <p>Phone: +852 1234 5678</p>
+            <div class="about-float-text">
+                <h2>
+                    <span class="t-en">Who We Are</span>
+                    <span class="t-zh">关于成和</span>
+                </h2>
+                <div class="t-en">
+                    <p>Chenghe Capital is a premier asset management firm based in Hong Kong. We are dedicated to creating long-term value through disciplined investment strategies and deep industry insights.</p>
+                    <br>
+                    <p>Our philosophy is rooted in integrity, innovation, and a global perspective. We bridge the gap between Asian innovation and global capital markets.</p>
+                </div>
+                <div class="t-zh">
+                    <p>成和集团是一家国际性金融公司，由其旗下在全球各地设立的分支机构开展业务。我们的业务覆盖财务顾问、私募股权融资顾问、并购重组、资产管理、证券承销等，致力于发掘、协助并陪伴行业内优秀企业共同成长，助力其成功登陆国际资本市场，并积极参与公司未来在国际资本市场舞台的构建与价值实现。</p>
+                    <div class="about-subsidiary-links">
+                        <a href="javascript:void(0)" onclick="switchFaTab('HK')" class="about-subsidiary-link"><span class="t-en">HK Subsidiary – Chenghe Capital</span><span class="t-zh">香港子公司 – 成和资本</span></a>
+                        <a href="javascript:void(0)" onclick="switchFaTab('US')" class="about-subsidiary-link"><span class="t-en">US Subsidiary – CBC Securities</span><span class="t-zh">美国子公司 – CBC证券</span></a>
+                        <a href="javascript:void(0)" onclick="switchSpacMainTab('Overview')" class="about-subsidiary-link"><span class="t-en">Cayman Subsidiary (SPAC)</span><span class="t-zh">开曼子公司(SPAC)</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="track-record-section">
+        <div class="record-container">
+            <h2 class="record-title">
+                <span class="t-en">Track Record</span>
+                <span class="t-zh">过往业绩</span>
+            </h2>
+            <div class="news-item-horizontal" style="cursor: default;">
+                <div class="news-img" style="width:250px; height:160px;"></div>
+                <div class="news-text" style="flex:1;">
+                    <h3 style="margin-bottom:10px; color:var(--color-dark-blue);">Project Alpha Merger</h3>
+                    <p style="color:var(--color-gold); font-size:13px; font-weight:bold; margin-bottom:10px;">NASDAQ IPO | 2023</p>
+                    <p>
+                        <span class="t-en">Successfully completed business combination with XYZ Tech, valuing the combined entity at $1.5B.</span>
+                        <span class="t-zh">成功完成与 XYZ Tech 的业务合并，合并后实体估值达15亿美元。</span>
+                    </p>
+                </div>
+            </div>
+            <div class="news-item-horizontal" style="cursor: default;">
+                <div class="news-img" style="width:250px; height:160px;"></div>
+                <div class="news-text" style="flex:1;">
+                    <h3 style="margin-bottom:10px; color:var(--color-dark-blue);">Beta Tech Advisory</h3>
+                    <p style="color:var(--color-gold); font-size:13px; font-weight:bold; margin-bottom:10px;">Private Placement | 2024</p>
+                    <p>
+                        <span class="t-en">Served as exclusive financial advisor to Beta Tech for their pre-IPO fundraising round of $200M.</span>
+                        <span class="t-zh">担任 Beta Tech 的独家财务顾问，协助其完成2亿美元的 Pre-IPO 融资。</span>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
