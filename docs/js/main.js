@@ -174,8 +174,8 @@ function loadPageFromUrl(pageId, updateUrl = false) {
     switchPage(pageId, updateUrl);
 }
 
-// 页面加载时根据URL初始化
-window.addEventListener('DOMContentLoaded', function() {
+// 页面初始化函数（由 index.html 在页面内容加载完成后调用）
+function initializeApp() {
     // 首先从URL读取语言设置
     const langFromUrl = getLanguageFromUrl();
     if (langFromUrl && (langFromUrl === 'zh' || langFromUrl === 'en')) {
@@ -187,18 +187,110 @@ window.addEventListener('DOMContentLoaded', function() {
     if (pageId !== 'home') {
         loadPageFromUrl(pageId, false);
     }
+}
+
+// 如果页面内容已经存在（非模块化版本），自动初始化
+window.addEventListener('DOMContentLoaded', function() {
+    // 检查是否是模块化版本（页面容器为空）
+    const homePage = document.getElementById('page-home');
+    if (homePage && homePage.innerHTML.trim() !== '') {
+        // 非模块化版本，直接初始化
+        initializeApp();
+    }
+    // 模块化版本会在 index-modular.html 中手动调用 initializeApp()
 });
 
 // --- Team Modal Functions ---
-function openTeamModal(name, role, bio) {
+// 兼容两种调用方式：
+// 1) 旧版：openTeamModal(name, role, bio)
+// 2) 新版多语言：openTeamModal(nameEn, roleEn, bioEn, nameZh, roleZh, bioZh [, photoUrl, logos])
+function openTeamModal(a, b, c, d, e, f, photoUrl, logos) {
+    var name, role, bio;
+    var isZh = document.body.classList.contains('lang-zh');
+
+    if (arguments.length >= 6) {
+        name = isZh ? d : a;
+        role = isZh ? e : b;
+        bio  = isZh ? f : c;
+    } else {
+        name = a;
+        role = b;
+        bio  = c || '';
+    }
+
+    var mPhoto = document.getElementById('m-photo');
+    if (mPhoto) {
+        if (photoUrl) {
+            mPhoto.src = photoUrl;
+            mPhoto.alt = name;
+            mPhoto.style.display = 'block';
+        } else {
+            mPhoto.src = '';
+            mPhoto.style.display = 'none';
+        }
+    }
+
     document.getElementById('m-name').innerText = name;
-    document.getElementById('m-role').innerText = role;
-    document.getElementById('m-bio').innerText = bio;
+    var titleEl = document.getElementById('m-role-title');
+    var companyEl = document.getElementById('m-role-company');
+    var roleStr = (role || '').trim();
+    var title = '', companyHtml = '';
+    if (/\s+[-–]\s+/.test(roleStr)) {
+        var zhParts = roleStr.split(/\s+[-–]\s+/);
+        companyHtml = (zhParts[0] || '').trim().split(/\s*\/\s*/).map(function(s) { return s.trim(); }).filter(Boolean).join('<br>');
+        title = (zhParts[1] || '').trim();
+    } else {
+        var roleParts = roleStr.split(/\s*[\/,]\s*/).map(function(s) { return s.trim(); }).filter(Boolean);
+        title = roleParts.length ? roleParts[0] : '';
+        companyHtml = roleParts.length > 1 ? roleParts.slice(1).join('<br>') : '';
+    }
+    if (titleEl) titleEl.innerText = title;
+    if (companyEl) companyEl.innerHTML = companyHtml;
+
+    var bioEl = document.getElementById('m-bio');
+    var lines = (bio || '').split('\n').map(function(s) { return s.replace(/^[·\s]+/, '').trim(); }).filter(Boolean);
+    bioEl.innerHTML = lines.length ? '<ul class="modal-bio-list">' + lines.map(function(line) { return '<li>' + line + '</li>'; }).join('') + '</ul>' : '';
+
+    var logosEl = document.getElementById('m-logos');
+    if (logosEl) {
+        logosEl.style.display = 'flex';
+        if (logos && logos.length) {
+            logosEl.innerHTML = logos.map(function(item) {
+                var name = (isZh && item.nameZh) ? item.nameZh : (item.nameEn || item.name || '');
+                var src = item.src || item.img || '';
+                if (src) {
+                    return '<div class="modal-logo"><img src="' + src + '" alt="' + name + '"></div>';
+                }
+                return '<div class="modal-logo modal-logo--text">' + name + '</div>';
+            }).join('');
+        } else {
+            logosEl.innerHTML = '';
+        }
+    }
+
     document.getElementById('team-modal').style.display = 'flex';
 }
 
 function closeTeamModal(e) {
     if(e.target.className === 'modal-overlay' || e.target.className === 'close-modal') {
         document.getElementById('team-modal').style.display = 'none';
+    }
+}
+
+// --- About 页面区块详情弹窗（过往业绩等点击后展示完整内容）---
+// 参数：titleEn, titleZh, subtitleEn, subtitleZh, bodyEn, bodyZh
+function openAboutDetailModal(titleEn, titleZh, subtitleEn, subtitleZh, bodyEn, bodyZh) {
+    document.getElementById('about-detail-title-en').innerText = titleEn || '';
+    document.getElementById('about-detail-title-zh').innerText = titleZh || '';
+    document.getElementById('about-detail-subtitle-en').innerText = subtitleEn || '';
+    document.getElementById('about-detail-subtitle-zh').innerText = subtitleZh || '';
+    document.getElementById('about-detail-body-en').innerText = bodyEn || '';
+    document.getElementById('about-detail-body-zh').innerText = bodyZh || '';
+    document.getElementById('about-detail-modal').style.display = 'flex';
+}
+
+function closeAboutDetailModal(e) {
+    if (e.target.className === 'modal-overlay' || e.target.className === 'close-modal') {
+        document.getElementById('about-detail-modal').style.display = 'none';
     }
 }
