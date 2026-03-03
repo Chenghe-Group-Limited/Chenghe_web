@@ -4,6 +4,33 @@
  * 修改此文件即可更新About Us页面内容
  */
 
+// 过往业绩每条记录的完整弹窗内容（点击区块时展示）
+var ABOUT_TRACK_RECORDS = [
+    {
+        titleEn: "Project Alpha Merger",
+        titleZh: "Project Alpha 合并项目",
+        subtitleEn: "NASDAQ IPO | 2023",
+        subtitleZh: "纳斯达克 IPO | 2023",
+        bodyEn: "Successfully completed business combination with XYZ Tech, valuing the combined entity at $1.5B. Chenghe acted as financial advisor and helped structure the transaction, coordinate due diligence, and navigate regulatory requirements. The deal closed in Q2 2023 and the combined company continues to trade on NASDAQ.",
+        bodyZh: "成功完成与 XYZ Tech 的业务合并，合并后实体估值达15亿美元。成和担任财务顾问，协助完成交易结构设计、尽职调查协调及监管审批。交易于2023年第二季度完成，合并后公司于纳斯达克持续交易。"
+    },
+    {
+        titleEn: "Beta Tech Advisory",
+        titleZh: "Beta Tech 顾问项目",
+        subtitleEn: "Private Placement | 2024",
+        subtitleZh: "私募融资 | 2024",
+        bodyEn: "Served as exclusive financial advisor to Beta Tech for their pre-IPO fundraising round of $200M. We led the process from investor targeting and term negotiation through to closing. The round was oversubscribed and included several tier-one institutional investors, positioning the company for a potential public listing.",
+        bodyZh: "担任 Beta Tech 的独家财务顾问，协助其完成2亿美元的 Pre-IPO 融资。我们主导了从投资者对接、条款谈判到交割的全流程。本轮融资获得超额认购，并引入多家一线机构投资者，为公司后续上市奠定基础。"
+    }
+];
+
+function openAboutRecordByIndex(index) {
+    var rec = ABOUT_TRACK_RECORDS[index];
+    if (rec && typeof openAboutDetailModal === "function") {
+        openAboutDetailModal(rec.titleEn, rec.titleZh, rec.subtitleEn, rec.subtitleZh, rec.bodyEn, rec.bodyZh);
+    }
+}
+
 function getAboutPageHTML() {
     return `
     <div class="about-hero-bg">
@@ -37,7 +64,7 @@ function getAboutPageHTML() {
                 <span class="t-en">Track Record</span>
                 <span class="t-zh">过往业绩</span>
             </h2>
-            <div class="news-item-horizontal" style="cursor: default;">
+            <div class="news-item-horizontal about-record-item" style="cursor: pointer;" onclick="openAboutRecordByIndex(0)">
                 <div class="news-img" style="width:250px; height:160px;"></div>
                 <div class="news-text" style="flex:1;">
                     <h3 style="margin-bottom:10px; color:var(--color-dark-blue);">Project Alpha Merger</h3>
@@ -46,9 +73,10 @@ function getAboutPageHTML() {
                         <span class="t-en">Successfully completed business combination with XYZ Tech, valuing the combined entity at $1.5B.</span>
                         <span class="t-zh">成功完成与 XYZ Tech 的业务合并，合并后实体估值达15亿美元。</span>
                     </p>
+                    <p class="about-view-more"><span class="t-en">View details &rarr;</span><span class="t-zh">查看详情 &rarr;</span></p>
                 </div>
             </div>
-            <div class="news-item-horizontal" style="cursor: default;">
+            <div class="news-item-horizontal about-record-item" style="cursor: pointer;" onclick="openAboutRecordByIndex(1)">
                 <div class="news-img" style="width:250px; height:160px;"></div>
                 <div class="news-text" style="flex:1;">
                     <h3 style="margin-bottom:10px; color:var(--color-dark-blue);">Beta Tech Advisory</h3>
@@ -57,6 +85,7 @@ function getAboutPageHTML() {
                         <span class="t-en">Served as exclusive financial advisor to Beta Tech for their pre-IPO fundraising round of $200M.</span>
                         <span class="t-zh">担任 Beta Tech 的独家财务顾问，协助其完成2亿美元的 Pre-IPO 融资。</span>
                     </p>
+                    <p class="about-view-more"><span class="t-en">View details &rarr;</span><span class="t-zh">查看详情 &rarr;</span></p>
                 </div>
             </div>
         </div>
