@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chenghe Capital - Official Website</title>
+    <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
@@ -97,16 +99,36 @@
     </footer>
 
     <div class="modal-overlay" id="team-modal" onclick="closeTeamModal(event)">
-        <div class="modal-box">
+        <div class="modal-box modal-box--team">
             <span class="close-modal" onclick="closeTeamModal(event)">&times;</span>
-            <div class="modal-left">
-                <div class="team-photo" style="width:200px; height:200px; margin:0; border:2px solid white;"></div>
+            <div class="modal-main modal-main--team">
+                <div class="modal-left modal-left--team">
+                    <div class="team-photo modal-photo" style="width:200px; height:200px; margin:0; border:2px solid #eee;">
+                        <img id="m-photo" src="" alt="" style="display:none; width:100%; height:100%; object-fit:cover; border-radius:4px;">
+                    </div>
+                    <div class="modal-left-info">
+                        <h2 id="m-name" class="modal-name">Name</h2>
+                        <p id="m-role-title" class="modal-role-title">Position</p>
+                        <p id="m-role-company" class="modal-role-company">Company</p>
+                    </div>
+                </div>
+                <div class="modal-right modal-right--team">
+                    <div id="m-bio" class="modal-bio">Bio...</div>
+                </div>
             </div>
-            <div class="modal-right">
-                <h2 id="m-name">Name</h2>
-                <p id="m-role" class="role">Role</p>
+            <div id="m-logos" class="modal-logos"></div>
+        </div>
+    </div>
+
+    <!-- About 页面区块详情弹窗（过往业绩等点击后展示完整内容） -->
+    <div class="modal-overlay" id="about-detail-modal" onclick="closeAboutDetailModal(event)">
+        <div class="modal-box modal-box--content">
+            <span class="close-modal" onclick="closeAboutDetailModal(event)">&times;</span>
+            <div class="modal-right modal-right--full">
+                <h2><span class="t-en" id="about-detail-title-en"></span><span class="t-zh" id="about-detail-title-zh"></span></h2>
+                <p class="role"><span class="t-en" id="about-detail-subtitle-en"></span><span class="t-zh" id="about-detail-subtitle-zh"></span></p>
                 <hr>
-                <p id="m-bio" class="bio">Bio...</p>
+                <div class="bio"><span class="t-en" id="about-detail-body-en"></span><span class="t-zh" id="about-detail-body-zh"></span></div>
             </div>
         </div>
     </div>
@@ -164,5 +186,3 @@
     </script>
 </body>
 </html>
-
-
