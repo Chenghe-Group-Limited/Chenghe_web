@@ -35,7 +35,7 @@ function getContactPageHTML() {
             </h2>
             <div class="contact-item">
                 <h4><span class="t-en">Hong Kong Headquarters</span><span class="t-zh">香港总部</span></h4>
-                <p>123 Finance Centre<br>Central, Hong Kong</p>
+                <p>Unit 2307, Tower One, Lippo Centre, 89 Queensway, Hong Kong<br>Central, Hong Kong</p>
             </div>
             <div class="contact-item">
                 <h4>Contact</h4>
@@ -46,4 +46,3 @@ function getContactPageHTML() {
     </div>
     `;
 }
-
