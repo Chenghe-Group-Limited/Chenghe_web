@@ -9,7 +9,7 @@
  * 3. 创建后得到 Form ID（形如 xyzabcde），把下面 CONTACT_FORMSPREE_ID 改成你的 Form ID
  * 4. 提交后咨询会发到你在 Formspree 里设置的邮箱
  */
-var contactDisplayEmail = "chenghe@chenghecap.com";  // 页面「办公地点」里展示的邮箱
+var contactDisplayEmail = "elena.liang@chenghecap.com";  // 页面「办公地点」里展示的邮箱
 var CONTACT_FORMSPREE_ID = "mojngdba";  // 改成你在 Formspree 创建表单后得到的 Form ID
 
 function getContactPageHTML() {
@@ -46,3 +46,4 @@ function getContactPageHTML() {
     </div>
     `;
 }
+
