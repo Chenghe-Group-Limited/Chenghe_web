@@ -82,9 +82,9 @@ function renderSpacContent(subTab) {
             // HHL 使用专门的项目概览内容，其它项目使用通用模板
             if (currentSpacProject === 'HHL') {
                 bodyHtml = `
-                <div class="spac-project-layout hhl-overview" style="display:flex; flex-direction:column; gap:32px;">
-                    <div style="text-align:center;">
-                        <h3 style="margin-bottom:8px; color:var(--color-dark-blue); font-size:28px;">
+                <div class="hhl-overview-section" style="max-width:1080px; margin:0 auto; padding:40px 32px 32px; border-radius:16px; background:#f5f7fb;">
+                    <div style="text-align:center; margin-bottom:32px;">
+                        <h3 style="margin-bottom:10px; color:var(--color-dark-blue); font-size:30px; letter-spacing:0.02em;">
                             <span class="t-en">HH&amp;L Acquisition Co. (US$414 million)</span>
                             <span class="t-zh">HH&amp;L Acquisition Co.（发行规模约4.14亿美元）</span>
                         </h3>
@@ -93,9 +93,9 @@ function renderSpacContent(subTab) {
                             <span class="t-zh">2021年以来亚洲最大的侧重医疗领域的 SPAC IPO</span>
                         </p>
                     </div>
-                    <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:8px;">
-                        <div style="flex:1 1 220px; min-width:220px; max-width:320px; background:#f7f8fb; border-radius:8px; padding:18px 20px;">
-                            <p style="font-weight:600; margin-bottom:8px; color:var(--color-dark-blue);">
+                    <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px;">
+                        <div style="background:#ffffff; border-radius:14px; padding:20px 22px; box-shadow:0 10px 24px rgba(15,35,52,0.08);">
+                            <p style="font-weight:600; margin-bottom:10px; color:var(--color-dark-blue); font-size:16px;">
                                 <span class="t-en">Up-sized by around 20%</span>
                                 <span class="t-zh">发行规模扩大约 20%</span>
                             </p>
@@ -104,8 +104,8 @@ function renderSpacContent(subTab) {
                                 <span class="t-zh">最终 IPO 募资规模约 4.14 亿美元。</span>
                             </p>
                         </div>
-                        <div style="flex:1 1 220px; min-width:220px; max-width:320px; background:#f7f8fb; border-radius:8px; padding:18px 20px;">
-                            <p style="font-weight:600; margin-bottom:8px; color:var(--color-dark-blue);">
+                        <div style="background:#ffffff; border-radius:14px; padding:20px 22px; box-shadow:0 10px 24px rgba(15,35,52,0.08);">
+                            <p style="font-weight:600; margin-bottom:10px; color:var(--color-dark-blue); font-size:16px;">
                                 <span class="t-en">Backed by top-tier investors</span>
                                 <span class="t-zh">超过 100 家知名机构投资者</span>
                             </p>
@@ -114,8 +114,8 @@ function renderSpacContent(subTab) {
                                 <span class="t-zh">来自亚洲、欧洲及美国的逾百家领先机构投资者参与认购。</span>
                             </p>
                         </div>
-                        <div style="flex:1 1 220px; min-width:220px; max-width:320px; background:#f7f8fb; border-radius:8px; padding:18px 20px;">
-                            <p style="font-weight:600; margin-bottom:8px; color:var(--color-dark-blue);">
+                        <div style="background:#ffffff; border-radius:14px; padding:20px 22px; box-shadow:0 10px 24px rgba(15,35,52,0.08);">
+                            <p style="font-weight:600; margin-bottom:10px; color:var(--color-dark-blue); font-size:16px;">
                                 <span class="t-en">Unique healthcare network</span>
                                 <span class="t-zh">全球医疗网络与中国资源</span>
                             </p>
