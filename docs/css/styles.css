@@ -561,6 +561,10 @@ nav ul li:hover .dropdown-content { display: block; animation: slideUp 0.2s ease
 .form-row textarea { height: 200px; resize: vertical; } 
 .submit-btn { width: 100%; padding: 18px; background: var(--color-gold); color: white; border: none; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: background 0.3s; }
 .submit-btn:hover { background: var(--color-gold-hover); }
+.submit-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+.contact-form-msg { margin-bottom: 16px; padding: 12px 16px; border-radius: 4px; font-size: 14px; }
+.contact-form-msg--success { background: #e8f5e9; color: #2e7d32; }
+.contact-form-msg--error { background: #ffebee; color: #c62828; }
 .contact-info { flex: 0.8; padding-top: 20px; }
 .contact-info h2 { font-size: 24px; margin-bottom: 40px; }
 .contact-item { margin-bottom: 40px; }

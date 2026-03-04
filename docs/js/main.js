@@ -200,6 +200,45 @@ window.addEventListener('DOMContentLoaded', function() {
     // 模块化版本会在 index-modular.html 中手动调用 initializeApp()
 });
 
+// --- Contact 表单提交（Formspree）：AJAX 提交并显示成功/失败提示，不跳转 ---
+document.addEventListener('submit', function(e) {
+    if (e.target.id !== 'contact-inquiry-form') return;
+    e.preventDefault();
+    var form = e.target;
+    var msgEl = document.getElementById('contact-form-msg');
+    if (!msgEl) return;
+    var isZh = document.body.classList.contains('lang-zh');
+    if (typeof CONTACT_FORMSPREE_ID === 'undefined' || CONTACT_FORMSPREE_ID === 'YOUR_FORM_ID') {
+        msgEl.style.display = 'block';
+        msgEl.className = 'contact-form-msg contact-form-msg--error';
+        msgEl.textContent = isZh ? '请在 contact.js 中配置 Formspree Form ID 后再使用提交功能。' : 'Please set CONTACT_FORMSPREE_ID in contact.js to enable form submission.';
+        return;
+    }
+    var btn = form.querySelector('.submit-btn');
+    if (btn) { btn.disabled = true; btn.textContent = isZh ? '提交中…' : 'Sending…'; }
+    msgEl.style.display = 'none';
+    fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+    }).then(function(r) {
+        if (r.ok) {
+            msgEl.className = 'contact-form-msg contact-form-msg--success';
+            msgEl.textContent = isZh ? '提交成功，我们会尽快与您联系。' : 'Thank you. We will get back to you soon.';
+            msgEl.style.display = 'block';
+            form.reset();
+        } else {
+            throw new Error('Submit failed');
+        }
+    }).catch(function() {
+        msgEl.className = 'contact-form-msg contact-form-msg--error';
+        msgEl.textContent = isZh ? '提交失败，请稍后重试或直接发邮件联系我们。' : 'Submission failed. Please try again later or email us directly.';
+        msgEl.style.display = 'block';
+    }).finally(function() {
+        if (btn) { btn.disabled = false; btn.innerHTML = '<span class="t-en">Submit Inquiry</span><span class="t-zh">提交咨询</span>'; }
+    });
+});
+
 // --- Team Modal Functions ---
 // 兼容两种调用方式：
 // 1) 旧版：openTeamModal(name, role, bio)
