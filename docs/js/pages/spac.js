@@ -27,12 +27,25 @@ function switchSpacMainTab(tabName, updateUrl = true) {
          titleEl.innerHTML = '<span class="t-en">SPAC Overview</span><span class="t-zh">SPAC 概览</span>';
          titleEl.style.fontFamily = ''; // 使用全局标题字体
     } else if (tabName === 'HHL') {
-         // HHL 在标题中显示为 HH&L，并使用 Times New Roman
-         titleEl.innerHTML = 'HH&L';
+         // HHL 在标题中显示为全名，并使用 Times New Roman
+         titleEl.innerHTML = 'HH&L Acquisition Co.';
          titleEl.style.fontFamily = '"Times New Roman", Times, serif';
+    } else if (tabName === 'Chenghe') {
+         titleEl.innerHTML = 'Chenghe Acquisition Co.';
+         titleEl.style.fontFamily = '';
+    } else if (tabName === 'Chenghe I') {
+         titleEl.innerHTML = 'Chenghe Acquisition I Co.';
+         titleEl.style.fontFamily = '';
+    } else if (tabName === 'Chenghe II') {
+         titleEl.innerHTML = 'Chenghe Acquisition II Co.';
+         titleEl.style.fontFamily = '';
+    } else if (tabName === 'Chenghe III') {
+         titleEl.innerHTML = 'Chenghe Acquisition III Co.';
+         titleEl.style.fontFamily = '';
     } else {
+         // 兜底：直接显示 tabName
          titleEl.innerHTML = tabName;
-         titleEl.style.fontFamily = ''; // 其他 SPAC 用默认标题样式
+         titleEl.style.fontFamily = '';
     }
 
     renderSpacContent('Overview');
@@ -85,14 +98,14 @@ function renderSpacContent(subTab) {
             </div>`;
     } else {
         if (subTab === 'Overview') {
-            // HHL 使用专门的项目概览内容，其它项目使用通用模板
+            // 特定项目使用专门的项目概览内容，其它项目使用通用模板
             if (currentSpacProject === 'HHL') {
                 bodyHtml = `
                 <div class="hhl-overview-section" style="max-width:1080px; margin:0 auto; padding:40px 32px 32px; border-radius:16px; background:#f5f7fb;">
                     <div style="text-align:center; margin-bottom:32px;">
                         <h3 style="margin-bottom:10px; color:var(--color-dark-blue); font-size:30px; letter-spacing:0.02em;">
-                            <span class="t-en">HH&L Acquisition Co. (US$414 million)</span>
-                            <span class="t-zh">HH&L Acquisition Co.（发行规模约4.14亿美元）</span>
+                            <span class="t-en">US$414 million offering size</span>
+                            <span class="t-zh">发行规模为 4.14 亿美元</span>
                         </h3>
                         <p style="color:var(--color-grey); font-size:18px; margin:0;">
                             <span class="t-en">The largest healthcare-focused SPAC IPO in Asia since 2021</span>
@@ -132,6 +145,154 @@ function renderSpacContent(subTab) {
                         </div>
                     </div>
                 </div>`;
+            } else if (currentSpacProject === 'Chenghe') {
+                // Chenghe Acquisition Co. 的专属概览
+                bodyHtml = `
+                <div class="spac-project-layout ch-overview" style="max-width:1080px; margin:0 auto; padding:40px 32px 32px; border-radius:16px; background:#f5f7fb;">
+                    <div style="text-align:center; margin-bottom:32px;">
+                        <h3 style="margin-bottom:10px; color:var(--color-dark-blue); font-size:30px; letter-spacing:0.02em;">
+                            <span class="t-en">US$115 million offering size</span>
+                            <span class="t-zh">发行规模约 1.15 亿美元</span>
+                        </h3>
+                        <p style="color:var(--color-grey); font-size:18px; margin:0;">
+                            <span class="t-en">Business combination with Taiwan Color Optoelectronics Co., Ltd completed on 15 February 2024</span>
+                            <span class="t-zh">与台湾彩光科技股份有限公司于 2024 年 2 月 15 日完成并购上市</span>
+                        </p>
+                    </div>
+                    <div style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px;">
+                        <div style="background:#ffffff; border-radius:14px; padding:20px 22px; box-shadow:0 10px 24px rgba(15,35,52,0.08);">
+                            <p style="font-weight:600; margin-bottom:10px; color:#B02A30; font-size:16px;">
+                                <span class="t-en">Trusted repeat issuer</span>
+                                <span class="t-zh">重复发行人获全球机构信任</span>
+                            </p>
+                            <p style="font-size:14px; color:var(--color-grey); margin:0;">
+                                <span class="t-en">Continued support from leading global institutional investors even during challenging market conditions.</span>
+                                <span class="t-zh">即使在市场低谷期，仍持续获得全球顶尖投资机构和战略伙伴的支持与投资。</span>
+                            </p>
+                        </div>
+                        <div style="background:#ffffff; border-radius:14px; padding:20px 22px; box-shadow:0 10px 24px rgba(15,35,52,0.08);">
+                            <p style="font-weight:600; margin-bottom:10px; color:var(--color-dark-blue); font-size:16px;">
+                                <span class="t-en">Global network, Asia access</span>
+                                <span class="t-zh">全球网络 · 亚洲独特通路</span>
+                            </p>
+                            <p style="font-size:14px; color:var(--color-grey); margin:0;">
+                                <span class="t-en">Unique connectivity between global capital and the fast‑growing Asian markets.</span>
+                                <span class="t-zh">打通全球资本与高速增长的亚洲市场之间的独特通路。</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>`;
+            } else if (currentSpacProject === 'Chenghe I') {
+                // Chenghe I 的专属概览
+                bodyHtml = `
+                <div class="spac-project-layout ch1-overview" style="max-width:1080px; margin:0 auto; padding:40px 32px 32px; border-radius:16px; background:#f5f7fb;">
+                    <div style="text-align:center; margin-bottom:32px;">
+                        <h3 style="margin-bottom:10px; color:var(--color-dark-blue); font-size:30px; letter-spacing:0.02em;">
+                            <span class="t-en">US$130 million offering size</span>
+                            <span class="t-zh">发行规模约 1.3 亿美元</span>
+                        </h3>
+                        <p style="color:var(--color-grey); font-size:18px; margin:0;">
+                            <span class="t-en">Business combination with Qikang Technology Co., Ltd completed on 15 January 2025</span>
+                            <span class="t-zh">与启坤科技股份有限公司于 2025 年 1 月 15 日完成并购上市</span>
+                        </p>
+                    </div>
+                    <div style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px;">
+                        <div style="background:#ffffff; border-radius:14px; padding:20px 22px; box-shadow:0 10px 24px rgba(15,35,52,0.08);">
+                            <p style="font-weight:600; margin-bottom:10px; color:var(--color-dark-blue); font-size:16px;">
+                                <span class="t-en">Pioneering Asia sponsor team</span>
+                                <span class="t-zh">开创亚洲发起人团队收购美国主板 SPAC 先例</span>
+                            </p>
+                            <p style="font-size:14px; color:var(--color-grey); margin:0;">
+                                <span class="t-en">One of the first Asia‑based sponsor teams to list and acquire on the U.S. mainboard.</span>
+                                <span class="t-zh">成为最早在美国主板成功完成 SPAC 上市及并购的亚洲团队之一。</span>
+                            </p>
+                        </div>
+                        <div style="background:#ffffff; border-radius:14px; padding:20px 22px; box-shadow:0 10px 24px rgba(15,35,52,0.08);">
+                            <p style="font-weight:600; margin-bottom:10px; color:var(--color-dark-blue); font-size:16px;">
+                                <span class="t-en">Asia new‑economy focus</span>
+                                <span class="t-zh">着眼亚太地区新经济高成长潜力企业</span>
+                            </p>
+                            <p style="font-size:14px; color:var(--color-grey); margin:0;">
+                                <span class="t-en">Targeting innovative, high‑growth new‑economy companies across the Asia‑Pacific region.</span>
+                                <span class="t-zh">聚焦亚太地区具有高成长潜力的创新型新经济企业。</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>`;
+            } else if (currentSpacProject === 'Chenghe II') {
+                // Chenghe Acquisition II Co. 的专属概览
+                bodyHtml = `
+                <div class="spac-project-layout ch2-overview" style="max-width:1080px; margin:0 auto; padding:40px 32px 32px; border-radius:16px; background:#f5f7fb;">
+                    <div style="text-align:center; margin-bottom:32px;">
+                        <h3 style="margin-bottom:10px; color:var(--color-dark-blue); font-size:30px; letter-spacing:0.02em;">
+                            <span class="t-en">US$86.25 million offering size</span>
+                            <span class="t-zh">发行规模约 8,625 万美元</span>
+                        </h3>
+                        <p style="color:var(--color-grey); font-size:18px; margin:0;">
+                            <span class="t-en">Business combination with Polibeli Group Ltd completed on 8 August 2025</span>
+                            <span class="t-zh">与 Polibeli Group Ltd 于 2025 年 8 月 8 日完成并购上市</span>
+                        </p>
+                    </div>
+                    <div style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px;">
+                        <div style="background:#ffffff; border-radius:14px; padding:20px 22px; box-shadow:0 10px 24px rgba(15,35,52,0.08);">
+                            <p style="font-weight:600; margin-bottom:10px; color:var(--color-dark-blue); font-size:16px;">
+                                <span class="t-en">Repeat sponsor team</span>
+                                <span class="t-zh">具有深厚网络和价值创造能力的重复发起人团队</span>
+                            </p>
+                            <p style="font-size:14px; color:var(--color-grey); margin:0;">
+                                <span class="t-en">Experienced investors with a strong track record in Asian capital markets.</span>
+                                <span class="t-zh">在亚洲资本市场拥有丰富经验和优秀长期业绩。</span>
+                            </p>
+                        </div>
+                        <div style="background:#ffffff; border-radius:14px; padding:20px 22px; box-shadow:0 10px 24px rgba(15,35,52,0.08);">
+                            <p style="font-weight:600; margin-bottom:10px; color:var(--color-dark-blue); font-size:16px;">
+                                <span class="t-en">Asia e‑commerce & consumer</span>
+                                <span class="t-zh">专注亚太地区电商与消费等潜力行业</span>
+                            </p>
+                            <p style="font-size:14px; color:var(--color-grey); margin:0;">
+                                <span class="t-en">Targeting high‑growth sectors such as e‑commerce and consumer platforms.</span>
+                                <span class="t-zh">重点关注电商及消费平台等高增长细分领域。</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>`;
+            } else if (currentSpacProject === 'Chenghe III') {
+                // Chenghe Acquisition III Co. 的专属概览
+                bodyHtml = `
+                <div class="spac-project-layout ch3-overview" style="max-width:1080px; margin:0 auto; padding:40px 32px 32px; border-radius:16px; background:#f5f7fb;">
+                    <div style="text-align:center; margin-bottom:32px;">
+                        <h3 style="margin-bottom:10px; color:var(--color-dark-blue); font-size:30px; letter-spacing:0.02em;">
+                            <span class="t-en">US$126.5 million offering size</span>
+                            <span class="t-zh">发行规模约 1.265 亿美元</span>
+                        </h3>
+                        <p style="color:var(--color-grey); font-size:18px; margin:0;">
+                            <span class="t-en">Successfully listed on Nasdaq Global Market in September 2025</span>
+                            <span class="t-zh">于 2025 年 9 月在纳斯达克全球市场成功上市</span>
+                        </p>
+                    </div>
+                    <div style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px;">
+                        <div style="background:#ffffff; border-radius:14px; padding:20px 22px; box-shadow:0 10px 24px rgba(15,35,52,0.08);">
+                            <p style="font-weight:600; margin-bottom:10px; color:var(--color-dark-blue); font-size:16px;">
+                                <span class="t-en">Global institutional co‑founders</span>
+                                <span class="t-zh">引入华尔街大型基金加入联合创始人</span>
+                            </p>
+                            <p style="font-size:14px; color:var(--color-grey); margin:0;">
+                                <span class="t-en">Participation from leading global funds as cornerstone and co‑founding investors.</span>
+                                <span class="t-zh">多家全球领先机构基金作为基石及联合创始投资人参与。</span>
+                            </p>
+                        </div>
+                        <div style="background:#ffffff; border-radius:14px; padding:20px 22px; box-shadow:0 10px 24px rgba(15,35,52,0.08);">
+                            <p style="font-weight:600; margin-bottom:10px; color:var(--color-dark-blue); font-size:16px;">
+                                <span class="t-en">Strong demand from pensions and funds</span>
+                                <span class="t-zh">吸引 3 倍顶级养老金计划和基金超额认购</span>
+                            </p>
+                            <p style="font-size:14px; color:var(--color-grey); margin:0;">
+                                <span class="t-en">Oversubscribed by more than three times from top‑tier pension plans and institutional funds.</span>
+                                <span class="t-zh">获得顶级养老金计划及机构基金逾三倍超额认购。</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>`;
             } else {
                 bodyHtml = `
                 <div class="spac-project-layout" style="display:flex; gap:60px;">
@@ -147,11 +308,11 @@ function renderSpacContent(subTab) {
                 </div>`;
             }
         } else if (subTab === 'Management') {
-            // HHL 使用与 team.js 中一致的三位成员信息与图片，其它项目保持占位布局
+            // HHL / Chenghe / Chenghe I / Chenghe II / Chenghe III 使用与 team.js 数据一致的管理团队（但弹窗不再展示公司行），其它项目保持占位布局
             if (currentSpacProject === 'HHL') {
                 bodyHtml = `
                 <div class="team-grid">
-                    <div class="team-card" onclick="openTeamModalByIndex(0)">
+                    <div class="team-card" onclick="openHhlMgmtModalFromSpac(0, 'Chief Executive Officer', '首席执行官')">
                         <div class="team-photo"><img src="images/Team/Richard.png" alt="Richard Li / 李琦"></div>
                         <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
                             <span class="t-en">Richard Li</span>
@@ -162,7 +323,7 @@ function renderSpacContent(subTab) {
                             <span class="t-zh">首席执行官</span>
                         </p>
                     </div>
-                    <div class="team-card" onclick="openTeamModalByIndex(10)">
+                    <div class="team-card" onclick="openHhlMgmtModalFromSpac(10, 'Chairman', '董事长')">
                         <div class="team-photo"><img src="images/Team/Kenneth-W.Hitchner.png" alt="Ken Hitchner"></div>
                         <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
                             <span class="t-en">Ken Hitchner</span>
@@ -173,7 +334,7 @@ function renderSpacContent(subTab) {
                             <span class="t-zh">董事长</span>
                         </p>
                     </div>
-                    <div class="team-card" onclick="openTeamModalByIndex(9)">
+                    <div class="team-card" onclick="openHhlMgmtModalFromSpac(9, 'Advisory Board Chairman', '咨询委员会主席')">
                         <div class="team-photo"><img src="images/Team/Fenglei-Fang.png" alt="Fenglei Fang / 方凤雷"></div>
                         <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
                             <span class="t-en">Fenglei Fang</span>
@@ -182,6 +343,191 @@ function renderSpacContent(subTab) {
                         <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
                             <span class="t-en">Advisory Board Chairman</span>
                             <span class="t-zh">咨询委员会主席</span>
+                        </p>
+                    </div>
+                </div>`;
+            } else if (currentSpacProject === 'Chenghe') {
+                // Chenghe Acquisition Co. 管理团队（Ken Hitchner、Richard Li、Shibin Wang、Zhiyang Zhou）
+                bodyHtml = `
+                <div class="team-grid">
+                    <div class="team-card" onclick="openChengheMgmtModalFromSpac(10, 'Advisory Board Chairman', '顾问委员会主席')">
+                        <div class="team-photo"><img src="images/Team/Kenneth-W.Hitchner.png" alt="Ken Hitchner"></div>
+                        <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
+                            <span class="t-en">Ken Hitchner</span>
+                            <span class="t-zh">Ken Hitchner</span>
+                        </h3>
+                        <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
+                            <span class="t-en">Advisory Board Chairman</span>
+                            <span class="t-zh">顾问委员会主席</span>
+                        </p>
+                    </div>
+                    <div class="team-card" onclick="openChengheMgmtModalFromSpac(0, 'Chairman', '董事长')">
+                        <div class="team-photo"><img src="images/Team/Richard.png" alt="Richard Li / 李琦"></div>
+                        <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
+                            <span class="t-en">Richard Li</span>
+                            <span class="t-zh">李琦</span>
+                        </h3>
+                        <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
+                            <span class="t-en">Chairman</span>
+                            <span class="t-zh">董事长</span>
+                        </p>
+                    </div>
+                    <div class="team-card" onclick="openChengheMgmtModalFromSpac(4, 'Chief Executive Officer', '首席执行官')">
+                        <div class="team-photo"><img src="images/Team/Shibin-Wang.png" alt="Shibin Wang / 王世斌"></div>
+                        <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
+                            <span class="t-en">Shibin Wang</span>
+                            <span class="t-zh">王世斌</span>
+                        </h3>
+                        <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
+                            <span class="t-en">Chief Executive Officer</span>
+                            <span class="t-zh">首席执行官</span>
+                        </p>
+                    </div>
+                    <div class="team-card" onclick="openChengheZhouModalFromSpac()">
+                        <div class="team-photo"><img src="images/Team/Zhiyang_Zhou.jpg" alt="Zhiyang Zhou / 周志阳"></div>
+                        <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
+                            <span class="t-en">Zhiyang Zhou</span>
+                            <span class="t-zh">周志阳</span>
+                        </h3>
+                        <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
+                            <span class="t-en">Chief Financial Officer</span>
+                            <span class="t-zh">首席财务官</span>
+                        </p>
+                    </div>
+                </div>`;
+            } else if (currentSpacProject === 'Chenghe I') {
+                // Chenghe I 管理团队（李琦、王世斌、王兆海）
+                bodyHtml = `
+                <div class="team-grid">
+                    <div class="team-card" onclick="openChenghe1MgmtModalFromSpac(0, 'Advisory Board Chairman', '顾问委员会主席')">
+                        <div class="team-photo"><img src="images/Team/Richard.png" alt="Richard Li / 李琦"></div>
+                        <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
+                            <span class="t-en">Richard Li</span>
+                            <span class="t-zh">李琦</span>
+                        </h3>
+                        <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
+                            <span class="t-en">Advisory Board Chairman</span>
+                            <span class="t-zh">顾问委员会主席</span>
+                        </p>
+                    </div>
+                    <div class="team-card" onclick="openChenghe1MgmtModalFromSpac(4, 'Chairman', '董事长')">
+                        <div class="team-photo"><img src="images/Team/Shibin-Wang.png" alt="Shibin Wang / 王世斌"></div>
+                        <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
+                            <span class="t-en">Shibin Wang</span>
+                            <span class="t-zh">王世斌</span>
+                        </h3>
+                        <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
+                            <span class="t-en">Chairman</span>
+                            <span class="t-zh">董事长</span>
+                        </p>
+                    </div>
+                    <div class="team-card" onclick="openChenghe1MgmtModalFromSpac(7, 'Chief Financial Officer', '首席财务官')">
+                        <div class="team-photo"><img src="images/Team/Lyle.jpg" alt="Lyle Wang / 王兆海"></div>
+                        <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
+                            <span class="t-en">Lyle Wang</span>
+                            <span class="t-zh">王兆海</span>
+                        </h3>
+                        <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
+                            <span class="t-en">Chief Financial Officer</span>
+                            <span class="t-zh">首席财务官</span>
+                        </p>
+                    </div>
+                    <div class="team-card" onclick="openChenghe1MariaModalFromSpac()">
+                        <div class="team-photo"><img src="images/Team/Maria.jpg" alt="Yixuan Yuan / 袁怡萱"></div>
+                        <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
+                            <span class="t-en">Yixuan Yuan</span>
+                            <span class="t-zh">袁怡萱</span>
+                        </h3>
+                        <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
+                            <span class="t-en">Chief Executive Officer</span>
+                            <span class="t-zh">首席执行官</span>
+                        </p>
+                    </div>
+                </div>`;
+            } else if (currentSpacProject === 'Chenghe II') {
+                // Chenghe II 管理团队（李琦、王世斌、王兆海）
+                bodyHtml = `
+                <div class="team-grid">
+                    <div class="team-card" onclick="openChenghe2MgmtModalFromSpac(0, 'Advisory Board Chairman', '顾问委员会主席')">
+                        <div class="team-photo"><img src="images/Team/Richard.png" alt="Richard Li / 李琦"></div>
+                        <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
+                            <span class="t-en">Richard Li</span>
+                            <span class="t-zh">李琦</span>
+                        </h3>
+                        <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
+                            <span class="t-en">Advisory Board Chairman</span>
+                            <span class="t-zh">顾问委员会主席</span>
+                        </p>
+                    </div>
+                    <div class="team-card" onclick="openChenghe2MgmtModalFromSpac(4, 'Chief Executive Officer', '首席执行官')">
+                        <div class="team-photo"><img src="images/Team/Shibin-Wang.png" alt="Shibin Wang / 王世斌"></div>
+                        <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
+                            <span class="t-en">Shibin Wang</span>
+                            <span class="t-zh">王世斌</span>
+                        </h3>
+                        <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
+                            <span class="t-en">Chief Executive Officer</span>
+                            <span class="t-zh">首席执行官</span>
+                        </p>
+                    </div>
+                    <div class="team-card" onclick="openChenghe2MgmtModalFromSpac(7, 'Chief Financial Officer', '首席财务官')">
+                        <div class="team-photo"><img src="images/Team/Lyle.jpg" alt="Lyle Wang / 王兆海"></div>
+                        <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
+                            <span class="t-en">Lyle Wang</span>
+                            <span class="t-zh">王兆海</span>
+                        </h3>
+                        <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
+                            <span class="t-en">Chief Financial Officer</span>
+                            <span class="t-zh">首席财务官</span>
+                        </p>
+                    </div>
+                </div>`;
+            } else if (currentSpacProject === 'Chenghe III') {
+                // Chenghe III 管理团队（李琦、王世斌、王兆海、李泽原）
+                bodyHtml = `
+                <div class="team-grid">
+                    <div class="team-card" onclick="openChenghe3MgmtModalFromSpac(0, 'Advisory Board Chairman', '顾问委员会主席')">
+                        <div class="team-photo"><img src="images/Team/Richard.png" alt="Richard Li / 李琦"></div>
+                        <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
+                            <span class="t-en">Richard Li</span>
+                            <span class="t-zh">李琦</span>
+                        </h3>
+                        <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
+                            <span class="t-en">Advisory Board Chairman</span>
+                            <span class="t-zh">顾问委员会主席</span>
+                        </p>
+                    </div>
+                    <div class="team-card" onclick="openChenghe3MgmtModalFromSpac(4, 'Chairman &amp; CEO', '董事长兼 CEO')">
+                        <div class="team-photo"><img src="images/Team/Shibin-Wang.png" alt="Shibin Wang / 王世斌"></div>
+                        <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
+                            <span class="t-en">Shibin Wang</span>
+                            <span class="t-zh">王世斌</span>
+                        </h3>
+                        <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
+                            <span class="t-en">Chairman &amp; CEO</span>
+                            <span class="t-zh">董事长兼首席执行官</span>
+                        </p>
+                    </div>
+                    <div class="team-card" onclick="openChenghe3MgmtModalFromSpac(7, 'Chief Financial Officer', '首席财务官')">
+                        <div class="team-photo"><img src="images/Team/Lyle.jpg" alt="Lyle Wang / 王兆海"></div>
+                        <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
+                            <span class="t-en">Lyle Wang</span>
+                            <span class="t-zh">王兆海</span>
+                        </h3>
+                        <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
+                            <span class="t-en">Chief Financial Officer</span>
+                            <span class="t-zh">首席财务官</span>
+                        </p>
+                    </div>
+                    <div class="team-card" onclick="openChenghe3MgmtModalFromSpac(8, 'Senior Advisor', '高级顾问')">
+                        <div class="team-photo"><img src="images/Team/Houston.jpg" alt="Houston Li / 李泽原"></div>
+                        <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
+                            <span class="t-en">Houston Li</span>
+                            <span class="t-zh">李泽原</span>
+                        </h3>
+                        <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
+                            <span class="t-en">Senior Advisor</span>
+                            <span class="t-zh">高级顾问</span>
                         </p>
                     </div>
                 </div>`;
@@ -239,6 +585,124 @@ function renderSpacContent(subTab) {
         }
     }
     contentDiv.innerHTML = subNavHtml + bodyHtml;
+}
+
+// 从 team.js 的 TEAM_MEMBERS 复用人物信息，但自定义 HH&L 职位文案，且不展示公司行
+function openHhlMgmtModalFromSpac(index, roleEn, roleZh) {
+    if (typeof TEAM_MEMBERS === 'undefined' || !TEAM_MEMBERS[index] || typeof openTeamModal !== 'function') {
+        return;
+    }
+    var m = TEAM_MEMBERS[index];
+    openTeamModal(
+        m.nameEn,
+        roleEn,
+        m.bioEn,
+        m.nameZh,
+        roleZh,
+        m.bioZh,
+        m.photo,
+        m.logos
+    );
+}
+
+// Chenghe II 管理团队弹窗：沿用 team.js 的人物与履历，只覆盖职位文案，不展示公司行
+function openChenghe2MgmtModalFromSpac(index, roleEn, roleZh) {
+    if (typeof TEAM_MEMBERS === 'undefined' || !TEAM_MEMBERS[index] || typeof openTeamModal !== 'function') {
+        return;
+    }
+    var m = TEAM_MEMBERS[index];
+    openTeamModal(
+        m.nameEn,
+        roleEn,
+        m.bioEn,
+        m.nameZh,
+        roleZh,
+        m.bioZh,
+        m.photo,
+        m.logos
+    );
+}
+
+// Chenghe I 管理团队弹窗：沿用 team.js 的人物与履历，只覆盖职位文案，不展示公司行
+function openChenghe1MgmtModalFromSpac(index, roleEn, roleZh) {
+    if (typeof TEAM_MEMBERS === 'undefined' || !TEAM_MEMBERS[index] || typeof openTeamModal !== 'function') {
+        return;
+    }
+    var m = TEAM_MEMBERS[index];
+    openTeamModal(
+        m.nameEn,
+        roleEn,
+        m.bioEn,
+        m.nameZh,
+        roleZh,
+        m.bioZh,
+        m.photo,
+        m.logos
+    );
+}
+
+// Chenghe I 新增人物 宛怡萱（Maria）：仅在 SPAC 页面使用，不依赖 TEAM_MEMBERS
+function openChenghe1MariaModalFromSpac() {
+    if (typeof openTeamModal !== 'function') return;
+    openTeamModal(
+        'Yixuan Yuan',
+        'Chief Executive Officer',
+        '· 8 years of investment and financing experience, focusing on overseas capital markets in the U.S., Hong Kong and other regions.\n· Previously worked at Credit Suisse and BNP Paribas.',
+        '宛怡萱',
+        '首席执行官',
+        '· 8年投融资经验，专注美国、香港等海外资本市场\n· 曾在瑞士信贷和法国巴黎银行工作',
+        'images/Team/Maria.jpg'
+    );
+}
+
+// Chenghe Acquisition Co. 管理团队弹窗（Ken Hitchner / Richard Li / Shibin Wang）：沿用 team.js 人物与履历，只覆盖职位文案
+function openChengheMgmtModalFromSpac(index, roleEn, roleZh) {
+    if (typeof TEAM_MEMBERS === 'undefined' || !TEAM_MEMBERS[index] || typeof openTeamModal !== 'function') {
+        return;
+    }
+    var m = TEAM_MEMBERS[index];
+    openTeamModal(
+        m.nameEn,
+        roleEn,
+        m.bioEn,
+        m.nameZh,
+        roleZh,
+        m.bioZh,
+        m.photo,
+        m.logos
+    );
+}
+
+// Chenghe Acquisition Co. 新增人物周志阳：仅在 SPAC 页面使用，不依赖 TEAM_MEMBERS
+function openChengheZhouModalFromSpac() {
+    if (typeof openTeamModal !== 'function') return;
+    openTeamModal(
+        'Zhiyang Zhou',
+        'Chief Financial Officer',
+        '· Extensive equity research and finance experience, focused on technology, media and telecommunications sectors in China and the U.S.\n· Previously worked at Mediatek Investment, Great Wall International, Anbang International and CICC (or Bank of Communications International)',
+        '周志阳',
+        '首席财务官',
+        '· 丰富的股权研究和金融经验，专注于中美科技、媒体和电信领域\n· 曾在美迪投资、长城国际、安邦国际和交银国际任职',
+        'images/Team/Zhiyang_Zhou.jpg'
+    );
+}
+
+// Chenghe III 管理团队弹窗：沿用 team.js 的人物与履历，只覆盖职位文案，不展示公司行
+function openChenghe3MgmtModalFromSpac(index, roleEn, roleZh) {
+    if (typeof TEAM_MEMBERS === 'undefined' || !TEAM_MEMBERS[index] || typeof openTeamModal !== 'function') {
+        return;
+    }
+    var m = TEAM_MEMBERS[index];
+    openTeamModal(
+        m.nameEn,
+        roleEn,
+        m.bioEn,
+        m.nameZh,
+        roleZh,
+        m.bioZh,
+        m.photo,
+        m.logos
+    );
 }
 
 function getSpacPageHTML() {
