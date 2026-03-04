@@ -25,8 +25,14 @@ function switchSpacMainTab(tabName, updateUrl = true) {
     const titleEl = document.getElementById('spac-title');
     if (tabName === 'Overview') {
          titleEl.innerHTML = '<span class="t-en">SPAC Overview</span><span class="t-zh">SPAC 概览</span>';
+         titleEl.style.fontFamily = ''; // 使用全局标题字体
+    } else if (tabName === 'HHL') {
+         // HHL 在标题中显示为 HH&L，并使用 Times New Roman
+         titleEl.innerHTML = 'HH&L';
+         titleEl.style.fontFamily = '"Times New Roman", Times, serif';
     } else {
-         titleEl.innerHTML = tabName; // 项目名称如 HHL 保持英文即可
+         titleEl.innerHTML = tabName;
+         titleEl.style.fontFamily = ''; // 其他 SPAC 用默认标题样式
     }
 
     renderSpacContent('Overview');
@@ -85,8 +91,8 @@ function renderSpacContent(subTab) {
                 <div class="hhl-overview-section" style="max-width:1080px; margin:0 auto; padding:40px 32px 32px; border-radius:16px; background:#f5f7fb;">
                     <div style="text-align:center; margin-bottom:32px;">
                         <h3 style="margin-bottom:10px; color:var(--color-dark-blue); font-size:30px; letter-spacing:0.02em;">
-                            <span class="t-en">HH&amp;L Acquisition Co. (US$414 million)</span>
-                            <span class="t-zh">HH&amp;L Acquisition Co.（发行规模约4.14亿美元）</span>
+                            <span class="t-en">HH&L Acquisition Co. (US$414 million)</span>
+                            <span class="t-zh">HH&L Acquisition Co.（发行规模约4.14亿美元）</span>
                         </h3>
                         <p style="color:var(--color-grey); font-size:18px; margin:0;">
                             <span class="t-en">The largest healthcare-focused SPAC IPO in Asia since 2021</span>
@@ -237,10 +243,10 @@ function renderSpacContent(subTab) {
 
 function getSpacPageHTML() {
     return `
-    <div class="tab-container">
+    <div class="tab-container spac-main-tabs-bar">
         <div class="tab-list" id="spac-main-tabs">
             <div class="tab-btn active" onclick="switchSpacMainTab('Overview')" data-tab="Overview"><span class="t-en">Overview</span><span class="t-zh">概览</span></div>
-            <div class="tab-btn" onclick="switchSpacMainTab('HHL')" data-tab="HHL">HHL</div>
+            <div class="tab-btn" onclick="switchSpacMainTab('HHL')" data-tab="HHL">HH&L</div>
             <div class="tab-btn" onclick="switchSpacMainTab('Chenghe')" data-tab="Chenghe">Chenghe</div>
             <div class="tab-btn" onclick="switchSpacMainTab('Chenghe I')" data-tab="Chenghe I">Chenghe I</div>
             <div class="tab-btn" onclick="switchSpacMainTab('Chenghe II')" data-tab="Chenghe II">Chenghe II</div>

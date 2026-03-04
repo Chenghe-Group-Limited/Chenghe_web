@@ -39,6 +39,13 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 
+/* HHL Overview 标题：关闭连字，并统一使用 Times New Roman（中英文保持一致） */
+.hhl-overview-section h3 {
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0, "clig" 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
 a { text-decoration: none; color: inherit; cursor: pointer; transition: all 0.3s ease; }
 ul { list-style: none; }
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
@@ -416,6 +423,10 @@ nav ul li:hover .dropdown-content { display: block; animation: slideUp 0.2s ease
 }
 .tab-btn:hover { color: var(--color-dark-blue); }
 .tab-btn.active { color: var(--color-dark-blue); border-bottom-color: var(--color-gold); }
+/* 隐藏 SPAC 页面顶部的项目导航条，避免与主导航堆叠显得拥挤 */
+.spac-main-tabs-bar {
+    display: none;
+}
 
 /* --- 7. SPAC 页面 --- */
 .spac-content { max-width: 1100px; margin: 60px auto; padding: 0 40px; }
