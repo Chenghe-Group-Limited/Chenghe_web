@@ -14,7 +14,7 @@ var TEAM_MEMBERS = [
     { nameEn: "Remington Xu", roleEn: "Partner, Chenghe Capital", photo: "images/Team/Remington.jpg", bioEn: "· Partner at Chenghe Capital\n· Former Managing Director and Head of Asset Management at Far East Horizon\n· Former CEO of First Qianhai International Capital\n· Earlier experience at Great Wall International, J.P. Morgan, Credit Suisse and Merrill Lynch", nameZh: "徐睿旻", roleZh: "成和资本 – 合伙人", bioZh: "· 成和资本合伙人\n· 前远东宏信董事总经理、资产管理部负责人\n· 前第一前海国际资本有限公司首席执行官\n· 曾就职于长城国际、摩根大通、瑞士信贷和美林证券" },
     { nameEn: "Erin Baskett", roleEn: "CFO, CBC Securities",photo: "images/Team/Erin.jpg", bioEn: "· Chief Financial Officer of CBC Securities\n· Former member of FINRA committees\n· Extensive industry experience across various asset classes", nameZh: "Erin Baskett", roleZh: "CBC证券有限公司 – 首席财务官", bioZh: "· CBC证券有限公司首席财务官\n· 曾担任FINRA委员会成员\n· 行业经验丰富，涉及各种资产类别" },
     { nameEn: "Lyle Wang", roleEn: "Vice President, Chenghe Capital", photo: "images/Team/Lyle.jpg", bioEn: "· Vice President at Chenghe Capital\n· Previously worked at China Merchants Bank\n· Master of Finance degree from the University of Hong Kong", nameZh: "王兆海", roleZh: "成和资本 – 副总裁", bioZh: "· 成和资本副总裁\n· 曾就职于招商银行\n· 毕业于香港大学金融硕士" },
-    { nameEn: "Houston Li", roleEn: "Manager, CBC Securities", photo: "images/Team/Houston.jpg", bioEn: "· Manager at CBC Securities\n· Previously worked in private markets fundraising at Campbell Lutyens\n· Experience in the investment banking division at Morgan Stanley\n· Holds a Bachelor's degree in Applied Mathematics and Economics from Brown University", nameZh: "李泽原", roleZh: "CBC证券有限公司 – 经理", bioZh: "· CBC证券有限公司经理\n· 曾于Campbell Lutyens私募市场融资业务和摩根士丹利投行部任职\n· 毕业于布朗大学，获得应用数学与经济学学士学位" },
+    { nameEn: "Houston Li", roleEn: "Associate, CBC Securities", photo: "images/Team/Houston.jpg", bioEn: "· Associate at CBC Securities\n· Previously worked in private markets fundraising at Campbell Lutyens\n· Experience in the investment banking division at Morgan Stanley\n· Holds a Bachelor's degree in Applied Mathematics and Economics from Brown University", nameZh: "李泽原", roleZh: "CBC证券有限公司 – 助理", bioZh: "· CBC证券有限公司助理\n· 曾于Campbell Lutyens私募市场融资业务和摩根士丹利投行部任职\n· 毕业于布朗大学，获得应用数学与经济学学士学位" },
     { nameEn: "Fenglei Fang", roleEn: "Advisory Board Chairman, HH&L Acquisition Co.", photo: "images/Team/Fenglei-Fang.png", bioEn: "· Advisory Board Chairman of HH&L Acquisition Co.\n· Renowned investor with an outstanding long-term track record\n· Founder and Chairman of Hopu Investment\n· Extensive experience in sourcing investment opportunities and structuring and executing transactions\n· Broad and influential network in China's capital markets", nameZh: "方凤雷", roleZh: "HH&L Acquisition Co. - 咨询委员会主席", bioZh: "· HH&L Acquisition Co. 咨询委员会主席\n· 拥有数十年长期出色业绩的知名投资者\n· 厚朴投资创办人兼董事长\n· 在投资机会取得及交易结构设计和执行方面拥有广泛的经验\n· 在中国资本市场拥有广泛的网络和重大的影响力" },
     { nameEn: "Ken Hitchner", roleEn: "Chairman, HH&L Acquisition Co.", photo: "images/Team/Kenneth-W.Hitchner.png", bioEn: "· Chairman of HH&L Acquisition Co.\n· Decades of capital markets and advisory experience across global and Asian financial and technology sectors\n· Former Chairman and CEO of Goldman Sachs Asia Pacific (ex-Japan)\n· Former member of the Goldman Sachs Management Committee", nameZh: "Ken Hitchner", roleZh: "HH&L Acquisition Co. - 董事长", bioZh: "· HH&L Acquisition Co. 董事长\n· 在全球和亚洲的金融和技术领域拥有数十年的资本市场和咨询经验\n· 前高盛亚太区（除日本）董事长兼首席执行官\n· 高盛全球管理委员会成员" },
     { nameEn: "Kwan Sun", roleEn: "Founder, Millburn Advisory", photo: "images/Team/Kwan-Sun.png", bioEn: "· Founder of Millburn Advisory with extensive experience in finance and entrepreneurship\n· Built a broad investment banking network\n· Former Vice Chairman of Nan Fung Group's U.S. operations\n· Previously Managing Director at Morgan Stanley and Deutsche Bank\n· Former Vice President at Merrill Lynch", nameZh: "沈琨", roleZh: "Millburn Advisory – 创始人", bioZh: "· Millburn Advisory 创始人\n· 拥有丰富的金融与创业经验，建立了广泛的投行网络\n· 曾任南丰地产美国公司副董事长\n· 曾任摩根士丹利与德意志银行董事总经理\n· 曾任美林证券副总裁" },
@@ -35,10 +35,6 @@ function getTeamPageHTML() {
             <span class="t-en">Our Team</span>
             <span class="t-zh">我们的团队</span>
         </h1>
-        <p style="color:var(--color-grey); margin-top:15px; font-size:18px;">
-            <span class="t-en">Meet the professionals behind Chenghe Capital</span>
-            <span class="t-zh">认识成和资本背后的专业人士</span>
-        </p>
     </div>
     <div class="team-level-title">
         <span class="t-en">Core Management</span>
@@ -163,8 +159,8 @@ function getTeamPageHTML() {
                 <span class="t-zh">李泽原</span>
             </h3>
             <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
-                <span class="t-en">Manager</span>
-                <span class="t-zh">经理</span>
+                <span class="t-en">Associate</span>
+                <span class="t-zh">助理</span>
             </p>
             <p class="team-company" style="font-size:15px; font-style:italic; font-weight:600; margin-top:6px;">
                 <span class="t-en">CBC Securities</span>

@@ -17,16 +17,12 @@ function getContactPageHTML() {
     return `
     <div class="contact-wrapper">
         <form id="contact-inquiry-form" class="contact-form" action="${formAction}" method="POST">
-            <h2 style="margin-bottom:40px; color:var(--color-dark-blue); font-size:32px;">
-                <span class="t-en">Inquiry Form</span>
-                <span class="t-zh">在线咨询</span>
-            </h2>
             <div id="contact-form-msg" class="contact-form-msg" style="display:none;"></div>
             <div class="form-row"><label><span class="t-en">Name</span><span class="t-zh">姓名</span></label><input type="text" name="name" required></div>
             <div class="form-row"><label><span class="t-en">Email</span><span class="t-zh">邮箱</span></label><input type="email" name="email" required></div>
             <div class="form-row"><label><span class="t-en">Company</span><span class="t-zh">公司</span></label><input type="text" name="company"></div>
             <div class="form-row"><label><span class="t-en">Message</span><span class="t-zh">留言</span></label><textarea name="message" placeholder="Please write your detailed message here..." required></textarea></div>
-            <button type="submit" class="submit-btn"><span class="t-en">Submit Inquiry</span><span class="t-zh">提交咨询</span></button>
+            <button type="submit" class="submit-btn"><span class="t-en">Submit</span><span class="t-zh">提交咨询</span></button>
         </form>
         <div class="contact-info">
             <h2 style="margin-bottom:40px; color:var(--color-dark-blue); font-size:32px;">

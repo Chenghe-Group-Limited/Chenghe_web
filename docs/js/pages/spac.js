@@ -147,7 +147,7 @@ function renderSpacContent(subTab) {
                             <p class="t-zh" style="font-size:14px; color:var(--color-grey); line-height:1.7; margin:0;">该 SPAC 吸引 3 倍顶级养老金计划和基金超额认购，通过联合募资筹集资金逾 230 万美元，于 2025 年 9 月在纳斯达克全球市场成功上市。该 SPAC 目前正在寻找合作标的。</p>
                             <p style="margin-top:14px;"><span class="t-en" style="font-size:14px; color:var(--color-gold); font-weight:600;">Learn more about Chenghe Acquisition III Co. &rarr;</span><span class="t-zh" style="font-size:14px; color:var(--color-gold); font-weight:600;">了解更多关于 Chenghe Acquisition III Co. &rarr;</span></p>
                         </a>
-                    </div>
+                </div>
                 </section>
             </div>`;
     } else {
@@ -348,18 +348,18 @@ function renderSpacContent(subTab) {
                     </div>
                 </div>`;
             } else {
-                bodyHtml = `
-                <div class="spac-project-layout" style="display:flex; gap:60px;">
-                    <div class="spac-project-text" style="flex:1;">
-                        <h3 style="margin-bottom:20px; color:var(--color-dark-blue);">
-                            <span class="t-en">About ${currentSpacProject}</span>
-                            <span class="t-zh">关于 ${currentSpacProject}</span>
-                        </h3>
-                        <p class="t-en" style="line-height:1.8; color:var(--color-grey); font-size:15px;">Detailed overview for ${currentSpacProject}. Investment thesis, target size, and strategic vision.</p>
-                        <p class="t-zh" style="line-height:1.8; color:var(--color-grey); font-size:15px;">${currentSpacProject} 的详细概览。这里将介绍具体的投资主题、目标规模和战略愿景。</p>
-                    </div>
-                    <div class="spac-project-image" style="width:350px; height:250px; background:var(--color-teal-muted); border-radius:4px; flex-shrink:0;">Project Image</div>
-                </div>`;
+            bodyHtml = `
+            <div class="spac-project-layout" style="display:flex; gap:60px;">
+                <div class="spac-project-text" style="flex:1;">
+                    <h3 style="margin-bottom:20px; color:var(--color-dark-blue);">
+                        <span class="t-en">About ${currentSpacProject}</span>
+                        <span class="t-zh">关于 ${currentSpacProject}</span>
+                    </h3>
+                    <p class="t-en" style="line-height:1.8; color:var(--color-grey); font-size:15px;">Detailed overview for ${currentSpacProject}. Investment thesis, target size, and strategic vision.</p>
+                    <p class="t-zh" style="line-height:1.8; color:var(--color-grey); font-size:15px;">${currentSpacProject} 的详细概览。这里将介绍具体的投资主题、目标规模和战略愿景。</p>
+                </div>
+                <div class="spac-project-image" style="width:350px; height:250px; background:var(--color-teal-muted); border-radius:4px; flex-shrink:0;">Project Image</div>
+            </div>`;
             }
         } else if (subTab === 'Management') {
             // HHL / Chenghe / Chenghe I / Chenghe II / Chenghe III 使用与 team.js 数据一致的管理团队（但弹窗不再展示公司行），其它项目保持占位布局
@@ -587,35 +587,35 @@ function renderSpacContent(subTab) {
                 </div>`;
             } else {
                 // 其它 SPAC 项目暂时使用占位管理团队
-                let chairmanName = "Richard Li";
-                let ceoName = "Ken Hitchner";
-                if (currentSpacProject === 'Chenghe') { chairmanName = "Dr. Shibin Wang"; ceoName = "Richard Li"; }
-                if (currentSpacProject === 'Chenghe I') { chairmanName = "Yong Zhao"; ceoName = "Tong Zhou"; }
+            let chairmanName = "Richard Li";
+            let ceoName = "Ken Hitchner";
+            if (currentSpacProject === 'Chenghe') { chairmanName = "Dr. Shibin Wang"; ceoName = "Richard Li"; }
+            if (currentSpacProject === 'Chenghe I') { chairmanName = "Yong Zhao"; ceoName = "Tong Zhou"; }
 
-                bodyHtml = `
-                <div class="team-grid" style="justify-content:flex-start;">
-                    <div class="team-card" onclick="openTeamModal('${chairmanName}', 'Chairman', 'Detailed bio for ${chairmanName}...')">
-                        <div class="team-photo" style="height:250px;"></div>
-                        <h3>${chairmanName}</h3>
-                        <p style="color:var(--color-gold); font-weight:bold;">
-                            <span class="t-en">Chairman</span><span class="t-zh">董事长</span>
-                        </p>
-                    </div>
-                    <div class="team-card" onclick="openTeamModal('${ceoName}', 'CEO', 'Detailed bio for ${ceoName}...')">
-                        <div class="team-photo" style="height:250px;"></div>
-                        <h3>${ceoName}</h3>
-                        <p style="color:var(--color-gold); font-weight:bold;">
-                            <span class="t-en">CEO</span><span class="t-zh">首席执行官</span>
-                        </p>
-                    </div>
-                    <div class="team-card" onclick="openTeamModal('CFO Name', 'CFO', 'CFO bio...')">
-                        <div class="team-photo" style="height:250px;"></div>
-                        <h3>CFO Name</h3>
-                        <p style="color:var(--color-gold); font-weight:bold;">
-                            <span class="t-en">CFO</span><span class="t-zh">首席财务官</span>
-                        </p>
-                    </div>
-                </div>`;
+            bodyHtml = `
+            <div class="team-grid" style="justify-content:flex-start;">
+                <div class="team-card" onclick="openTeamModal('${chairmanName}', 'Chairman', 'Detailed bio for ${chairmanName}...')">
+                    <div class="team-photo" style="height:250px;"></div>
+                    <h3>${chairmanName}</h3>
+                    <p style="color:var(--color-gold); font-weight:bold;">
+                        <span class="t-en">Chairman</span><span class="t-zh">董事长</span>
+                    </p>
+                </div>
+                <div class="team-card" onclick="openTeamModal('${ceoName}', 'CEO', 'Detailed bio for ${ceoName}...')">
+                    <div class="team-photo" style="height:250px;"></div>
+                    <h3>${ceoName}</h3>
+                    <p style="color:var(--color-gold); font-weight:bold;">
+                        <span class="t-en">CEO</span><span class="t-zh">首席执行官</span>
+                    </p>
+                </div>
+                <div class="team-card" onclick="openTeamModal('CFO Name', 'CFO', 'CFO bio...')">
+                    <div class="team-photo" style="height:250px;"></div>
+                    <h3>CFO Name</h3>
+                    <p style="color:var(--color-gold); font-weight:bold;">
+                        <span class="t-en">CFO</span><span class="t-zh">首席财务官</span>
+                    </p>
+                </div>
+            </div>`;
             }
         } else if (subTab === 'News') {
             bodyHtml = `

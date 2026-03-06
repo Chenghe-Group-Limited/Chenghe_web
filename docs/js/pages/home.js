@@ -28,31 +28,31 @@ function getHomePageHTML() {
 
         <div class="hero-overlay-box">
             <h2>
-                <span class="t-en">Vision and Strategy</span>
-                <span class="t-zh">愿景与策略</span>
+                <span class="t-en">Principal Investing<br>Capital Markets Advisory<br>SPAC</span>
+                <span class="t-zh">私募股权投资<br>资本市场顾问<br>SPAC</span>
             </h2>
             <p>
-                <span class="t-en">Connecting Global Capital with Visionary Enterprises. We specialize in identifying high-growth opportunities and bridging the gap between Asian assets and international markets.</span>
-                <span class="t-zh">连接全球资本与具有远见卓识的企业。我们专注于发掘高增长机会，并致力于搭建亚洲资产与国际市场之间的桥梁。</span>
+                <span class="t-en">Connecting global capital markets with visionary Asian enterprises</span>
+                <span class="t-zh">连接全球资本市场与具有远见卓识的亚洲企业</span>
             </p>
         </div>
     </div>
 
     <div class="business-preview">
         <h2>
-            <span class="t-en">Chenghe's Capabilities</span>
+            <span class="t-en">Our Expertise</span>
             <span class="t-zh">成和业务</span>
         </h2>
 
         <div class="biz-container">
             <div class="biz-box">
                 <h3>
-                    <span class="t-en">SPAC and De-SPAC Business</span>
-                    <span class="t-zh">SPAC与De-SPAC业务</span>
+                    <span class="t-en">SPAC Sponsor</span>
+                    <span class="t-zh">SPAC 发起人</span>
                 </h3>
                 <p class="biz-desc">
-                    <span class="t-en">By initiating mature SPACs, we build an efficient bridge to international capital markets, providing a faster and more flexible listing path for outstanding enterprises.</span>
-                    <span class="t-zh">我们通过发起成熟的SPAC，构建一座高效直达国际资本市场的桥梁，为契合的杰出企业提供一条更快、更灵活的上市路径。</span>
+                    <span class="t-en">Chenghe is a leading player in the Asian SPAC market, with over $4.3 billion in transaction value closed.</span>
+                    <span class="t-zh">成和是亚洲 SPAC 市场的领先参与者，已累计完成逾 43 亿美元的交易总额。</span>
                 </p>
                 <div style="margin-top: 0;">
                     <a class="biz-link" onclick="switchSpacMainTab('Overview')">
@@ -64,12 +64,12 @@ function getHomePageHTML() {
 
             <div class="biz-box">
                 <h3>
-                    <span class="t-en">Financial Advisory and Investment Banking</span>
-                    <span class="t-zh">财务顾问与投资银行</span>
+                    <span class="t-en">Advisory Services</span>
+                    <span class="t-zh">顾问服务</span>
                 </h3>
                 <p class="biz-desc">
-                    <span class="t-en">Our professional team focuses on planning and executing financing and listing paths for enterprises, providing end-to-end guidance from launch to IPO.</span>
-                    <span class="t-zh">我们境外的专业团队专注于为企业规划并执行融资与上市路径，从启动到上市全程护航。</span>
+                    <span class="t-en">We partner with enterprises positioned for international growth, providing end-to-end guidance from securing financing and navigating restructuring to achieving a public listing. </span>
+                    <span class="t-zh">我们与有国际增长潜力的企业合作，从获得融资到重构再到上市，提供全方位的指导。</span>
                 </p>
                 <div style="margin-top: 0;">
                     <a class="biz-link" onclick="switchFaTab('HK')">

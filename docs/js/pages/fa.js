@@ -43,24 +43,29 @@ function getFaPageHTML() {
                 <span class="t-en">HK - Chenghe Capital</span>
                 <span class="t-zh">香港 - 成和资本</span>
             </h1>
-            <div class="hk-split-block">
+            <div class="hk-grid-wrap">
                 <div class="hk-left-img"><img src="images/FA_HK_Licence.png" alt="HK SFC Licence"></div>
                 <div class="hk-right-text">
                     <h3 style="color:var(--color-dark-blue); margin-bottom:15px;">
                         <span class="t-en">Regulatory Information</span>
                         <span class="t-zh">合规信息</span>
                     </h3>
-                    <p class="t-en">Chenghe Capital Management Limited provides professional asset management and advisory services in Hong Kong.</p>
-                    <p class="t-zh">成和资本管理有限公司在香港提供专业的资产管理和顾问服务。</p>
-                    <br>
-                    <div class="license-box">
-                        <p><strong><span class="t-en">Licensed by SFC Hong Kong:</span><span class="t-zh">香港证监会持牌机构：</span></strong></p>
-                        <ul style="margin-top:10px; list-style:none; padding-left:0;">
-                            <li style="margin-bottom:5px;"> · <span class="t-en">Type 1: Dealing in Securities</span><span class="t-zh">第一类：证券交易</span></li>
-                            <li style="margin-bottom:5px;"> · <span class="t-en">Type 4: Advising on Securities</span><span class="t-zh">第四类：就证券提供意见</span></li>
-                            <li style="margin-bottom:5px;"> · <span class="t-en">Type 9: Asset Management</span><span class="t-zh">第九类：资产管理</span></li>
-                        </ul>
-                    </div>
+                    <p class="t-en" style="margin-bottom:14px;">Chenghe Capital is a subsidiary of Chenghe Group and holds Type 1 (Dealing in Securities), Type 4 (Advising on Securities), and Type 9 (Asset Management) licences issued by the Hong Kong Securities and Futures Commission (SFC). The company has built an extensive network of strategic partnerships globally and maintains close strategic cooperation with a number of top-tier US investment banks.</p>
+                    <p class="t-zh" style="margin-bottom:14px;">成和资本是成和集团的子公司，持有香港证监会（SFC）颁发的 1 号（证券交易）、4 号（就证券提供意见）及 9 号（资产管理）牌照。公司在全球建立了广泛的战略合作网络，并与美国多家顶级投资银行形成了紧密的战略合作关系。</p>
+                    <p class="t-en" style="margin-bottom:20px;">Chenghe Capital provides a range of financial services to clients, including marketing, underwriting and placement of securities, as well as investment advisory and discretionary portfolio management services. With comprehensive solutions, Chenghe Capital is committed to being a trusted partner for corporate financing needs.</p>
+                    <p class="t-zh" style="margin-bottom:20px;">成和资本为客户提供一系列的金融服务，包括证券的营销、承销与配售，以及投资顾问和全权委托投资组合管理服务。成和资本凭借全面的解决方案，致力于成为企业融资需求可信赖的合作伙伴。</p>
+                </div>
+                <div class="hk-license-block">
+                <p class="t-en" style="margin-bottom:12px; font-size:15px;">SFC-issued financial licences are key enablers for business expansion. Type 1, Type 4 and Type 9 are three core licences, each corresponding to different business functions:</p>
+                <p class="t-zh" style="margin-bottom:12px; font-size:15px;">香港证监会（SFC）颁发的金融牌照是拓展业务的关键通行证，其中 1 号、4 号和 9 号牌照是三大核心金融牌照，分别对应不同的业务功能：</p>
+                <ul class="license-points" style="list-style:none; padding-left:0; margin:0;">
+                    <li class="t-en" style="margin-bottom:10px; font-size:14px; padding-left:16px; position:relative;"><span class="license-point-dot">·</span> <strong>Type 1 (Dealing in Securities):</strong> Enables the firm to provide clients with buying and selling of securities such as stocks and bonds, brokerage services, and to participate in placement and underwriting of securities.</li>
+                    <li class="t-zh" style="margin-bottom:10px; font-size:14px; padding-left:16px; position:relative;"><span class="license-point-dot">·</span> <strong>1 号牌照（证券交易）：</strong>允许机构为客户提供股票、债券等证券的买卖与经纪服务，参与证券配售和包销业务。</li>
+                    <li class="t-en" style="margin-bottom:10px; font-size:14px; padding-left:16px; position:relative;"><span class="license-point-dot">·</span> <strong>Type 4 (Advising on Securities):</strong> Also known as the &quot;Hong Kong FA licence&quot;, it allows the firm to provide investment advice on securities and publish research reports to clients.</li>
+                    <li class="t-zh" style="margin-bottom:10px; font-size:14px; padding-left:16px; position:relative;"><span class="license-point-dot">·</span> <strong>4 号牌照（就证券提供意见）：</strong>又称为「香港 FA 牌照」，允许机构向客户提供证券投资建议和发布研究报告。</li>
+                    <li class="t-en" style="margin-bottom:0; font-size:14px; padding-left:16px; position:relative;"><span class="license-point-dot">·</span> <strong>Type 9 (Asset Management):</strong> Allows the firm to manage client portfolios of securities or futures and funds on a discretionary basis.</li>
+                    <li class="t-zh" style="margin-bottom:0; font-size:14px; padding-left:16px; position:relative;"><span class="license-point-dot">·</span> <strong>9 号牌照（资产管理）：</strong>允许以全权委托形式管理客户证券或期货投资组合及基金。</li>
+                </ul>
                 </div>
             </div>
         </div>
