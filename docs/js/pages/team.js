@@ -44,7 +44,7 @@ function getTeamPageHTML() {
         <span class="t-en">Core Management</span>
         <span class="t-zh">核心管理层</span>
     </div>
-    <div class="team-grid">
+    <div class="team-grid team-grid--cols-3">
         <div class="team-card" onclick="openTeamModalByIndex(0)">
             <div class="team-photo"><img src="images/Team/Richard.png" alt="Richard Li / 李琦"></div>
             <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">

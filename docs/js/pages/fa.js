@@ -44,7 +44,7 @@ function getFaPageHTML() {
                 <span class="t-zh">香港 - 成和资本</span>
             </h1>
             <div class="hk-split-block">
-                <div class="hk-left-img">Vertical Image</div>
+                <div class="hk-left-img"><img src="images/FA_HK_Licence.png" alt="HK SFC Licence"></div>
                 <div class="hk-right-text">
                     <h3 style="color:var(--color-dark-blue); margin-bottom:15px;">
                         <span class="t-en">Regulatory Information</span>
@@ -76,7 +76,7 @@ function getFaPageHTML() {
                 <h3 style="color:var(--color-dark-blue); margin-bottom:15px;">Overview</h3>
                 <p class="t-en" style="font-size:16px; line-height:1.8;">CBC Securities provides strategic advisory and capital raising services in the United States market. We specialize in connecting Asian issuers with US institutional investors, facilitating cross-border transactions with efficiency and expertise.</p>
                 <p class="t-zh" style="font-size:16px; line-height:1.8;">CBC Securities 在美国市场提供战略咨询和融资服务。我们专注于将亚洲发行人与美国机构投资者联系起来，以高效和专业的服务促成跨境交易。</p>
-                <a href="https://brokercheck.finra.org/" target="_blank" class="broker-check-btn">
+                <a href="https://brokercheck.finra.org/firm/summary/46153" target="_blank" class="broker-check-btn">
                     Check us on FINRA BrokerCheck &rarr;
                 </a>
             </div>

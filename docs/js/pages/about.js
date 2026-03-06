@@ -50,9 +50,47 @@ function getAboutPageHTML() {
                     <p>成和集团是一家国际性金融公司，由其旗下在全球各地设立的分支机构开展业务。我们的业务覆盖财务顾问、私募股权融资顾问、并购重组、资产管理、证券承销等，致力于发掘、协助并陪伴行业内优秀企业共同成长，助力其成功登陆国际资本市场，并积极参与公司未来在国际资本市场舞台的构建与价值实现。</p>
                 </div>
                 <div class="about-subsidiary-links">
-                    <a href="javascript:void(0)" onclick="switchFaTab('HK')" class="about-subsidiary-link"><span class="t-en">HK Subsidiary – Chenghe Capital</span><span class="t-zh">香港子公司 – 成和资本</span></a>
-                    <a href="javascript:void(0)" onclick="switchFaTab('US')" class="about-subsidiary-link"><span class="t-en">US Subsidiary – CBC Securities</span><span class="t-zh">美国子公司 – CBC证券</span></a>
-                    <a href="javascript:void(0)" onclick="switchSpacMainTab('Overview')" class="about-subsidiary-link"><span class="t-en">Cayman Subsidiary (SPAC)</span><span class="t-zh">开曼子公司(SPAC)</span></a>
+                    <a href="javascript:void(0)" onclick="switchPage('fa'); setTimeout(function(){ switchFaTab('HK'); }, 100);" class="about-subsidiary-link"><span class="t-en">HK Subsidiary – Chenghe Capital</span><span class="t-zh">香港子公司 – 成和资本</span></a>
+                    <a href="javascript:void(0)" onclick="switchPage('fa'); setTimeout(function(){ switchFaTab('US'); }, 100);" class="about-subsidiary-link"><span class="t-en">US Subsidiary – CBC Securities</span><span class="t-zh">美国子公司 – CBC证券</span></a>
+                    <a href="javascript:void(0)" onclick="switchPage('spac'); setTimeout(function(){ switchSpacMainTab('Overview'); }, 100);" class="about-subsidiary-link"><span class="t-en">Cayman Subsidiary (SPAC)</span><span class="t-zh">开曼子公司(SPAC)</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-structure-section">
+        <div class="about-structure-inner">
+            <h2 class="about-structure-title">
+                <span class="t-en">Chenghe Group Overview</span>
+                <span class="t-zh">成和集团概览</span>
+            </h2>
+            <div class="about-structure-chart">
+                <div class="about-structure-center">
+                    <span class="t-en">Chenghe Group</span>
+                    <span class="t-zh">成和集团</span>
+                </div>
+                <div class="about-structure-connector" aria-hidden="true"></div>
+                <div class="about-structure-nodes">
+                    <a href="javascript:void(0)" onclick="switchPage('fa'); setTimeout(function(){ switchFaTab('HK'); }, 100);" class="about-structure-node about-structure-node--link">
+                        <span class="about-structure-node-name"><span class="t-en">Chenghe Capital</span><span class="t-zh">成和资本</span></span>
+                        <span class="about-structure-node-desc t-en">HK SFC licensed (Type 1, 4, 9)</span>
+                        <span class="about-structure-node-desc t-zh">香港证监会持牌（1、4、9号）</span>
+                    </a>
+                    <a href="javascript:void(0)" onclick="switchPage('fa'); setTimeout(function(){ switchFaTab('US'); }, 100);" class="about-structure-node about-structure-node--link">
+                        <span class="about-structure-node-name"><span class="t-en">CBC Securities</span><span class="t-zh">CBC 证券</span></span>
+                        <span class="about-structure-node-desc t-en">US SEC registered broker-dealer</span>
+                        <span class="about-structure-node-desc t-zh">美国证监会注册经纪商</span>
+                    </a>
+                    <div class="about-structure-node">
+                        <span class="about-structure-node-name"><span class="t-en">Chenghe Investment</span><span class="t-zh">成和投资</span></span>
+                        <span class="about-structure-node-desc t-en">Investment advisory, global presence</span>
+                        <span class="about-structure-node-desc t-zh">投资顾问，全球布局</span>
+                    </div>
+                    <a href="javascript:void(0)" onclick="switchPage('spac'); setTimeout(function(){ switchSpacMainTab('Overview'); }, 100);" class="about-structure-node about-structure-node--link">
+                        <span class="about-structure-node-name"><span class="t-en">SPAC Business</span><span class="t-zh">SPAC 业务</span></span>
+                        <span class="about-structure-node-desc t-en">US-listed SPACs</span>
+                        <span class="about-structure-node-desc t-zh">美国上市 SPAC</span>
+                    </a>
                 </div>
             </div>
         </div>

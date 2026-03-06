@@ -89,12 +89,66 @@ function renderSpacContent(subTab) {
     
     if (currentSpacProject === 'Overview') {
         bodyHtml = `
-            <div class="spac-overview-layout" style="display:flex; gap:60px; align-items:center;">
-                <div class="spac-text-content" style="flex:1;">
-                    <p class="t-en" style="font-size:20px; color:#555; line-height:1.8;">Our SPAC strategy focuses on high-growth technology sectors in Asia. We leverage our deep network to identify proprietary deal flow and create value for shareholders through disciplined execution.</p>
-                    <p class="t-zh" style="font-size:20px; color:#555; line-height:1.8;">我们的 SPAC 战略专注于亚洲的高增长科技领域。我们利用深厚的网络资源发掘独家交易机会，并通过严谨的执行为股东创造价值。</p>
-                </div>
-                <div class="spac-image-content" style="width:500px; height:350px; background:var(--color-accent-blue); display:flex; align-items:center; justify-content:center; color:white; font-size:24px;">Main Image</div>
+            <div class="spac-overview-page" style="max-width:960px; margin:0 auto; padding:0 24px 48px;">
+                <section class="spac-intro-section" style="margin-bottom:56px;">
+                    <h2 class="spac-overview-h2" style="font-size:26px; color:var(--color-dark-blue); margin-bottom:20px; padding-bottom:12px; border-bottom:2px solid var(--color-gold);">
+                        <span class="t-en">What is SPAC</span>
+                        <span class="t-zh">什么是 SPAC</span>
+                    </h2>
+                    <p class="t-en" style="font-size:16px; color:var(--color-grey); line-height:1.85; margin-bottom:16px;">SPAC stands for Special Purpose Acquisition Company (also known as blank-check company). It is a way to help small and mid-sized companies go public quickly. Compared with traditional IPOs, SPAC listings offer higher efficiency, lower fees, more flexible financing, greater media exposure and stronger deal certainty.</p>
+                    <p class="t-zh" style="font-size:16px; color:var(--color-grey); line-height:1.85; margin-bottom:16px;">SPAC 全称 Special Purpose Acquisition Company，中文名称为空头支票公司或特殊目的收购公司，是一种帮助中小企业快速上市的方式。相较于传统 IPO，SPAC 上市具有更高的效率、更低的费率、更灵活的融资安排、更高的媒体曝光率以及更强的确定性。</p>
+                    <p class="t-en" style="font-size:15px; color:var(--color-dark-blue); font-weight:600; margin:24px 0 12px;">Listing via SPAC generally follows four stages:</p>
+                    <p class="t-zh" style="font-size:15px; color:var(--color-dark-blue); font-weight:600; margin:24px 0 12px;">拟上市企业借由 SPAC 模式上市一般分为四个阶段：</p>
+                    <ol class="spac-stages-list" style="list-style:none; padding-left:0; margin:0 0 20px;">
+                        <li style="display:flex; gap:12px; margin-bottom:14px; font-size:15px; color:var(--color-grey); line-height:1.7;"><span style="flex-shrink:0; width:28px; height:28px; background:var(--color-gold); color:white; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-weight:700; font-size:14px;">1</span><span class="t-en">Formation: Sponsors raise capital and form a cash-only shell company (the SPAC).</span><span class="t-zh">设立 SPAC：专业发起人募集资金，创立仅有现金、无实际业务的公司（SPAC）。</span></li>
+                        <li style="display:flex; gap:12px; margin-bottom:14px; font-size:15px; color:var(--color-grey); line-height:1.7;"><span style="flex-shrink:0; width:28px; height:28px; background:var(--color-gold); color:white; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-weight:700; font-size:14px;">2</span><span class="t-en">SPAC IPO: The SPAC completes its IPO and places proceeds in a trust account.</span><span class="t-zh">SPAC 上市：SPAC 公司完成 IPO 上市，将募集的资金存入专门的信托账户。</span></li>
+                        <li style="display:flex; gap:12px; margin-bottom:14px; font-size:15px; color:var(--color-grey); line-height:1.7;"><span style="flex-shrink:0; width:28px; height:28px; background:var(--color-gold); color:white; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-weight:700; font-size:14px;">3</span><span class="t-en">Target search: The SPAC identifies and evaluates growth companies as merger targets.</span><span class="t-zh">寻找标的：SPAC 公司寻找并筛选具有成长潜力的非上市公司作为并购标的。</span></li>
+                        <li style="display:flex; gap:12px; margin-bottom:14px; font-size:15px; color:var(--color-grey); line-height:1.7;"><span style="flex-shrink:0; width:28px; height:28px; background:var(--color-gold); color:white; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-weight:700; font-size:14px;">4</span><span class="t-en">De-SPAC: The SPAC merges with the target in a reverse merger; the target becomes the listed company and the ticker and name change.</span><span class="t-zh">完成并购（De-SPAC）：SPAC 与标的公司达成合并协议，完成反向并购，标的公司借此实现上市，取代 SPAC 成为新的上市公司主体，变更股票代码及公司名称。</span></li>
+                    </ol>
+                    <p class="t-en" style="font-size:15px; color:var(--color-grey); line-height:1.8;">Compared with traditional reverse mergers, the SPAC structure is a clearer financial tool: the SPAC is a pure cash shell with no debt or legacy business risk, a focused and professional shareholder base, and high capital security, making it a more transparent and efficient path to listing.</p>
+                    <p class="t-zh" style="font-size:15px; color:var(--color-grey); line-height:1.8;">与传统的反向并购相比，SPAC 模式具备更强的金融工具属性，其核心优势在于资产结构清晰。SPAC 本身为纯现金壳公司，无负债、无历史业务风险，股东结构集中且专业，资金安全性高，风险更加可控，使得 SPAC 成为更透明、更高效的上市路径选择。</p>
+                </section>
+                <section class="chenghe-spac-section" style="margin-bottom:40px;">
+                    <h2 class="spac-overview-h2" style="font-size:26px; color:var(--color-dark-blue); margin-bottom:20px; padding-bottom:12px; border-bottom:2px solid var(--color-gold);">
+                        <span class="t-en">Chenghe SPAC</span>
+                        <span class="t-zh">成和 SPAC</span>
+                    </h2>
+                    <p class="t-en" style="font-size:16px; color:var(--color-grey); line-height:1.85; margin-bottom:32px;">Chenghe has a leading SPAC team in Asia and has successfully sponsored multiple U.S.-listed SPACs. As of March 2026, one SPAC remains in search of a high-potential merger target. Overview of each SPAC:</p>
+                    <p class="t-zh" style="font-size:16px; color:var(--color-grey); line-height:1.85; margin-bottom:32px;">成和拥有亚洲一流的 SPAC 团队，过去几年已成功在美国发行多个 SPAC。截至 2026 年 3 月，仍有 1 支在寻找具有高潜力合并标的。各个 SPAC 情况概览如下：</p>
+                    <div class="spac-overview-cards" style="display:flex; flex-direction:column; gap:24px;">
+                        <a href="javascript:void(0)" onclick="switchSpacMainTab('HHL')" class="spac-overview-card" style="display:block; background:#fff; border-radius:12px; padding:24px 28px; box-shadow:0 4px 20px rgba(45,78,108,0.08); border-left:4px solid var(--color-gold); text-decoration:none; color:inherit; transition:box-shadow 0.25s, transform 0.2s;">
+                            <div style="font-weight:700; font-size:18px; color:var(--color-dark-blue); margin-bottom:8px;">HH&L Acquisition Co.</div>
+                            <div style="font-size:14px; color:var(--color-gold); font-weight:600; margin-bottom:12px;"><span class="t-en">NYSE: HHLA · IPO size US$414 million</span><span class="t-zh">NYSE: HHLA，IPO 规模 4.14 亿美元</span></div>
+                            <p class="t-en" style="font-size:14px; color:var(--color-grey); line-height:1.7; margin:0;">One of the largest and most successful SPACs in Asia, focused on biotech and healthcare; attracted over 10x oversubscription from the world’s largest funds and listed on the NYSE in February 2021.</p>
+                            <p class="t-zh" style="font-size:14px; color:var(--color-grey); line-height:1.7; margin:0;">亚洲迄今发行最大、最为成功的 SPAC 之一，专注生物医疗类，共吸引 10 多倍全球最大型基金的超额认购，于 2021 年 2 月在纽约交易所成功上市。</p>
+                        </a>
+                        <a href="javascript:void(0)" onclick="switchSpacMainTab('Chenghe')" class="spac-overview-card" style="display:block; background:#fff; border-radius:12px; padding:24px 28px; box-shadow:0 4px 20px rgba(45,78,108,0.08); border-left:4px solid var(--color-gold); text-decoration:none; color:inherit; transition:box-shadow 0.25s, transform 0.2s;">
+                            <div style="font-weight:700; font-size:18px; color:var(--color-dark-blue); margin-bottom:8px;">Chenghe Acquisition Co.</div>
+                            <div style="font-size:14px; color:var(--color-gold); font-weight:600; margin-bottom:12px;"><span class="t-en">Nasdaq: CHEA · IPO size US$115 million</span><span class="t-zh">Nasdaq: CHEA，IPO 规模 1.15 亿美元</span></div>
+                            <p class="t-en" style="font-size:14px; color:var(--color-grey); line-height:1.7; margin:0;">Attracted over 4x subscription from top global investors and listed on Nasdaq in April 2022. Business combination with Taiwan Color Optoelectronics Co., Ltd completed on 15 February 2024.</p>
+                            <p class="t-zh" style="font-size:14px; color:var(--color-grey); line-height:1.7; margin:0;">该 SPAC 共吸引超过 4 倍全球顶级投资人的认购，于 2022 年 4 月在纳斯达克交易所成功上市。2024 年 2 月 15 日，与台湾彩光科技股份有限公司完成并购上市。</p>
+                        </a>
+                        <a href="javascript:void(0)" onclick="switchSpacMainTab('Chenghe I')" class="spac-overview-card" style="display:block; background:#fff; border-radius:12px; padding:24px 28px; box-shadow:0 4px 20px rgba(45,78,108,0.08); border-left:4px solid var(--color-gold); text-decoration:none; color:inherit; transition:box-shadow 0.25s, transform 0.2s;">
+                            <div style="font-weight:700; font-size:18px; color:var(--color-dark-blue); margin-bottom:8px;">Chenghe Acquisition I Co.</div>
+                            <div style="font-size:14px; color:var(--color-gold); font-weight:600; margin-bottom:12px;"><span class="t-en">Nasdaq: LATG · IPO size US$130 million</span><span class="t-zh">Nasdaq: LATG，IPO 规模 1.3 亿美元</span></div>
+                            <p class="t-en" style="font-size:14px; color:var(--color-grey); line-height:1.7; margin:0;">Formerly LatAmGrowth SPAC; Chenghe completed the acquisition and assumed control in October 2023, renaming the SPAC—setting a precedent for an Asian sponsor team acquiring a U.S.-listed SPAC. Business combination with Chikun Technology completed on 15 January 2025.</p>
+                            <p class="t-zh" style="font-size:14px; color:var(--color-grey); line-height:1.7; margin:0;">该 SPAC 原名 LatAmGrowth SPAC，成和于 2023 年 10 月与其完成股权收购交割，接管控制权并更名，开创了亚洲创始人团队收购美国主板 SPAC 先例。2025 年 1 月 15 日，与启坤科技股份有限公司完成并购上市。</p>
+                        </a>
+                        <a href="javascript:void(0)" onclick="switchSpacMainTab('Chenghe II')" class="spac-overview-card" style="display:block; background:#fff; border-radius:12px; padding:24px 28px; box-shadow:0 4px 20px rgba(45,78,108,0.08); border-left:4px solid var(--color-gold); text-decoration:none; color:inherit; transition:box-shadow 0.25s, transform 0.2s;">
+                            <div style="font-weight:700; font-size:18px; color:var(--color-dark-blue); margin-bottom:8px;">Chenghe Acquisition II Co.</div>
+                            <div style="font-size:14px; color:var(--color-gold); font-weight:600; margin-bottom:12px;"><span class="t-en">NYSE: CHEB · IPO size US$86.25 million</span><span class="t-zh">NYSE: CHEB，IPO 规模 8,625 万美元</span></div>
+                            <p class="t-en" style="font-size:14px; color:var(--color-grey); line-height:1.7; margin:0;">Attracted multiple oversubscription and listed on the NYSE in June 2024. Business combination with Polibeli Group Ltd completed on 7 August 2025.</p>
+                            <p class="t-zh" style="font-size:14px; color:var(--color-grey); line-height:1.7; margin:0;">该 SPAC 吸引多倍超额认购，于 2024 年 6 月在纽约交易所成功上市。2025 年 8 月 7 日，与 Polibeli Group Ltd 完成并购上市。</p>
+                        </a>
+                        <a href="javascript:void(0)" onclick="switchSpacMainTab('Chenghe III')" class="spac-overview-card" style="display:block; background:#fff; border-radius:12px; padding:24px 28px; box-shadow:0 4px 20px rgba(45,78,108,0.08); border-left:4px solid var(--color-gold); text-decoration:none; color:inherit; transition:box-shadow 0.25s, transform 0.2s;">
+                            <div style="font-weight:700; font-size:18px; color:var(--color-dark-blue); margin-bottom:8px;">Chenghe Acquisition III Co.</div>
+                            <div style="font-size:14px; color:var(--color-gold); font-weight:600; margin-bottom:12px;"><span class="t-en">Nasdaq: CHECU · IPO size US$126.5 million</span><span class="t-zh">Nasdaq: CHECU，IPO 规模 1.265 亿美元</span></div>
+                            <p class="t-en" style="font-size:14px; color:var(--color-grey); line-height:1.7; margin:0;">Attracted 3x oversubscription from top pension plans and funds; raised over US$2.3 million through the concurrent offering; listed on Nasdaq Global Market in September 2025. This SPAC is currently seeking a merger target.</p>
+                            <p class="t-zh" style="font-size:14px; color:var(--color-grey); line-height:1.7; margin:0;">该 SPAC 吸引 3 倍顶级养老金计划和基金超额认购，通过联合募资筹集资金逾 230 万美元，于 2025 年 9 月在纳斯达克全球市场成功上市。该 SPAC 目前正在寻找合作标的。</p>
+                            <p style="margin-top:14px;"><span class="t-en" style="font-size:14px; color:var(--color-gold); font-weight:600;">Learn more about Chenghe Acquisition III Co. &rarr;</span><span class="t-zh" style="font-size:14px; color:var(--color-gold); font-weight:600;">了解更多关于 Chenghe Acquisition III Co. &rarr;</span></p>
+                        </a>
+                    </div>
+                </section>
             </div>`;
     } else {
         if (subTab === 'Overview') {
