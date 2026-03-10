@@ -29,7 +29,7 @@ body {
     padding-bottom: env(safe-area-inset-bottom);
 }
 
-/* --- 双语切换的核心 CSS --- */
+/* 双语切换的核心 CSS --- */
 body.lang-en .t-zh { display: none !important; }
 body.lang-zh .t-en { display: none !important; }
 
@@ -773,8 +773,8 @@ footer p { font-size: 14px; letter-spacing: 1px; color: var(--color-gold); }
     .about-structure-section { padding: 50px 20px 60px; }
     .about-structure-nodes { grid-template-columns: 1fr; }
     .about-structure-title { font-size: 24px; margin-bottom: 28px; }
-    .track-record-section { padding: 60px 20px; }
-    .record-title { font-size: 28px; }
+    .track-record-section { padding: 50px 15px; }
+    .record-title { font-size: 24px; margin-bottom: 40px; }
     .news-item-horizontal { flex-direction: column; gap: 20px; }
     .news-img { width: 100%; height: 200px; }
     
@@ -874,15 +874,15 @@ footer p { font-size: 14px; letter-spacing: 1px; color: var(--color-gold); }
     .hero-news-box p { font-size: 13px; line-height: 1.6; }
     
     /* 业务预览 */
-    .business-preview { padding: 50px 0; }
+    .business-preview { padding-bottom: 60px; }
     .business-preview h2 { font-size: 24px; margin-bottom: 30px; }
     .biz-container { padding: 0 15px; gap: 25px; }
     .biz-box { padding: 30px 20px; }
     .biz-box h3 { font-size: 20px; }
-    .biz-desc { font-size: 14px; }
+    .biz-desc { font-size: 14px; line-height: 1.7; }
     
     /* 新闻区域 */
-    .news-section { padding: 50px 0; }
+    .news-section { padding-bottom: 60px; }
     .news-section h2 { font-size: 24px; }
     .news-container { padding: 0 15px; }
     .news-card { width: 280px; padding: 20px; }
