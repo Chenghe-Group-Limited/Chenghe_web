@@ -267,12 +267,21 @@ nav ul li:hover .dropdown-content { display: block; animation: slideUp 0.2s ease
 }
 
 .hero-overlay-box h2 { 
-    font-size: 64px; 
+    font-size: 52px; 
     margin-bottom: 25px; 
     color: var(--color-white); 
     font-weight: 700;
     letter-spacing: -1px;
     text-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+}
+
+.hero-overlay-box h2 .t-zh {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    text-shadow: inherit;
 }
 
 .hero-overlay-box p { 
@@ -353,7 +362,7 @@ nav ul li:hover .dropdown-content { display: block; animation: slideUp 0.2s ease
     flex-direction: column;
 }
 .biz-box:hover { transform: translateY(-10px); box-shadow: var(--shadow-hover); border-color: transparent; }
-.biz-box h3 { font-size: 26px; margin-bottom: 20px; color: var(--color-dark-blue); min-height: 64px; }
+.biz-box h3 { font-size: 26px; margin-bottom: 8px; color: var(--color-dark-blue); min-height: 64px; }
 
 /* 业务简介描述 */
 .biz-desc {
@@ -964,7 +973,7 @@ footer p { font-size: 14px; letter-spacing: 1px; color: var(--color-gold); }
     .broker-check-btn { padding: 14px 25px; font-size: 12px; }
     
     /* Contact页面 */
-    .contact-wrapper { padding: 30px 15px; }
+    .contact-wrapper { padding: 30px 15px 60px; }
     .contact-form h2, .contact-info h2 { font-size: 24px; margin-bottom: 30px; }
     .form-row input, .form-row textarea { padding: 12px; font-size: 14px; }
     .form-row textarea { height: 150px; }
