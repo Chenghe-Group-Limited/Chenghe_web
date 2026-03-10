@@ -127,10 +127,16 @@
         <div class="modal-box modal-box--content">
             <span class="close-modal" onclick="closeAboutDetailModal(event)">&times;</span>
             <div class="modal-right modal-right--full">
-                <h2><span class="t-en" id="about-detail-title-en"></span><span class="t-zh" id="about-detail-title-zh"></span></h2>
-                <p class="role"><span class="t-en" id="about-detail-subtitle-en"></span><span class="t-zh" id="about-detail-subtitle-zh"></span></p>
+                <div class="about-detail-header" style="display:flex; align-items:center; justify-content:space-between; gap:24px;">
+                    <div>
+                        <h2 style="margin-bottom:5px;"><span class="t-en" id="about-detail-title-en"></span><span class="t-zh" id="about-detail-title-zh"></span></h2>
+                        <p class="role"><span class="t-en" id="about-detail-subtitle-en"></span><span class="t-zh" id="about-detail-subtitle-zh"></span></p>
+                    </div>
+                    <img id="about-detail-logo" src="" alt="" style="max-height:60px; max-width:160px; object-fit:contain; display:none; flex-shrink:0;">
+                </div>
                 <hr>
-                <div class="bio"><span class="t-en" id="about-detail-body-en"></span><span class="t-zh" id="about-detail-body-zh"></span></div>
+                <div class="bio" id="about-detail-body"></div>
+                <div id="about-detail-images" style="display:none; margin-top:24px;"></div>
             </div>
         </div>
     </div>

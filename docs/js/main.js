@@ -318,13 +318,39 @@ function closeTeamModal(e) {
 
 // --- About 页面区块详情弹窗（过往业绩等点击后展示完整内容）---
 // 参数：titleEn, titleZh, subtitleEn, subtitleZh, bodyEn, bodyZh
-function openAboutDetailModal(titleEn, titleZh, subtitleEn, subtitleZh, bodyEn, bodyZh) {
+function openAboutDetailModal(titleEn, titleZh, subtitleEn, subtitleZh, bodyEn, bodyZh, images, logo) {
     document.getElementById('about-detail-title-en').innerText = titleEn || '';
     document.getElementById('about-detail-title-zh').innerText = titleZh || '';
     document.getElementById('about-detail-subtitle-en').innerText = subtitleEn || '';
     document.getElementById('about-detail-subtitle-zh').innerText = subtitleZh || '';
-    document.getElementById('about-detail-body-en').innerText = bodyEn || '';
-    document.getElementById('about-detail-body-zh').innerText = bodyZh || '';
+
+    var logoEl = document.getElementById('about-detail-logo');
+    if (logo) {
+        logoEl.src = logo;
+        logoEl.style.display = 'block';
+    } else {
+        logoEl.src = '';
+        logoEl.style.display = 'none';
+    }
+
+    var bodyDiv = document.getElementById('about-detail-body');
+    var enLines = (bodyEn || '').split('\n').filter(function(s){ return s.trim(); });
+    var zhLines = (bodyZh || '').split('\n').filter(function(s){ return s.trim(); });
+    var html = '<ul class="modal-bio-list t-en">' + enLines.map(function(l){ return '<li>' + l + '</li>'; }).join('') + '</ul>';
+    html += '<ul class="modal-bio-list t-zh">' + zhLines.map(function(l){ return '<li>' + l + '</li>'; }).join('') + '</ul>';
+    bodyDiv.innerHTML = html;
+
+    var imgDiv = document.getElementById('about-detail-images');
+    if (images && images.length) {
+        imgDiv.innerHTML = images.map(function(src){
+            return '<img src="' + src + '" alt="" style="width:100%; border-radius:6px; margin-bottom:12px;">';
+        }).join('');
+        imgDiv.style.display = 'block';
+    } else {
+        imgDiv.innerHTML = '';
+        imgDiv.style.display = 'none';
+    }
+
     document.getElementById('about-detail-modal').style.display = 'flex';
 }
 

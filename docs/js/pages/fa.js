@@ -40,7 +40,7 @@ function getFaPageHTML() {
         </div>
         <div class="fa-content-container">
             <h1 style="margin-bottom:30px; color:var(--color-dark-blue); border-left: 5px solid var(--color-gold); padding-left: 20px;">
-                <span class="t-en">HK - Chenghe Capital</span>
+                <span class="t-en">HK - Chenghe Capital Management</span>
                 <span class="t-zh">香港 - 成和资本</span>
             </h1>
             <div class="hk-grid-wrap">
