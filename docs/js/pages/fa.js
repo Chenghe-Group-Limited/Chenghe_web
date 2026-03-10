@@ -79,10 +79,11 @@ function getFaPageHTML() {
             <h1 style="margin-bottom:30px; color:var(--color-dark-blue); border-left: 5px solid var(--color-red); padding-left: 20px;">US - CBC Securities</h1>
             <div class="us-text-block">
                 <h3 style="color:var(--color-dark-blue); margin-bottom:15px;">Overview</h3>
-                <p class="t-en" style="font-size:16px; line-height:1.8;">CBC Securities provides strategic advisory and capital raising services in the United States market. We specialize in connecting Asian issuers with US institutional investors, facilitating cross-border transactions with efficiency and expertise.</p>
-                <p class="t-zh" style="font-size:16px; line-height:1.8;">CBC Securities 在美国市场提供战略咨询和融资服务。我们专注于将亚洲发行人与美国机构投资者联系起来，以高效和专业的服务促成跨境交易。</p>
+                <p class="t-en" style="font-size:16px; line-height:1.8;">CBC Securities is a registered broker-dealer with the U.S. Securities and Exchange Commission and a member of FINRA. </p>
+                <p class="t-zh" style="font-size:16px; line-height:1.8;">CBC 证券有限公司是在美国证券交易委员会（SEC）及美国金融业监管局（FINRA）注册的经纪交易商</p>
                 <a href="https://brokercheck.finra.org/firm/summary/46153" target="_blank" class="broker-check-btn">
-                    Check us on FINRA BrokerCheck &rarr;
+                    <span class="t-en">Find us on BrokerCheck &rarr;</span>
+                    <span class="t-zh">在 BrokerCheck 上查找我们 &rarr;</span>
                 </a>
             </div>
         </div>
