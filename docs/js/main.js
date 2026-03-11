@@ -208,10 +208,11 @@ document.addEventListener('submit', function(e) {
     var msgEl = document.getElementById('contact-form-msg');
     if (!msgEl) return;
     var isZh = document.body.classList.contains('lang-zh');
-    if (typeof CONTACT_FORMSPREE_ID === 'undefined' || CONTACT_FORMSPREE_ID === 'YOUR_FORM_ID') {
+    var hasBackend = (typeof CONTACT_FORM_WORKER_URL !== 'undefined' && CONTACT_FORM_WORKER_URL) || (typeof CONTACT_FORMSPREE_ID !== 'undefined' && CONTACT_FORMSPREE_ID && CONTACT_FORMSPREE_ID !== 'YOUR_FORM_ID');
+    if (!hasBackend) {
         msgEl.style.display = 'block';
         msgEl.className = 'contact-form-msg contact-form-msg--error';
-        msgEl.textContent = isZh ? '请在 contact.js 中配置 Formspree Form ID 后再使用提交功能。' : 'Please set CONTACT_FORMSPREE_ID in contact.js to enable form submission.';
+        msgEl.textContent = isZh ? '请在 contact.js 中配置 CONTACT_FORM_WORKER_URL 或 Formspree Form ID 后再使用提交功能。' : 'Please set CONTACT_FORM_WORKER_URL or CONTACT_FORMSPREE_ID in contact.js to enable form submission.';
         return;
     }
     var btn = form.querySelector('.submit-btn');
@@ -228,14 +229,23 @@ document.addEventListener('submit', function(e) {
             msgEl.style.display = 'block';
             form.reset();
         } else {
-            throw new Error('Submit failed');
+            return r.json().then(function(data) {
+                var backendMsg = (data && (data.error || data.detail)) ? (data.error + (data.detail ? ': ' + data.detail : '')) : null;
+                msgEl.className = 'contact-form-msg contact-form-msg--error';
+                msgEl.textContent = backendMsg || (isZh ? '提交失败，请稍后重试或直接发邮件联系我们。' : 'Submission failed. Please try again later or email us directly.');
+                msgEl.style.display = 'block';
+            }).catch(function() {
+                msgEl.className = 'contact-form-msg contact-form-msg--error';
+                msgEl.textContent = isZh ? '提交失败，请稍后重试或直接发邮件联系我们。' : 'Submission failed. Please try again later or email us directly.';
+                msgEl.style.display = 'block';
+            });
         }
     }).catch(function() {
         msgEl.className = 'contact-form-msg contact-form-msg--error';
-        msgEl.textContent = isZh ? '提交失败，请稍后重试或直接发邮件联系我们。' : 'Submission failed. Please try again later or email us directly.';
+        msgEl.textContent = isZh ? '提交失败，请检查网络或稍后重试。' : 'Submission failed. Please check your connection and try again.';
         msgEl.style.display = 'block';
     }).finally(function() {
-        if (btn) { btn.disabled = false; btn.innerHTML = '<span class="t-en">Submit Inquiry</span><span class="t-zh">提交咨询</span>'; }
+        if (btn) { btn.disabled = false; btn.innerHTML = '<span class="t-en">Submit</span><span class="t-zh">提交咨询</span>'; }
     });
 });
 

@@ -1,0 +1,15 @@
+name = "chenghe-contact-form"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# R2 绑定：在 Cloudflare 控制台里绑定到同名 bucket，或取消注释下面并填 bucket 名
+# [[r2_buckets]]
+# binding = "R2_BUCKET"
+# bucket_name = "chenghe-contact-files"
+
+# 以下变量需在 Cloudflare Dashboard → Workers → 该 Worker → Settings → Variables and Secrets 中配置：
+# RESEND_API_KEY      (Secret) - Resend API Key
+# NOTIFY_EMAIL        (Plain)  - 接收咨询的邮箱，如 chenghe@chenghecap.com
+# DOWNLOAD_TOKEN      (Secret) - 任意随机字符串，用于保护附件下载链接
+# FROM_EMAIL (可选)    (Plain)  - 发件人邮箱，未验证域名时用 onboarding@resend.dev
+# FROM_NAME (可选)    (Plain)  - 发件人显示名

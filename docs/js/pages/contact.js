@@ -3,40 +3,74 @@
  * 管理"联系我们"页面的所有HTML内容
  * 修改此文件即可更新Contact页面内容
  *
- * 表单发信（Formspree）：
- * 1. 打开 https://formspree.io 注册并登录
- * 2. 点击 "New Form"，填写表单名称，接收邮箱填成和要收咨询的邮箱（如 chenghe@chenghecap.com）
- * 3. 创建后得到 Form ID（形如 xyzabcde），把下面 CONTACT_FORMSPREE_ID 改成你的 Form ID
- * 4. 提交后咨询会发到你在 Formspree 里设置的邮箱
+ * 表单提交方式二选一：
+ * 【推荐】自建 Worker（支持附件 + 邮件带下载链接）：
+ * 1. 填写下面 CONTACT_FORM_WORKER_URL 为你的 Cloudflare Worker 地址（如 https://chenghe-contact-form.xxx.workers.dev）
+ * 2. 留空则使用 Formspree（见 CONTACT_FORMSPREE_ID）
+ *
+ * Formspree（仅文本，无附件）：
+ * 1. 打开 https://formspree.io 注册并登录，创建 Form 得到 Form ID
+ * 2. 把 CONTACT_FORMSPREE_ID 改成你的 Form ID
  */
-var contactDisplayEmail = "chenghe@chenghecap.com";  // 页面「办公地点」里展示的邮箱（group email，多人接收）
-var CONTACT_FORMSPREE_ID = "mojngdba";  // 改成你在 Formspree 创建表单后得到的 Form ID
+var contactDisplayEmail = "chenghe@chenghecap.com";  // 页面「办公地点」里展示的邮箱
+var CONTACT_FORM_WORKER_URL = "https://chenghe-contact-form.chloe-shuai2002.workers.dev";  // Cloudflare Worker 地址，填上后表单会提交到 Worker（支持附件）；留空则用 Formspree
+var CONTACT_FORMSPREE_ID = "mojngdba";  // Worker 未配置时使用的 Formspree Form ID
 
 function getContactPageHTML() {
-    var formAction = "https://formspree.io/f/" + CONTACT_FORMSPREE_ID;
+    var formAction = CONTACT_FORM_WORKER_URL || ("https://formspree.io/f/" + CONTACT_FORMSPREE_ID);
     return `
     <div class="contact-wrapper">
-        <form id="contact-inquiry-form" class="contact-form" action="${formAction}" method="POST">
+        <form id="contact-inquiry-form" class="contact-form" action="${formAction}" method="POST" enctype="multipart/form-data">
             <div id="contact-form-msg" class="contact-form-msg" style="display:none;"></div>
-            <div class="form-row"><label><span class="t-en">Name</span><span class="t-zh">姓名</span></label><input type="text" name="name" required></div>
-            <div class="form-row"><label><span class="t-en">Email</span><span class="t-zh">邮箱</span></label><input type="email" name="email" required></div>
-            <div class="form-row"><label><span class="t-en">Company</span><span class="t-zh">公司</span></label><input type="text" name="company"></div>
-            <div class="form-row"><label><span class="t-en">Message</span><span class="t-zh">留言</span></label><textarea name="message" placeholder="Please write your detailed message here..." required></textarea></div>
+            <div class="form-row">
+                <label><span class="t-en">Company Name <span style="color:var(--color-red);">*</span></span><span class="t-zh">公司名称 <span style="color:var(--color-red);">*</span></span></label>
+                <input type="text" name="company" required>
+            </div>
+            <div class="form-row">
+                <label><span class="t-en">Contact Person <span style="color:var(--color-red);">*</span></span><span class="t-zh">联系人姓名 <span style="color:var(--color-red);">*</span></span></label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="form-row">
+                <label><span class="t-en">Title / Position <span style="color:var(--color-red);">*</span></span><span class="t-zh">联系人职位 <span style="color:var(--color-red);">*</span></span></label>
+                <input type="text" name="title" required>
+            </div>
+            <div class="form-row">
+                <label><span class="t-en">Email <span style="color:var(--color-red);">*</span></span><span class="t-zh">邮箱 <span style="color:var(--color-red);">*</span></span></label>
+                <input type="email" name="email" id="contact-email">
+            </div>
+            <div class="form-row">
+                <label><span class="t-en">WeChat ID</span><span class="t-zh">微信号</span></label>
+                <input type="text" name="wechat" id="contact-wechat">
+            </div>
+            <p style="font-size:12px; color:var(--color-grey); margin-top:-15px; margin-bottom:20px;">
+                <span class="t-en">* Please fill in at least one: Email or WeChat ID</span>
+                <span class="t-zh">* 邮箱和微信至少填写一项</span>
+            </p>
+            <div class="form-row">
+                <label><span class="t-en">Message</span><span class="t-zh">留言</span></label>
+                <textarea name="message" placeholder="" style="height:120px;"></textarea>
+            </div>
+            <div class="form-row">
+                <label><span class="t-en">Supporting Materials (PDF only)</span><span class="t-zh">辅助材料（仅限 PDF 格式）</span></label>
+                <input type="file" name="attachment" accept=".pdf" style="padding:10px; background:#fcfcfc; border:1px solid #ddd; border-radius:2px; width:100%; font-size:14px;">
+            </div>
             <button type="submit" class="submit-btn"><span class="t-en">Submit</span><span class="t-zh">提交咨询</span></button>
         </form>
         <div class="contact-info">
             <h2 style="margin-bottom:40px; color:var(--color-dark-blue); font-size:32px;">
-                <span class="t-en">Our Office</span>
-                <span class="t-zh">办公地点</span>
+                <span class="t-en">Office Address</span>
+                <span class="t-zh">办公地址</span>
             </h2>
             <div class="contact-item">
-                <h4><span class="t-en">Hong Kong Headquarters</span><span class="t-zh">香港总部</span></h4>
-                <p>Unit 2307, Tower One, Lippo Centre, 89 Queensway, Hong Kong<br>Central, Hong Kong</p>
+                <h4><span class="t-en">Hong Kong Office</span><span class="t-zh">香港办公室</span></h4>
+                <p class="t-en">Unit 2307, Tower One, Lippo Centre,<br>89 Queensway, Admiralty, Hong Kong</p>
+                <p class="t-zh">香港港岛金钟道 89 号<br>力宝中心一座 2307 室</p>
             </div>
             <div class="contact-item">
-                <h4>Contact</h4>
-                <p>Email: ${contactDisplayEmail}</p>
-                <p>Phone: +852 1234 5678</p>
+                <h4><span class="t-en">Contact</span><span class="t-zh">联系方式</span></h4>
+                <p><span class="t-en">Email</span><span class="t-zh">邮箱</span>: ${contactDisplayEmail}</p>
+                <p><span class="t-en">Tel</span><span class="t-zh">座机</span>: +852 2777 3998</p>
+                <p><span class="t-en">Fax</span><span class="t-zh">传真</span>: +852 2777 3733</p>
             </div>
         </div>
     </div>

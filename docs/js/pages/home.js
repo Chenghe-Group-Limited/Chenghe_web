@@ -69,7 +69,7 @@ function getHomePageHTML() {
                 </h3>
                 <p class="biz-desc">
                     <span class="t-en">We partner with enterprises positioned for international growth, providing end-to-end guidance from securing financing and navigating restructuring to achieving a public listing. </span>
-                    <span class="t-zh">我们与有国际增长潜力的企业合作，从获得融资到重构再到上市，提供全方位的指导。</span>
+                    <span class="t-zh">我们与有国际增长潜力的企业合作，为其从获得融资到重构再到上市，提供全方位的咨询服务。</span>
                 </p>
                 <div style="margin-top: 0;">
                     <a class="biz-link" onclick="switchFaTab('HK')">
