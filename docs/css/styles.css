@@ -682,10 +682,10 @@ nav ul li:hover .dropdown-content { display: block; animation: slideUp 0.2s ease
 .contact-form-msg--success { background: #e8f5e9; color: #2e7d32; }
 .contact-form-msg--error { background: #ffebee; color: #c62828; }
 .contact-info { flex: 0.8; padding-top: 20px; }
-.contact-info h2 { font-size: 24px; margin-bottom: 40px; }
+.contact-info h2 { font-size: 24px; margin-bottom: 18px; }
 .contact-item { margin-bottom: 40px; }
-.contact-item h4 { color: var(--color-gold); margin-bottom: 10px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
-.contact-item p { font-size: 16px; color: var(--color-grey); }
+.contact-item h4 { color: var(--color-gold); margin-bottom: 3px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; }
+.contact-item p { font-size: 16px; color: var(--color-grey); margin: 0 0 20px; }
 
 /* --- 12. Footer (Simple Centered) --- */
 footer { 

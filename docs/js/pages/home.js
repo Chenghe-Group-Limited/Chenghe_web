@@ -73,12 +73,12 @@ function getHomePageHTML() {
                 </p>
                 <div style="margin-top: 0;">
                     <a class="biz-link" onclick="switchFaTab('HK')">
-                        <span class="t-en">Hong Kong – Chenghe Capital</span>
-                        <span class="t-zh">香港地区 – 成和资本</span>
+                        <span class="t-en">Hong Kong – Chenghe Capital Management</span>
+                        <span class="t-zh">香港 – 成和资本管理</span>
                     </a>
                     <a class="biz-link" onclick="switchFaTab('US')">
-                        <span class="t-en">US – CBC Securities</span>
-                        <span class="t-zh">美国地区 – CBC证券</span>
+                        <span class="t-en">United States – CBC Securities</span>
+                        <span class="t-zh">美国 – CBC 证券</span>
                     </a>
                 </div>
             </div>

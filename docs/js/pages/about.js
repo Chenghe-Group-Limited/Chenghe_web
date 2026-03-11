@@ -9,8 +9,8 @@ var ABOUT_TRACK_RECORDS = [
     {
         titleEn: "Polibeli Group Ltd",
         titleZh: "Polibeli Group Ltd",
-        subtitleEn: "Nasdaq | August 2025 · Cross-border E-commerce",
-        subtitleZh: "纳斯达克 | 2025 年 8 月 · 跨境电商",
+        subtitleEn: "Nasdaq De-SPAC | Closed on August 2025 · Cross-Border E-commerce",
+        subtitleZh: "纳斯达克 De-SPAC | 完成于 2025 年 8 月 · 跨境电商",
         bodyEn: "Polibeli is a cross-border B2B e-commerce platform headquartered in Indonesia, with its parent company and team based in mainland China.\n\nIts business currently focuses on Japan and Indonesia, and has expanded to Singapore, South Korea, the United States, France, Italy and other countries and regions.\n\nProduct categories cover seven core areas including consumer electronics accessories, home appliances, skincare, oral care, cosmetics, toys and games, and health care products.\n\nChenghe raised over US$30 million in equity investment for the company.",
         bodyZh: "Polibeli 是一家总部位于印度尼西亚的跨境 B2B 电商平台，母公司及团队来自中国大陆。\n\n目前业务重点集中在日本和印尼，并已扩展至新加坡、韩国、美国、法国、意大利等多个国家和地区。\n\n产品品类涵盖七大核心领域，包括消费电子配件、家用电器、护肤品、口腔护理、化妆品、玩具与游戏产品以及健康护理用品。\n\n成和为 Polibeli 募集超过 3 千万美元股权投资。",
         logo: "images/About us/Track Record/Polibeli/polibeli_logo.jpg",
@@ -19,8 +19,8 @@ var ABOUT_TRACK_RECORDS = [
     {
         titleEn: "Femco Steel Technology (FST)",
         titleZh: "启坤科技（FST）",
-        subtitleEn: "Nasdaq | January 2025 · Golf Equipment Manufacturing",
-        subtitleZh: "纳斯达克 | 2025 年 1 月 · 高尔夫设备制造",
+        subtitleEn: "Nasdaq De-SPAC | Closed on January 2025 · Golf Equipment Manufacturing",
+        subtitleZh: "纳斯达克 De-SPAC | 完成于 2025 年 1 月 · 高尔夫设备制造",
         bodyEn: "FST is a Taiwanese company founded in 2003 that specializes in the design, manufacture, distribution and delivery of steel golf club shafts for major golf club brand manufacturers and distributors.\n\nFST is committed to developing its own brand KBS and is one of the largest suppliers of premium steel shafts for golf club brand manufacturers and distributors. Major customers include TaylorMade, Titleist, Ping, Nike, Callaway, Mizuno, Cleveland and other world-renowned brands.\n\nFST is currently the world's second-largest golf club shaft manufacturer by volume and has opened branded experience stores in the United States, Taiwan and Japan.\n\nChenghe raised over US$20 million in equity investment for the company.",
         bodyZh: "FST 是一家成立于 2003 年的台湾公司，主营业务为设计、制造、运销和配送高尔夫球杆铁制杆身给各大高尔夫球杆品牌制造商与经销商。\n\nFST 致力于开发自有品牌 KBS，是高尔夫球杆品牌制造商与经销商在高价型铁制杆身方面最大的供应商之一。主要客户包括 TaylorMade、Titleist、Ping、Nike、Callaway、Mizuno、Cleveland 等世界知名品牌。\n\nFST 目前为世界第二大产量的高尔夫球杆杆身制造商，并在美国、台湾及日本已有开品牌体验店。\n\n成和为 FST 募集超过 2 千万美元股权投资。",
         logo: "images/About us/Track Record/FST/fst_logo.jpg",
@@ -29,8 +29,8 @@ var ABOUT_TRACK_RECORDS = [
     {
         titleEn: "Taiwan Color Optics (TCO / SemiLux)",
         titleZh: "台湾彩光技术（TCO / SemiLux）",
-        subtitleEn: "Nasdaq | February 2024 · Optics & 3D Sensing Technology",
-        subtitleZh: "纳斯达克 | 2024 年 2 月 · 光学与 3D 传感技术",
+        subtitleEn: "Nasdaq De-SPAC | Closed on February 2024 · Optics & 3D Sensing Technology",
+        subtitleZh: "纳斯达克 De-SPAC | 完成于 2024 年 2 月 · 光学与 3D 传感技术",
         bodyEn: "TCO was founded in 2009 and is a Taiwanese company specializing in optical and 3D sensing technology. It primarily serves autonomous driving, smart lighting, drones and other industry-specific applications, designing and supplying optical components and integrated chips.\n\nTCO works closely with its partner Hon Hai (Foxconn) Group, positioning itself at the forefront of electric vehicle development.\n\nTCO has strategic offices in the Central Taiwan Science Park and Hsinchu Science Park, planning to leverage Taiwan's mature semiconductor vertical supply chain to advance the production of LiDAR and ADB chipsets.\n\nChenghe raised over US$40 million in equity investment from funds for the company.",
         bodyZh: "TCO 成立于 2009 年，是一家专注于光学和三维传感技术的台湾公司，主要为自动驾驶、智能照明和无人机等各行各业定制、设计和供应光学元件和集成芯片。\n\nTCO 与鸿海及其合作伙伴莱孚集团紧密合作，将于电动汽车开发的前沿。\n\nTCO 在台湾中部科学园区和新竹科学园区设有战略性办公室，计划利用台湾成熟的半导体垂直供应链，促进公司用于 LiDAR 和 ADB 芯片组的生产。\n\n成和为公司从基金募集超过 4 千万美元股权投资。",
         logo: "images/About us/Track Record/TCO/TCO_logo.jpg",
@@ -123,8 +123,8 @@ function getAboutPageHTML() {
                         <span class="t-zh">Polibeli Group Ltd</span>
                     </h3>
                     <p style="color:var(--color-gold); font-size:13px; font-weight:bold; margin-bottom:10px;">
-                        <span class="t-en">Nasdaq | August 2025 · Cross-border E-commerce</span>
-                        <span class="t-zh">纳斯达克 | 2025 年 8 月 · 跨境电商</span>
+                        <span class="t-en">Nasdaq De-SPAC | Closed on August 2025 · Cross-Border E-commerce</span>
+                        <span class="t-zh">纳斯达克 De-SPAC | 完成于 2025 年 8 月 · 跨境电商</span>
                     </p>
                     <p>
                         <span class="t-en">Cross-border B2B e-commerce platform headquartered in Indonesia. Chenghe raised over US$30 million in equity investment.</span>
@@ -141,8 +141,8 @@ function getAboutPageHTML() {
                         <span class="t-zh">启坤科技（FST）</span>
                     </h3>
                     <p style="color:var(--color-gold); font-size:13px; font-weight:bold; margin-bottom:10px;">
-                        <span class="t-en">Nasdaq | January 2025 · Golf Equipment Manufacturing</span>
-                        <span class="t-zh">纳斯达克 | 2025 年 1 月 · 高尔夫设备制造</span>
+                        <span class="t-en">Nasdaq De-SPAC | Closed on January 2025 · Golf Equipment Manufacturing</span>
+                        <span class="t-zh">纳斯达克 De-SPAC | 完成于 2025 年 1 月 · 高尔夫设备制造</span>
                     </p>
                     <p>
                         <span class="t-en">World's second-largest golf club shaft manufacturer. Chenghe raised over US$20 million in equity investment.</span>
@@ -159,8 +159,8 @@ function getAboutPageHTML() {
                         <span class="t-zh">台湾彩光技术（TCO / SemiLux）</span>
                     </h3>
                     <p style="color:var(--color-gold); font-size:13px; font-weight:bold; margin-bottom:10px;">
-                        <span class="t-en">Nasdaq | February 2024 · Optics & 3D Sensing Technology</span>
-                        <span class="t-zh">纳斯达克 | 2024 年 2 月 · 光学与 3D 传感技术</span>
+                        <span class="t-en">Nasdaq De-SPAC | Closed on February 2024 · Optics & 3D Sensing Technology</span>
+                        <span class="t-zh">纳斯达克 De-SPAC | 完成于 2024 年 2 月 · 光学与 3D 传感技术</span>
                     </p>
                     <p>
                         <span class="t-en">Taiwanese optical and 3D sensing technology company. Chenghe raised over US$40 million from funds.</span>

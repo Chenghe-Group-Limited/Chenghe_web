@@ -12,6 +12,8 @@
  * 1. 打开 https://formspree.io 注册并登录，创建 Form 得到 Form ID
  * 2. 把 CONTACT_FORMSPREE_ID 改成你的 Form ID
  */
+
+
 var contactDisplayEmail = "chenghe@chenghecap.com";  // 页面「办公地点」里展示的邮箱
 var CONTACT_FORM_WORKER_URL = "https://chenghe-contact-form.chloe-shuai2002.workers.dev";  // Cloudflare Worker 地址，填上后表单会提交到 Worker（支持附件）；留空则用 Formspree
 var CONTACT_FORMSPREE_ID = "mojngdba";  // Worker 未配置时使用的 Formspree Form ID
@@ -57,7 +59,7 @@ function getContactPageHTML() {
             <button type="submit" class="submit-btn"><span class="t-en">Submit</span><span class="t-zh">提交咨询</span></button>
         </form>
         <div class="contact-info">
-            <h2 style="margin-bottom:40px; color:var(--color-dark-blue); font-size:32px;">
+            <h2 style="margin-bottom:20px; color:var(--color-dark-blue); font-size:32px;">
                 <span class="t-en">Office Address</span>
                 <span class="t-zh">办公地址</span>
             </h2>
@@ -66,11 +68,17 @@ function getContactPageHTML() {
                 <p class="t-en">Unit 2307, Tower One, Lippo Centre,<br>89 Queensway, Admiralty, Hong Kong</p>
                 <p class="t-zh">香港港岛金钟道 89 号<br>力宝中心一座 2307 室</p>
             </div>
+            <h2 style="margin-bottom:20px; color:var(--color-dark-blue); font-size:32px;">
+                <span class="t-en">Contact Information</span>
+                <span class="t-zh">联系方式</span>
+            </h2>
             <div class="contact-item">
-                <h4><span class="t-en">Contact</span><span class="t-zh">联系方式</span></h4>
-                <p><span class="t-en">Email</span><span class="t-zh">邮箱</span>: ${contactDisplayEmail}</p>
-                <p><span class="t-en">Tel</span><span class="t-zh">座机</span>: +852 2777 3998</p>
-                <p><span class="t-en">Fax</span><span class="t-zh">传真</span>: +852 2777 3733</p>
+                <h4><span class="t-en">Email</span><span class="t-zh">邮箱</span></h4>
+                <p><span class="t-en">${contactDisplayEmail}</span><span class="t-zh">${contactDisplayEmail}</span></p>
+                <h4><span class="t-en">Tel</span><span class="t-zh">座机</span></h4>
+                <p><span class="t-en">+852 2777 3998</span><span class="t-zh">+852 2777 3998</span></p>
+                <h4><span class="t-en">Fax</span><span class="t-zh">传真</span></h4>
+                <p><span class="t-en">+852 2777 3733</span><span class="t-zh">+852 2777 3733</span></p>
             </div>
         </div>
     </div>
