@@ -515,10 +515,6 @@ nav ul li:hover .dropdown-content { display: block; animation: slideUp 0.2s ease
 .about-float-text h2 { font-size: 32px; margin-bottom: 25px; color: var(--color-dark-blue); position: relative; }
 .about-float-text h2::after { content: ''; display: block; width: 60px; height: 3px; background: var(--color-gold); margin-top: 15px; }
 .about-float-text p { color: var(--color-grey); font-size: 17px; line-height: 1.75; text-align: justify; }
-.about-subsidiary-links { margin-top: 28px; display: flex; flex-direction: column; gap: 12px; }
-.about-subsidiary-link { color: var(--color-dark-blue); font-size: 15px; font-weight: 600; border-left: 3px solid var(--color-gold); padding-left: 14px; transition: color 0.3s, padding-left 0.3s; display: block; }
-.about-subsidiary-link:hover { color: var(--color-gold); padding-left: 18px; }
-
 /* About 公司架构图（成和集团概览） */
 .about-structure-section {
     padding: 60px 24px 80px;

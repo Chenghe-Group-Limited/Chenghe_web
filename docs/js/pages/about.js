@@ -63,11 +63,6 @@ function getAboutPageHTML() {
                 <div class="t-zh">
                     <p>成和集团致力于连接全球资本市场与高成长亚洲企业。我们整合私募股权投资、资本市场顾问及特殊目的收购公司（SPAC）业务，为企业跨境成长的每一阶段提供全面、端到端的综合解决方案。</p>
                 </div>
-                <div class="about-subsidiary-links">
-                    <span class="about-subsidiary-link"><span class="t-en">HK Subsidiary – Chenghe Capital</span><span class="t-zh">香港子公司 – 成和资本</span></span>
-                    <span class="about-subsidiary-link"><span class="t-en">US Subsidiary – CBC Securities</span><span class="t-zh">美国子公司 – CBC证券</span></span>
-                    <span class="about-subsidiary-link"><span class="t-en">Cayman Subsidiary (SPAC)</span><span class="t-zh">开曼子公司(SPAC)</span></span>
-                </div>
             </div>
         </div>
     </div>
