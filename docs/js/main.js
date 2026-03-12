@@ -353,7 +353,7 @@ function openAboutDetailModal(titleEn, titleZh, subtitleEn, subtitleZh, bodyEn, 
     var imgDiv = document.getElementById('about-detail-images');
     if (images && images.length) {
         imgDiv.innerHTML = images.map(function(src){
-            return '<img src="' + src + '" alt="" style="width:100%; border-radius:6px; margin-bottom:12px;">';
+            return '<img src="' + src + '" alt="">';
         }).join('');
         imgDiv.style.display = 'block';
     } else {
