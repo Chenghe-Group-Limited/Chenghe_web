@@ -15,7 +15,7 @@
 
 
 var contactDisplayEmail = "chenghe@chenghecap.com";  // 页面「办公地点」里展示的邮箱
-var CONTACT_FORM_WORKER_URL = "https://chenghe-contact-form.chloe-shuai2002.workers.dev";  // Cloudflare Worker 地址，填上后表单会提交到 Worker（支持附件）；留空则用 Formspree
+const CONTACT_FORM_WORKER_URL = 'https://project-n0ybn.vercel.app/api/contact';
 var CONTACT_FORMSPREE_ID = "mojngdba";  // Worker 未配置时使用的 Formspree Form ID
 
 function getContactPageHTML() {
