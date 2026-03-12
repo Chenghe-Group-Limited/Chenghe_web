@@ -80,25 +80,25 @@ function getAboutPageHTML() {
                 </div>
                 <div class="about-structure-connector" aria-hidden="true"></div>
                 <div class="about-structure-nodes">
-                    <a href="javascript:void(0)" onclick="switchPage('fa'); setTimeout(function(){ switchFaTab('HK'); }, 100);" class="about-structure-node about-structure-node--link">
-                        <span class="about-structure-node-name"><span class="t-en">Chenghe Capital Management</span><span class="t-zh">成和资本</span></span>
-                        <span class="about-structure-node-desc t-en">HK SFC licensed (Type 1, 4, 9)</span>
-                        <span class="about-structure-node-desc t-zh">香港证监会持牌（1、4、9号）</span>
-                    </a>
-                    <a href="javascript:void(0)" onclick="switchPage('fa'); setTimeout(function(){ switchFaTab('US'); }, 100);" class="about-structure-node about-structure-node--link">
-                        <span class="about-structure-node-name"><span class="t-en">CBC Securities</span><span class="t-zh">CBC 证券</span></span>
-                        <span class="about-structure-node-desc t-en">US SEC registered broker-dealer</span>
-                        <span class="about-structure-node-desc t-zh">美国证监会注册经纪商</span>
-                    </a>
                     <div class="about-structure-node">
                         <span class="about-structure-node-name"><span class="t-en">Chenghe Investment</span><span class="t-zh">成和投资</span></span>
                         <span class="about-structure-node-desc t-en">Investment advisory, global presence</span>
                         <span class="about-structure-node-desc t-zh">投资顾问，全球布局</span>
                     </div>
+                    <a href="javascript:void(0)" onclick="switchPage('fa'); setTimeout(function(){ switchFaTab('HK'); }, 100);" class="about-structure-node about-structure-node--link">
+                        <span class="about-structure-node-name"><span class="t-en">Chenghe Capital Management</span><span class="t-zh">成和资本</span></span>
+                        <span class="about-structure-node-desc t-en">HK SFC licensed (Type 1, 4, 9)</span>
+                        <span class="about-structure-node-desc t-zh">香港证监会持牌（1、4、9号）</span>
+                    </a>
                     <a href="javascript:void(0)" onclick="switchPage('spac'); setTimeout(function(){ switchSpacMainTab('Overview'); }, 100);" class="about-structure-node about-structure-node--link">
                         <span class="about-structure-node-name"><span class="t-en">SPAC Business</span><span class="t-zh">SPAC 业务</span></span>
                         <span class="about-structure-node-desc t-en">US-listed SPACs</span>
                         <span class="about-structure-node-desc t-zh">美国上市 SPAC</span>
+                    </a>
+                    <a href="javascript:void(0)" onclick="switchPage('fa'); setTimeout(function(){ switchFaTab('US'); }, 100);" class="about-structure-node about-structure-node--link">
+                        <span class="about-structure-node-name"><span class="t-en">CBC Securities</span><span class="t-zh">CBC 证券</span></span>
+                        <span class="about-structure-node-desc t-en">US SEC registered broker-dealer</span>
+                        <span class="about-structure-node-desc t-zh">美国证监会注册经纪商</span>
                     </a>
                 </div>
             </div>

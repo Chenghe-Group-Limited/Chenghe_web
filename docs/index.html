@@ -184,10 +184,12 @@
             }
             
             // 第二步：页面内容加载完成后，初始化应用（包括语言设置和页面路由）
-            // 延迟执行，确保所有函数都已定义
             setTimeout(function() {
                 if (typeof initializeApp === 'function') {
                     initializeApp();
+                }
+                if (typeof initNewsCustomScrollbar === 'function') {
+                    initNewsCustomScrollbar();
                 }
             }, 100);
         });

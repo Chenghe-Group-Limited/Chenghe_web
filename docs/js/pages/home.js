@@ -90,7 +90,7 @@ function getHomePageHTML() {
             <span class="t-en">News</span>
             <span class="t-zh">成和新闻</span>
         </h2>
-        <div class="news-container">
+        <div class="news-container" id="news-scroll-host">
             <div class="news-grid">
                 <div class="news-card" onclick="window.open('https://finance.yahoo.com/news/chenghe-acquisition-iii-co-announces-014100803.html?guccounter=1', '_blank')">
                     <h4>
@@ -169,6 +169,11 @@ function getHomePageHTML() {
                     </p>
                     <a class="read-more"><span class="t-en">Read More &rarr;</span><span class="t-zh">阅读更多 &rarr;</span></a>
                 </div>
+            </div>
+        </div>
+        <div class="news-scrollbar-wrap">
+            <div class="news-scrollbar-track" id="news-scrollbar-track">
+                <div class="news-scrollbar-thumb" id="news-scrollbar-thumb"></div>
             </div>
         </div>
     </div>

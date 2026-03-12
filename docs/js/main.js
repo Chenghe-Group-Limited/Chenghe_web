@@ -369,3 +369,66 @@ function closeAboutDetailModal(e) {
         document.getElementById('about-detail-modal').style.display = 'none';
     }
 }
+
+// --- News 自定义滑动条：与全宽滚动区域同步 ---
+function initNewsCustomScrollbar() {
+    var host = document.getElementById('news-scroll-host');
+    var track = document.getElementById('news-scrollbar-track');
+    var thumb = document.getElementById('news-scrollbar-thumb');
+    if (!host || !track || !thumb) return;
+
+    function updateThumb() {
+        var scrollWidth = host.scrollWidth;
+        var clientWidth = host.clientWidth;
+        var maxScroll = scrollWidth - clientWidth;
+        if (maxScroll <= 0) {
+            thumb.style.width = '0';
+            thumb.style.left = '0';
+            return;
+        }
+        var trackWidth = track.offsetWidth;
+        var thumbWidth = Math.max(48, (clientWidth / scrollWidth) * trackWidth);
+        var left = (host.scrollLeft / maxScroll) * (trackWidth - thumbWidth);
+        thumb.style.width = thumbWidth + 'px';
+        thumb.style.left = left + 'px';
+    }
+
+    host.addEventListener('scroll', updateThumb);
+    window.addEventListener('resize', updateThumb);
+    updateThumb();
+
+    var dragging = false;
+    var startX, startThumbLeft;
+
+    thumb.addEventListener('mousedown', function(e) {
+        e.preventDefault();
+        dragging = true;
+        startX = e.clientX;
+        startThumbLeft = thumb.offsetLeft;
+    });
+    window.addEventListener('mousemove', function(e) {
+        if (!dragging) return;
+        var trackWidth = track.offsetWidth;
+        var thumbWidth = thumb.offsetWidth;
+        var maxScroll = host.scrollWidth - host.clientWidth;
+        var range = trackWidth - thumbWidth;
+        if (range <= 0) return;
+        var newLeft = startThumbLeft + (e.clientX - startX);
+        newLeft = Math.max(0, Math.min(newLeft, range));
+        host.scrollLeft = (newLeft / range) * maxScroll;
+    });
+    window.addEventListener('mouseup', function() { dragging = false; });
+
+    track.addEventListener('click', function(e) {
+        if (e.target === thumb) return;
+        var trackRect = track.getBoundingClientRect();
+        var maxScroll = host.scrollWidth - host.clientWidth;
+        if (maxScroll <= 0) return;
+        var clickX = e.clientX - trackRect.left;
+        var trackWidth = track.offsetWidth;
+        var thumbWidth = thumb.offsetWidth;
+        var left = clickX - thumbWidth / 2;
+        left = Math.max(0, Math.min(left, trackWidth - thumbWidth));
+        host.scrollLeft = (left / (trackWidth - thumbWidth)) * maxScroll;
+    });
+}

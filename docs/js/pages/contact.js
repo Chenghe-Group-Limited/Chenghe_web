@@ -73,11 +73,11 @@ function getContactPageHTML() {
                 <span class="t-zh">联系方式</span>
             </h2>
             <div class="contact-item">
-                <h4><span class="t-en">Email</span><span class="t-zh">邮箱</span></h4>
+                <h4><span class="t-en">Email: </span><span class="t-zh">邮箱: </span></h4>
                 <p><span class="t-en">${contactDisplayEmail}</span><span class="t-zh">${contactDisplayEmail}</span></p>
-                <h4><span class="t-en">Tel</span><span class="t-zh">座机</span></h4>
+                <h4><span class="t-en">Tel: </span><span class="t-zh">座机: </span></h4>
                 <p><span class="t-en">+852 2777 3998</span><span class="t-zh">+852 2777 3998</span></p>
-                <h4><span class="t-en">Fax</span><span class="t-zh">传真</span></h4>
+                <h4><span class="t-en">Fax: </span><span class="t-zh">传真: </span></h4>
                 <p><span class="t-en">+852 2777 3733</span><span class="t-zh">+852 2777 3733</span></p>
             </div>
         </div>
