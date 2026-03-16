@@ -84,6 +84,7 @@ export const config = {
         }, 400, corsHeaders);
       }
 
+      const attachmentUrl = String(formData.get('attachment_url') || '').trim();
       const attachmentFile = formData.get('attachment');
       let attachments = [];
 
@@ -128,6 +129,9 @@ export const config = {
         'Message:',
         message,
       ];
+      if (attachmentUrl && attachmentUrl.startsWith('http')) {
+        textLines.push('', 'Attachment (large file):', attachmentUrl);
+      }
 
       const emailBody = {
         from: `${FROM_NAME} <${FROM_EMAIL}>`,
@@ -176,4 +180,3 @@ export const config = {
       }, 500, corsHeaders);
     }
   }
-  

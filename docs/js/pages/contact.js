@@ -24,6 +24,7 @@ function getContactPageHTML() {
     <div class="contact-wrapper">
         <form id="contact-inquiry-form" class="contact-form" action="${formAction}" method="POST" enctype="multipart/form-data">
             <div id="contact-form-msg" class="contact-form-msg" style="display:none;"></div>
+            <input type="hidden" name="attachment_url" value="">
             <div class="form-row">
                 <label><span class="t-en">Company Name <span style="color:var(--color-red);">*</span></span><span class="t-zh">公司名称 <span style="color:var(--color-red);">*</span></span></label>
                 <input type="text" name="company" required>
@@ -53,7 +54,7 @@ function getContactPageHTML() {
                 <textarea name="message" placeholder="" style="height:120px;"></textarea>
             </div>
             <div class="form-row">
-                <label><span class="t-en">Supporting Materials (PDF only)</span><span class="t-zh">辅助材料（仅限 PDF 格式）</span></label>
+                <label><span class="t-en">Supporting Materials (PDF only, max 50MB)</span><span class="t-zh">辅助材料（仅限 PDF，最大 50MB）</span></label>
                 <input type="file" name="attachment" accept=".pdf" style="padding:10px; background:#fcfcfc; border:1px solid #ddd; border-radius:2px; width:100%; font-size:14px;">
             </div>
             <button type="submit" class="submit-btn"><span class="t-en">Submit</span><span class="t-zh">提交咨询</span></button>

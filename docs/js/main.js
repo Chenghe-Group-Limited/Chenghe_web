@@ -200,8 +200,8 @@ window.addEventListener('DOMContentLoaded', function() {
     // 模块化版本会在 index-modular.html 中手动调用 initializeApp()
 });
 
-// --- Contact 表单提交（Formspree）：AJAX 提交并显示成功/失败提示，不跳转 ---
-document.addEventListener('submit', function(e) {
+// --- Contact 表单提交（Formspree / Vercel）：AJAX 提交；>4MB 附件走 Vercel Blob 直传 ---
+document.addEventListener('submit', async function(e) {
     if (e.target.id !== 'contact-inquiry-form') return;
     e.preventDefault();
     var form = e.target;
@@ -214,6 +214,36 @@ document.addEventListener('submit', function(e) {
         msgEl.className = 'contact-form-msg contact-form-msg--error';
         msgEl.textContent = isZh ? '请在 contact.js 中配置 CONTACT_FORM_WORKER_URL 或 Formspree Form ID 后再使用提交功能。' : 'Please set CONTACT_FORM_WORKER_URL or CONTACT_FORMSPREE_ID in contact.js to enable form submission.';
         return;
+    }
+    var fileInput = form.querySelector('input[name="attachment"]');
+    var maxSize = 4 * 1024 * 1024;
+    var file = fileInput && fileInput.files && fileInput.files[0] ? fileInput.files[0] : null;
+    if (file && file.size > maxSize && typeof CONTACT_FORM_WORKER_URL !== 'undefined' && CONTACT_FORM_WORKER_URL) {
+        var base = CONTACT_FORM_WORKER_URL.replace(/\/api\/contact$/, '');
+        var uploadUrl = base + '/api/contact-upload';
+        try {
+            if (typeof window.__vercelBlobUpload !== 'function') {
+                await new Promise(function(resolve, reject) {
+                    var script = document.createElement('script');
+                    script.type = 'module';
+                    script.textContent = "import { upload } from 'https://esm.sh/@vercel/blob/client'; window.__vercelBlobUpload = upload; window.dispatchEvent(new Event('vercelBlobReady'));";
+                    script.onload = resolve;
+                    script.onerror = function() { reject(new Error('Load failed')); };
+                    document.head.appendChild(script);
+                    window.addEventListener('vercelBlobReady', resolve, { once: true });
+                });
+            }
+            var pathname = 'contact-attachments/' + (file.name || 'file.pdf');
+            var blob = await window.__vercelBlobUpload(pathname, file, { access: 'public', handleUploadUrl: uploadUrl, contentType: 'application/pdf' });
+            var hidden = form.querySelector('input[name="attachment_url"]');
+            if (hidden) hidden.value = blob && blob.url ? blob.url : '';
+            if (fileInput) fileInput.value = '';
+        } catch (err) {
+            msgEl.style.display = 'block';
+            msgEl.className = 'contact-form-msg contact-form-msg--error';
+            msgEl.textContent = isZh ? '大文件上传失败，请检查网络或换用小于 4MB 的 PDF 后重试。' : 'Large file upload failed. Please try a PDF under 4MB or check your connection.';
+            return;
+        }
     }
     var btn = form.querySelector('.submit-btn');
     if (btn) { btn.disabled = true; btn.textContent = isZh ? '提交中…' : 'Sending…'; }
