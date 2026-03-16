@@ -230,7 +230,14 @@ document.addEventListener('submit', function(e) {
             form.reset();
         } else {
             return r.json().then(function(data) {
-                var backendMsg = (data && (data.error || data.detail)) ? (data.error + (data.detail ? ': ' + data.detail : '')) : null;
+                var detailText = null;
+                if (data) {
+                    if (typeof data.detail === 'string') detailText = data.detail;
+                    else if (Array.isArray(data.missing) && data.missing.length) detailText = 'Missing env: ' + data.missing.join(', ');
+                    else if (data.hint) detailText = data.hint;
+                    else if (data.resendDetail && data.resendDetail.message) detailText = data.resendDetail.message;
+                }
+                var backendMsg = (data && (data.error || data.code)) ? ((data.code ? '[' + data.code + '] ' : '') + (data.error || '') + (detailText ? ': ' + detailText : '')) : null;
                 msgEl.className = 'contact-form-msg contact-form-msg--error';
                 msgEl.textContent = backendMsg || (isZh ? '提交失败，请稍后重试或直接发邮件联系我们。' : 'Submission failed. Please try again later or email us directly.');
                 msgEl.style.display = 'block';
