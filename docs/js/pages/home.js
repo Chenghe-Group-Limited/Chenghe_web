@@ -92,82 +92,92 @@ function getHomePageHTML() {
         </h2>
         <div class="news-container" id="news-scroll-host">
             <div class="news-grid">
-                <div class="news-card" onclick="window.open('https://finance.yahoo.com/news/chenghe-acquisition-iii-co-announces-014100803.html?guccounter=1', '_blank')">
+                <div class="news-card t-zh" onclick="window.open('https://lioncitylife.com/finance/chenghe-acquisition-iii-co-%E5%AE%A3%E5%B8%83%E5%AE%8C%E6%88%901-265%E4%BA%BF%E7%BE%8E%E5%85%83%E9%A6%96%E6%AC%A1%E5%85%AC%E5%BC%80%E5%8B%9F%E8%82%A1%EF%BC%8C%E5%8C%85%E6%8B%AC%E5%AE%8C%E5%85%A8/', '_blank')">
                     <h4>
-                        <span class="t-en">Chenghe Acquisition III Announces Pricing of $100 Million IPO</span>
-                        <span class="t-zh">Chenghe Acquisition III 宣布定价1亿美元 IPO</span>
+                        <span class="t-zh">Chenghe Acquisition III Co. 宣布完成1.265亿美元首次公开募股</span>
                     </h4>
-                    <p style="font-size:14px; color:#999; margin-bottom:15px;">November 2025</p>
+                    <p style="font-size:14px; color:#999; margin-bottom:8px;">2025 年 9 月</p>
                     <p style="color:var(--color-grey); font-size:14px;">
-                        <span class="t-en">The Company announced the pricing of its initial public offering of 10,000,000 units...</span>
-                        <span class="t-zh">公司宣布其1000万单位的首次公开募股定价...</span>
+                        <span class="t-zh">Chenghe Acquisition III Co.，一家新成立的特殊目的收购公司，根据开曼群岛豁免公司法成立，今日宣布其首次公开发行已完成，... </span>
                     </p>
-                    <a class="read-more"><span class="t-en">Read More &rarr;</span><span class="t-zh">阅读更多 &rarr;</span></a>
+                    <a class="read-more t-zh">阅读更多 &rarr;</a>
                 </div>
                 
-                <div class="news-card">
+                <div class="news-card t-zh" onclick="window.open('https://cn.investing.com/news/sec-filings/article-93CH-2822291', '_blank')">
                     <h4>
-                        <span class="t-en">Strategic Partnership Announced</span>
-                        <span class="t-zh">宣布达成战略合作伙伴关系</span>
+                        <span class="t-zh">成和收购II公司定于2025年6月6日完成合并</span>
                     </h4>
-                    <p style="font-size:14px; color:#999; margin-bottom:15px;">January 20, 2026</p>
+                    <p style="font-size:14px; color:#999; margin-bottom:8px;">2025 年 6 月</p>
                     <p style="color:var(--color-grey); font-size:14px;">
-                        <span class="t-en">Expanding our reach in the green energy sector through strategic alliances with key Asian players.</span>
-                        <span class="t-zh">通过与亚洲主要参与者的战略联盟，扩大我们在绿色能源领域的影响力。</span>
+                        <span class="t-zh">2025年5月23日，特殊目的收购公司（SPAC）成和收购II公司（Chenghe II）召开了特别股东大会，就其与Polibeli集团有限公司（Polibeli Group Ltd.）的拟议业务合并进行投票。</span>
                     </p>
-                    <a class="read-more"><span class="t-en">Read More &rarr;</span><span class="t-zh">阅读更多 &rarr;</span></a>
+                    <a class="read-more t-zh">阅读更多 &rarr;</a>
                 </div>
                 
-                <div class="news-card">
+                <div class="news-card t-zh" onclick="window.open('https://xueqiu.com/8031625547/321087481', '_blank')">
                     <h4>
-                        <span class="t-en">Chenghe Capital Expands Team</span>
-                        <span class="t-zh">成和资本扩充团队</span>
+                        <span class="t-zh">营收 2873 万美金，来自台湾的启坤科技借壳 SPAC 挂牌纳斯达克</span>
                     </h4>
-                    <p style="font-size:14px; color:#999; margin-bottom:15px;">March 10, 2026</p>
+                    <p style="font-size:14px; color:#999; margin-bottom:8px;">2025 年 1 月</p>
                     <p style="color:var(--color-grey); font-size:14px;">
-                        <span class="t-en">We are pleased to welcome new senior partners to our Hong Kong office.</span>
-                        <span class="t-zh">我们要非常荣幸地欢迎新的高级合伙人加入我们的香港办事处。</span>
+                        <span class="t-zh">来自台湾的高尔夫球杆制造商 Femco Steel Technology Co., Ltd.（“启坤科技”）与 SPAC 公司 Chenghe Acquisition I Co.（“Chenghe I”）宣布完成业务合并，在纳斯达克挂牌上市。</span>
                     </p>
-                    <a class="read-more"><span class="t-en">Read More &rarr;</span><span class="t-zh">阅读更多 &rarr;</span></a>
+                    <a class="read-more t-zh">阅读更多 &rarr;</a>
                 </div>
 
-                <div class="news-card">
+                <div class="news-card t-zh" onclick="window.open('https://spac.mg21.com/merger/8378.html', '_blank')">
                     <h4>
-                        <span class="t-en">Quarterly Market Insight</span>
-                        <span class="t-zh">季度市场洞察</span>
+                        <span class="t-zh">Chenghe Acquisition 与 TCO 达成合并上市协议，以加速成长型行业的光子集成电路技术的开发</span>
                     </h4>
-                    <p style="font-size:14px; color:#999; margin-bottom:15px;">April 05, 2026</p>
+                    <p style="font-size:14px; color:#999; margin-bottom:8px;">2023 年 7 月</p>
                     <p style="color:var(--color-grey); font-size:14px;">
-                        <span class="t-en">An in-depth analysis of the recovering Asian tech IPO market for Q1 2026.</span>
-                        <span class="t-zh">对2026年第一季度亚洲科技IPO市场复苏的深度分析。</span>
+                        <span class="t-zh">2023年7月21日，光学与3D感测科技公司台湾彩光科技股份有限公司（"TCO"）与特殊目的收购公司Chenghe Acquisition Co.达成业务合并协议。</span>
                     </p>
-                    <a class="read-more"><span class="t-en">Read More &rarr;</span><span class="t-zh">阅读更多 &rarr;</span></a>
+                    <a class="read-more t-zh">阅读更多 &rarr;</a>
                 </div>
 
-                <div class="news-card">
+                <div class="news-card t-en" onclick="window.open('https://www.globenewswire.com/news-release/2025/09/18/3152111/0/en/Chenghe-Acquisition-III-Co-Announces-Closing-of-126-5-Million-Initial-Public-Offering-Including-Full-Exercise-of-the-Underwriter-s-Overallotment-Option.html', '_blank')">
                     <h4>
-                        <span class="t-en">Annual Investor Conference</span>
-                        <span class="t-zh">年度投资者大会</span>
+                        <span class="t-en">Chenghe Acquisition III Co. Announces Closing of $126.5 Million Initial Public Offering, Including Full Exercise of the Underwriter’s Overallotment Option</span>
                     </h4>
-                    <p style="font-size:14px; color:#999; margin-bottom:15px;">May 12, 2026</p>
+                    <p style="font-size:14px; color:#999; margin-bottom:8px;">Sep, 2025</p>
                     <p style="color:var(--color-grey); font-size:14px;">
-                        <span class="t-en">Join us for our annual gathering to discuss global macroeconomic trends.</span>
-                        <span class="t-zh">加入我们的年度聚会，共同探讨全球宏观经济趋势。</span>
+                        <span class="t-en">Chenghe Acquisition III Co. (“the Company”), a newly organized special purpose acquisition company formed as a Cayman Islands exempted company, ...</span>
                     </p>
-                    <a class="read-more"><span class="t-en">Read More &rarr;</span><span class="t-zh">阅读更多 &rarr;</span></a>
+                    <a class="read-more t-en">Read More &rarr;</a>
                 </div>
 
-                <div class="news-card">
+                <div class="news-card t-en" onclick="window.open('#', '_blank')">
                     <h4>
-                        <span class="t-en">ESG Report 2025 Release</span>
-                        <span class="t-zh">2025 ESG 报告发布</span>
+                        <span class="t-en">[English headline 2]</span>
                     </h4>
-                    <p style="font-size:14px; color:#999; margin-bottom:15px;">June 01, 2026</p>
+                    <p style="font-size:14px; color:#999; margin-bottom:8px;">[Month Day, Year]</p>
                     <p style="color:var(--color-grey); font-size:14px;">
-                        <span class="t-en">Highlighting our commitment to sustainable investing and corporate governance.</span>
-                        <span class="t-zh">重点介绍我们在可持续投资和公司治理方面的承诺。</span>
+                        <span class="t-en">[One or two lines of English summary for news 2.]</span>
                     </p>
-                    <a class="read-more"><span class="t-en">Read More &rarr;</span><span class="t-zh">阅读更多 &rarr;</span></a>
+                    <a class="read-more t-en">Read More &rarr;</a>
+                </div>
+
+                <div class="news-card t-en" onclick="window.open('#', '_blank')">
+                    <h4>
+                        <span class="t-en">[English headline 3]</span>
+                    </h4>
+                    <p style="font-size:14px; color:#999; margin-bottom:8px;">[Month Day, Year]</p>
+                    <p style="color:var(--color-grey); font-size:14px;">
+                        <span class="t-en">[One or two lines of English summary for news 3.]</span>
+                    </p>
+                    <a class="read-more t-en">Read More &rarr;</a>
+                </div>
+
+                <div class="news-card t-en" onclick="window.open('#', '_blank')">
+                    <h4>
+                        <span class="t-en">[English headline 4]</span>
+                    </h4>
+                    <p style="font-size:14px; color:#999; margin-bottom:8px;">[Month Day, Year]</p>
+                    <p style="color:var(--color-grey); font-size:14px;">
+                        <span class="t-en">[One or two lines of English summary for news 4.]</span>
+                    </p>
+                    <a class="read-more t-en">Read More &rarr;</a>
                 </div>
             </div>
         </div>

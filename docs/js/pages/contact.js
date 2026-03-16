@@ -65,9 +65,9 @@ function getContactPageHTML() {
                 <span class="t-zh">办公地址</span>
             </h2>
             <div class="contact-item">
-                <h4><span class="t-en">Hong Kong Office</span><span class="t-zh">香港办公室</span></h4>
+                <h4><span class="t-en">Hong Kong Office: </span><span class="t-zh">香港办公室：</span></h4>
                 <p class="t-en">Unit 2307, Tower One, Lippo Centre,<br>89 Queensway, Admiralty, Hong Kong</p>
-                <p class="t-zh">香港港岛金钟道 89 号<br>力宝中心一座 2307 室</p>
+                <p class="t-zh">香港港岛金钟道 89 号力宝中心一座 2307 室</p>
             </div>
             <h2 style="margin-bottom:20px; color:var(--color-dark-blue); font-size:32px;">
                 <span class="t-en">Contact Information</span>

@@ -9,25 +9,89 @@ let currentSpacProject = 'Overview';
 // 各 SPAC 项目新闻：titleEn/titleZh 与 urlEn/urlZh；仅中文内容时只填 titleZh+urlZh，该条只在中文页显示；无中文时英文链接在中文页也显示
 var SPAC_NEWS = {
     'HHL': [
-        { titleEn: 'HH&L Acquisition Co. Announces Closing of Upsized $414 Million Initial Public Offering and Exercise of Underwriters\' Over-Allotment Option in Full', urlEn: '#' }
+        { 
+            titleEn: 'HH&L Acquisition Co. Announces Closing of Upsized $414 Million Initial Public Offering and Exercise of Underwriters\' Over-Allotment Option in Full', 
+            urlEn: 'http://www.prnewswire.com/news-releases/hhl-acquisition-co-announces-closing-of-upsized-414-million-initial-public-offering-and-exercise-of-underwriters-over-allotment-option-in-full-301225164.html',
+            summaryEn: 'HH&L Acquisition Co. completes its upsized US$414 million IPO, including full exercise of the underwriters’ over‑allotment option.'
+        }
     ],
     'Chenghe': [
-        { titleEn: 'Chenghe Acquisition Co. Announces Pricing of $100 Million Initial Public Offering - PR Newswire APAC', urlEn: '#' },
-        { titleEn: 'Chenghe Acquisition Co. Announces Closing of $115 Million Initial Public Offering and Exercise of Underwriters\' Over-Allotment Option in Full - PR Newswire APAC', urlEn: '#' },
-        { titleZh: 'Chenghe Acquisition Co.宣布完成1.15亿美元的首次公开募股-美通社PR-Newswire', urlZh: '#' },
-        { titleEn: 'Chenghe Acquisition Co. Announces the Separate Trading of its Class A Ordinary Shares and Warrants Commencing June 23, 2022 - PR Newswire APAC', urlEn: '#' },
-        { titleZh: 'Chenghe Acquisition宣布其A类普通股和权证自6月23日起分开交易-美通社PR-Newswire', urlZh: '#' }
+        { 
+            titleEn: 'Chenghe Acquisition Co. Announces Pricing of $100 Million Initial Public Offering - PR Newswire APAC', 
+            urlEn: 'https://en.prnasia.com/releases/apac/chenghe-acquisition-co-announces-pricing-of-100-million-initial-public-offering-359555.shtml',
+            summaryEn: 'Chenghe Acquisition Co. prices its US$100 million SPAC IPO of 10,000,000 units on Nasdaq under the symbol CHEAU.'
+        },
+        { 
+            titleEn: 'Chenghe Acquisition Co. Announces Closing of $115 Million Initial Public Offering and Exercise of Underwriters\' Over-Allotment Option in Full - PR Newswire APAC', 
+            urlEn: 'http://enold.prnasia.com/releases/apac/chenghe-acquisition-co-announces-closing-of-115-million-initial-public-offering-and-exercise-of-underwriters-over-allotment-option-in-full-360009.shtml',
+            summaryEn: 'Chenghe Acquisition Co. closes its upsized US$115 million IPO as underwriters fully exercise their over‑allotment option.'
+        },
+        { 
+            titleZh: 'Chenghe Acquisition Co.宣布完成1.15亿美元的首次公开募股-美通社PR-Newswire', 
+            urlZh: 'https://www.prnasia.com/story/360007-1.shtml',
+            summaryZh: '成和并购公司宣布完成总额1.15亿美元的首次公开募股，包括承销商完全行使超额配股权。' 
+        },
+        { 
+            titleEn: 'Chenghe Acquisition Co. Announces the Separate Trading of its Class A Ordinary Shares and Warrants Commencing June 23, 2022 - PR Newswire APAC', 
+            urlEn: 'http://enold.prnasia.com/releases/apac/chenghe-acquisition-co-announces-the-separate-trading-of-its-class-a-ordinary-shares-and-warrants-commencing-june-23-2022-365601.shtml',
+            summaryEn: 'Beginning June 23, 2022, holders of Chenghe Acquisition Co. units may separately trade the Class A ordinary shares and warrants on Nasdaq.'
+        },
+        { 
+            titleZh: 'Chenghe Acquisition宣布其A类普通股和权证自6月23日起分开交易-美通社PR-Newswire', 
+            urlZh: 'https://www.prnasia.com/story/365602-1.shtml',
+            summaryZh: '自2022年6月23日起，成和并购公司首次公开发行所含A类普通股和权证可在纳斯达克分别交易。'
+        }
     ],
     'Chenghe I': [
-        { titleEn: 'Femco Steel Technology Co., Ltd. to be Publicly Listed in the U.S. Through a Business Combination with Chenghe Acquisition I Co.', urlEn: '#' },
-        { titleZh: '啟坤科技股份有限公司將於整合後與成和Chenghe Acquisition I Co.合併後至美國公開上市-美通社PR-Newswire', urlZh: '#' }
+        { 
+            titleEn: 'Femco Steel Technology Co., Ltd. to be Publicly Listed in the U.S. Through a Business Combination with Chenghe Acquisition I Co.', 
+            urlEn: 'https://www.prnewswire.com/apac/news-releases/femco-steel-technology-co-ltd-to-be-publicly-listed-in-the-us-through-a-business-combination-with-chenghe-acquisition-i-co-302021622.html',
+            summaryEn: 'Femco Steel Technology Co., Ltd. agrees to become a U.S.‑listed company through a business combination with Chenghe Acquisition I Co.'
+        },
+        { 
+            titleZh: '啟坤科技股份有限公司將於整合後與成和Chenghe Acquisition I Co.合併後至美國公開上市-美通社PR-Newswire', 
+            urlZh: 'http://hk.prnasia.com/story/432234-2.shtml',
+            summaryZh: '啟坤科技股份有限公司宣布将通过与成和 Chenghe Acquisition I Co. 的业务合并，在美国公开上市。'
+        }
     ],
     'Chenghe II': [
-        { titleEn: 'Chenghe Acquisition II Co. Announces Pricing of $75 Million Initial Public Offering', urlEn: '#' },
-        { titleEn: 'Chenghe Acquisition II Co. Announces Closing of $86.25 Million Initial Public Offering', urlEn: '#' },
-        { titleEn: 'Chenghe Acquisition II Co. Announces the Separate Trading of Its Class A Ordinary Shares and Warrants, Commencing on July 29, 2024', urlEn: '#' }
+        { 
+            titleEn: 'Chenghe Acquisition II Co. Announces Pricing of $75 Million Initial Public Offering', 
+            urlEn: 'https://www.prnewswire.com/apac/news-releases/chenghe-acquisition-ii-co-announces-pricing-of-75-million-initial-public-offering-302167117.html',
+            summaryEn: 'Chenghe Acquisition II Co. prices its US$75 million IPO of 7,500,000 units on NYSE American under the symbol CHEB.U.'
+        },
+        { 
+            titleEn: 'Chenghe Acquisition II Co. Announces Closing of $86.25 Million Initial Public Offering', 
+            urlEn: 'https://www.prnewswire.com/apac/news-releases/chenghe-acquisition-ii-co-announces-closing-of-86-25-million-initial-public-offering-302168830.html',
+            summaryEn: 'Chenghe Acquisition II Co. closes its US$86.25 million IPO after underwriters fully exercise their over‑allotment option.'
+        },
+        { 
+            titleEn: 'Chenghe Acquisition II Co. Announces the Separate Trading of Its Class A Ordinary Shares and Warrants, Commencing on July 29, 2024', 
+            urlEn: 'https://www.prnewswire.com/news-releases/chenghe-acquisition-ii-co-announces-the-separate-trading-of-its-class-a-ordinary-shares-and-warrants-commencing-on-july-29-2024-302207817.html',
+            summaryEn: 'From July 29, 2024, investors can separately trade Chenghe Acquisition II Co.’s Class A ordinary shares and warrants under tickers CHEB and CHEB WS.'
+        }
     ],
     'Chenghe III': []
+};
+
+var SPAC_SEC_FILINGS = {
+    'HHL': [
+        { date: '02/12/2021', form: 'S-1/A', url: '' },
+        { date: '01/19/2021', form: 'S-1', url: '' }
+    ],
+    'Chenghe': [
+        { date: '04/01/2022', form: 'S-1', url: '' }
+    ],
+    'Chenghe I': [
+        { date: '01/01/2023', form: 'S-1', url: '' }
+    ],
+    'Chenghe II': [
+        { date: '05/13/2024', form: 'S-1', url: '' },
+        { date: '04/03/2024', form: 'DRS', url: '' }
+    ],
+    'Chenghe III': [
+        { date: '09/01/2025', form: 'S-1', url: '' }
+    ]
 };
 
 function switchSpacMainTab(tabName, updateUrl = true) {
@@ -89,10 +153,10 @@ function renderSpacContent(subTab) {
     // 定义子菜单的中英文映射
     const subTabMap = {
         'Overview': '概览',
-        'Management': '团队',
+        'Management': '管理团队',
         'News': '新闻',
-        'SEC Filings': 'SEC Filings', 
-        'Governance': '管理' 
+        'SEC Filings': 'SEC 文件', 
+        'Governance': '公司治理' 
     };
 
     if (currentSpacProject !== 'Overview') {
@@ -427,7 +491,7 @@ function renderSpacContent(subTab) {
             } else if (currentSpacProject === 'Chenghe') {
                 // Chenghe Acquisition Co. 管理团队（Ken Hitchner、Richard Li、Shibin Wang、Zhiyang Zhou）
                 bodyHtml = `
-                <div class="team-grid">
+                <div class="team-grid team-grid--cols-2">
                     <div class="team-card" onclick="openChengheMgmtModalFromSpac(10, 'Advisory Board Chairman', '顾问委员会主席')">
                         <div class="team-photo"><img src="images/Team/Kenneth-W.Hitchner.png" alt="Ken Hitchner"></div>
                         <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
@@ -476,7 +540,7 @@ function renderSpacContent(subTab) {
             } else if (currentSpacProject === 'Chenghe I') {
                 // Chenghe I 管理团队（李琦、王世斌、王兆海）
                 bodyHtml = `
-                <div class="team-grid">
+                <div class="team-grid team-grid--cols-2">
                     <div class="team-card" onclick="openChenghe1MgmtModalFromSpac(0, 'Advisory Board Chairman', '顾问委员会主席')">
                         <div class="team-photo"><img src="images/Team/Richard.png" alt="Richard Li / 李琦"></div>
                         <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
@@ -563,7 +627,7 @@ function renderSpacContent(subTab) {
             } else if (currentSpacProject === 'Chenghe III') {
                 // Chenghe III 管理团队（李琦、王世斌、王兆海、李泽原）
                 bodyHtml = `
-                <div class="team-grid">
+                <div class="team-grid team-grid--cols-2">
                     <div class="team-card" onclick="openChenghe3MgmtModalFromSpac(0, 'Advisory Board Chairman', '顾问委员会主席')">
                         <div class="team-photo"><img src="images/Team/Richard.png" alt="Richard Li / 李琦"></div>
                         <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
@@ -646,15 +710,61 @@ function renderSpacContent(subTab) {
             if (!newsList || newsList.length === 0) {
                 bodyHtml = '<div class="spac-news-empty" style="padding:40px; text-align:center; color:var(--color-grey);"><span class="t-en">News will be posted here.</span><span class="t-zh">新闻将在此更新。</span></div>';
             } else {
-                bodyHtml = '<div class="spac-news-list" style="max-width:800px;">';
+                // 特例：Chenghe Acquisition Co. 的中文页面只保留两条中文新闻
+                if (currentSpacProject === 'Chenghe' && document.body.className.indexOf('lang-zh') !== -1) {
+                    newsList = newsList.filter(function(item) {
+                        return item.titleZh && item.urlZh;
+                    });
+                }
+                // 使用与首页相同风格的新闻卡片样式（.news-card），每条新闻一个横向长卡片，点击整卡打开官网链接
+                bodyHtml = '<div class="spac-news-list" style="display:flex; flex-direction:column; gap:24px; max-width:1000px; margin:0 auto;">';
                 newsList.forEach(function(item) {
                     var zhOnly = !(item.titleEn && item.urlEn);
-                    var rowClass = zhOnly ? 'spac-news-item spac-news-item--zh-only' : 'spac-news-item';
-                    var enHtml = (item.titleEn && item.urlEn) ? '<a href="' + item.urlEn + '" target="_blank" rel="noopener noreferrer">' + item.titleEn + '</a>' : '';
-                    var zhHtml = (item.titleZh && item.urlZh) ? '<a href="' + item.urlZh + '" target="_blank" rel="noopener noreferrer">' + item.titleZh + '</a>' : (item.titleEn && item.urlEn ? '<a href="' + item.urlEn + '" target="_blank" rel="noopener noreferrer">' + item.titleEn + '</a>' : '');
-                    bodyHtml += '<div class="' + rowClass + '" style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid #eee;"><span class="t-en">' + enHtml + '</span><span class="t-zh">' + zhHtml + '</span></div>';
+                    var isZhOnlyClass = zhOnly ? ' spac-news-item--zh-only' : '';
+                    var linkEn = item.urlEn || item.urlZh || '#';
+                    var linkZh = item.urlZh || item.urlEn || '#';
+                    var summaryEn = item.summaryEn || '';
+                    var summaryZh = item.summaryZh || item.summaryEn || '';
+                    
+                    bodyHtml += '' +
+                        '<div class="news-card' + isZhOnlyClass + '" ' +
+                        'onclick="window.open((document.body.className.indexOf(\'lang-zh\') !== -1 ? \'' + linkZh + '\' : \'' + linkEn + '\'), \'_blank\')">' +
+                        '  <h4>' +
+                        '    <span class="t-en">' + (item.titleEn || item.titleZh || '') + '</span>' +
+                        '    <span class="t-zh">' + (item.titleZh || item.titleEn || '') + '</span>' +
+                        '  </h4>' +
+                        '  <p class="news-summary">' +
+                        '    <span class="t-en">' + (summaryEn || '') + '</span>' +
+                        '    <span class="t-zh">' + (summaryZh || '') + '</span>' +
+                        '  </p>' +
+                        '  <a class="read-more"><span class="t-en">Read More &rarr;</span><span class="t-zh">阅读更多 &rarr;</span></a>' +
+                        '</div>';
                 });
                 bodyHtml += '</div>';
+            }
+        } else if (subTab === 'SEC Filings') {
+            var filings = SPAC_SEC_FILINGS[currentSpacProject];
+            if (!filings || filings.length === 0) {
+                bodyHtml = '<div style="padding:40px; text-align:center; color:var(--color-grey);"><span class="t-en">SEC Filings will be posted here.</span><span class="t-zh">SEC 文件将在此更新。</span></div>';
+            } else {
+                bodyHtml = '<div class="sec-filings-table-wrap" style="max-width:1000px; margin:0 auto;">' +
+                    '<table class="sec-filings-table">' +
+                    '<thead><tr>' +
+                    '<th style="width:130px;"><span class="t-en">Date</span><span class="t-zh">日期</span></th>' +
+                    '<th style="width:100px;"><span class="t-en">Form</span><span class="t-zh">名称</span></th>' +
+                    '<th><span class="t-en">Link</span><span class="t-zh">链接</span></th>' +
+                    '</tr></thead><tbody>';
+                filings.forEach(function(f) {
+                    var urlCell = f.url
+                        ? '<a href="' + f.url + '" target="_blank">' + f.url + '</a>'
+                        : '<span style="color:#bbb;">\u2014</span>';
+                    bodyHtml += '<tr>' +
+                        '<td>' + f.date + '</td>' +
+                        '<td>' + f.form + '</td>' +
+                        '<td class="sec-filings-url">' + urlCell + '</td>' +
+                        '</tr>';
+                });
+                bodyHtml += '</tbody></table></div>';
             }
         } else {
             bodyHtml = `

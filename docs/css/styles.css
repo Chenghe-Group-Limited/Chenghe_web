@@ -48,7 +48,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* SPAC Overview 标题：关闭连字，并统一使用 Times New Roman（中英文保持一致） */
 .spac-overview-layout h3,
-.spac-project-layout h3 {
+.spac-project-layout h3,
+.hhl-overview-section h3,
+.ch-overview h3,
+.ch1-overview h3,
+.ch2-overview h3,
+.ch3-overview h3 {
     font-variant-ligatures: none;
     font-feature-settings: "liga" 0, "clig" 0;
     font-family: "Times New Roman", Times, serif;
@@ -373,7 +378,7 @@ nav ul li:hover .dropdown-content { display: block; animation: slideUp 0.2s ease
     flex-direction: column;
 }
 .biz-box:hover { transform: translateY(-10px); box-shadow: var(--shadow-hover); border-color: transparent; }
-.biz-box h3 { font-size: 26px; margin-bottom: 4px; color: var(--color-dark-blue); min-height: auto; }
+.biz-box h3 { font-size: 25px; margin-bottom: 10px; color: var(--color-dark-blue); min-height: auto; }
 
 /* 业务简介描述 */
 .biz-desc {
@@ -457,9 +462,11 @@ nav ul li:hover .dropdown-content { display: block; animation: slideUp 0.2s ease
     display: flex; flex-direction: column;
 }
 .news-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
-.news-card h4 { font-size: 18px; margin-bottom: 10px; font-family: 'Inter', sans-serif; line-height: 1.4; }
+.news-card h4 { font-size: 18px; margin-bottom: 10px; font-family: "Times New Roman", Times, serif; line-height: 1.4; }
 .read-more { color: var(--color-gold); font-size: 12px; font-weight: bold; margin-top: auto; text-transform: uppercase; letter-spacing: 1px; display: inline-block; border-bottom: 1px solid transparent; }
 .read-more:hover { border-bottom-color: var(--color-gold); }
+
+
 
 /* --- 6. 通用标签栏 --- */
 .tab-container { background-color: var(--color-white); border-bottom: 1px solid #e0e0e0; margin-bottom: 0; }
@@ -480,15 +487,36 @@ nav ul li:hover .dropdown-content { display: block; animation: slideUp 0.2s ease
 .spac-sub-tabs { display: flex; justify-content: center; gap: 0; margin-bottom: 50px; border-bottom: 1px solid #eee; }
 body.lang-en .spac-news-item--zh-only { display: none; }
 .spac-news-list a { color: var(--color-dark-blue); text-decoration: none; font-size: var(--font-body-size); line-height: var(--font-body-line); }
-.spac-news-list a:hover { color: var(--color-gold); text-decoration: underline; }
+.spac-news-list a:hover { color: var(--color-gold); text-decoration: none; }
+.spac-news-list .news-card { width: 100%; max-width: 100%; flex-shrink: 1; }
+.spac-news-list .news-summary { font-size: 14px; color: var(--color-body); line-height: var(--font-body-line); margin: 6px 0 10px; }
+.spac-news-list .read-more { font-size: 14px; }
 .sub-tab-btn { 
     padding: 15px 40px; background: transparent; border: none; cursor: pointer; 
     font-size: 14px; font-weight: 600; color: var(--color-grey); 
-    transition: all 0.2s; position: relative; font-family: 'Inter', sans-serif;
+    transition: all 0.2s; position: relative; font-family: "Times New Roman", Times, serif;
 }
 .sub-tab-btn:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); height: 14px; width: 1px; background-color: #ddd; }
 .sub-tab-btn:hover { color: var(--color-dark-blue); }
 .sub-tab-btn.active { color: var(--color-gold); }
+
+/* SEC Filings 表格 */
+.sec-filings-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.sec-filings-table thead th {
+    background: var(--color-accent-blue); color: #fff; font-weight: 600;
+    padding: 14px 18px; text-align: left; font-size: 15px;
+}
+.sec-filings-table tbody td {
+    padding: 14px 18px; border-bottom: 1px solid #e8ecf0; color: var(--color-grey);
+    vertical-align: top; line-height: 1.6;
+}
+.sec-filings-table tbody tr:hover { background: #f5f7fb; }
+.sec-filings-table tbody td a {
+    color: var(--color-dark-blue); text-decoration: none; font-weight: 600;
+}
+.sec-filings-table tbody td a:hover { color: var(--color-gold); text-decoration: underline; }
+.sec-filings-url { word-break: break-all; }
+.sec-filings-url a { font-weight: 400 !important; font-size: 14px; }
 
 .news-item-horizontal { 
     display: flex; gap: 30px; background: white; padding: 30px; margin-bottom: 30px; 
@@ -587,7 +615,7 @@ body.lang-en .spac-news-item--zh-only { display: none; }
     padding: 20px 44px;
     background: var(--color-dark-blue);
     color: var(--color-white);
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 600;
     letter-spacing: 0.02em;
     border-radius: 10px;
@@ -655,6 +683,7 @@ body.lang-en .spac-news-item--zh-only { display: none; }
 .team-grid { display: flex; flex-wrap: wrap; gap: 50px; justify-content: center; max-width: 1200px; margin: 0 auto; }
 /* 核心管理层 5 人：一行 3 个，二行 2 个，避免第二行单独一个 */
 .team-grid--cols-3 { display: grid; grid-template-columns: repeat(3, 260px); gap: 50px; justify-content: center; max-width: 1200px; margin: 0 auto; }
+.team-grid--cols-2 { display: grid; grid-template-columns: repeat(2, 260px); gap: 50px; justify-content: center; max-width: 1200px; margin: 0 auto; }
 .team-card { width: 260px; text-align: center; cursor: pointer; group: 'team'; }
 .team-photo { width: 260px; aspect-ratio: 3 / 4; background-color: var(--color-teal-muted); margin-bottom: 20px; border-radius: 4px; transition: all 0.4s ease; filter: grayscale(20%); overflow: hidden; }
 .team-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; display: block; }
@@ -734,7 +763,7 @@ body.lang-en .spac-news-item--zh-only { display: none; }
 .contact-info { flex: 0.8; padding-top: 20px; }
 .contact-info h2 { font-size: 24px; margin-bottom: 18px; }
 .contact-item { margin-bottom: 40px; }
-.contact-item h4 { color: var(--color-gold); margin-bottom: 3px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; }
+.contact-item h4 { color: var(--color-gold); margin-bottom: 7px; font-size: 20px; text-transform: uppercase; letter-spacing: 1px; }
 .contact-item p { font-size: var(--font-body-size); color: var(--color-body); line-height: var(--font-body-line); margin: 0 0 20px; }
 
 /* --- 12. Footer (Simple Centered) --- */

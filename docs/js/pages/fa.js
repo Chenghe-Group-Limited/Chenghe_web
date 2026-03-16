@@ -30,13 +30,18 @@ function getFaPageHTML() {
     <div class="tab-container">
         <div class="tab-list" id="fa-tabs">
             <div class="tab-btn active" onclick="switchFaTab('HK')"><span class="t-en">HK - Chenghe Capital</span><span class="t-zh">香港 - 成和资本</span></div>
-            <div class="tab-btn" onclick="switchFaTab('US')"><span class="t-en">US - CBC Securities</span><span class="t-zh">美国 - CBC Securities</span></div>
+            <div class="tab-btn" onclick="switchFaTab('US')"><span class="t-en">US - CBC Securities</span><span class="t-zh">美国 - CBC 证券</span></div>
         </div>
     </div>
 
     <div id="fa-hk" class="fa-subpage active">
-        <div class="fa-banner">
-            Office / Team Photo (Hong Kong)
+        <div class="fa-banner" id="fa-hk-banner">
+            <img src="" alt="Chenghe Capital Hong Kong" style="width:100%; height:100%; object-fit:cover; display:none;"
+                 onload="if(this.src && !this.src.endsWith('/'))this.style.display='block'">
+            <span class="fa-banner-placeholder" style="display:flex; align-items:center; justify-content:center; height:100%; color:#aaa; font-size:16px;">
+                <span class="t-en">Office / Team Photo (Hong Kong)</span>
+                <span class="t-zh">办公室 / 团队照片（香港）</span>
+            </span>
         </div>
         <div class="fa-content-container">
             <h1 style="margin-bottom:30px; color:var(--color-dark-blue); border-left: 5px solid var(--color-gold); padding-left: 20px;">
@@ -72,11 +77,16 @@ function getFaPageHTML() {
     </div>
 
     <div id="fa-us" class="fa-subpage">
-        <div class="fa-banner" style="background-color:var(--color-teal-muted);">
-            US Market / NYSE Photo
+        <div class="fa-banner" style="background-color:var(--color-teal-muted);" id="fa-us-banner">
+            <img src="" alt="CBC Securities US" style="width:100%; height:100%; object-fit:cover; display:none;"
+                 onload="if(this.src && !this.src.endsWith('/'))this.style.display='block'">
+            <span class="fa-banner-placeholder" style="display:flex; align-items:center; justify-content:center; height:100%; color:#aaa; font-size:16px;">
+                <span class="t-en">US Market / NYSE Photo</span>
+                <span class="t-zh">美国市场 / 纽交所照片</span>
+            </span>
         </div>
         <div class="fa-content-container">
-            <h1 style="margin-bottom:30px; color:var(--color-dark-blue); border-left: 5px solid var(--color-red); padding-left: 20px;">US - CBC Securities</h1>
+            <h1 style="margin-bottom:30px; color:var(--color-dark-blue); border-left: 5px solid var(--color-red); padding-left: 20px;"><span class="t-en">US - CBC Securities</span><span class="t-zh">美国 - CBC 证券</span></h1>
             <div class="us-text-block">
                 <h3 style="color:var(--color-dark-blue); margin-bottom:15px;">Overview</h3>
                 <p class="t-en" style="font-size:16px; line-height:1.8;">CBC Securities is a registered broker-dealer with the U.S. Securities and Exchange Commission and a member of FINRA. </p>
