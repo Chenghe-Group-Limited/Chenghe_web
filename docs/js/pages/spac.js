@@ -4,7 +4,31 @@
  * 修改此文件即可更新SPAC页面功能和内容
  */
 
-let currentSpacProject = 'Overview'; 
+let currentSpacProject = 'Overview';
+
+// 各 SPAC 项目新闻：titleEn/titleZh 与 urlEn/urlZh；仅中文内容时只填 titleZh+urlZh，该条只在中文页显示；无中文时英文链接在中文页也显示
+var SPAC_NEWS = {
+    'HHL': [
+        { titleEn: 'HH&L Acquisition Co. Announces Closing of Upsized $414 Million Initial Public Offering and Exercise of Underwriters\' Over-Allotment Option in Full', urlEn: '#' }
+    ],
+    'Chenghe': [
+        { titleEn: 'Chenghe Acquisition Co. Announces Pricing of $100 Million Initial Public Offering - PR Newswire APAC', urlEn: '#' },
+        { titleEn: 'Chenghe Acquisition Co. Announces Closing of $115 Million Initial Public Offering and Exercise of Underwriters\' Over-Allotment Option in Full - PR Newswire APAC', urlEn: '#' },
+        { titleZh: 'Chenghe Acquisition Co.宣布完成1.15亿美元的首次公开募股-美通社PR-Newswire', urlZh: '#' },
+        { titleEn: 'Chenghe Acquisition Co. Announces the Separate Trading of its Class A Ordinary Shares and Warrants Commencing June 23, 2022 - PR Newswire APAC', urlEn: '#' },
+        { titleZh: 'Chenghe Acquisition宣布其A类普通股和权证自6月23日起分开交易-美通社PR-Newswire', urlZh: '#' }
+    ],
+    'Chenghe I': [
+        { titleEn: 'Femco Steel Technology Co., Ltd. to be Publicly Listed in the U.S. Through a Business Combination with Chenghe Acquisition I Co.', urlEn: '#' },
+        { titleZh: '啟坤科技股份有限公司將於整合後與成和Chenghe Acquisition I Co.合併後至美國公開上市-美通社PR-Newswire', urlZh: '#' }
+    ],
+    'Chenghe II': [
+        { titleEn: 'Chenghe Acquisition II Co. Announces Pricing of $75 Million Initial Public Offering', urlEn: '#' },
+        { titleEn: 'Chenghe Acquisition II Co. Announces Closing of $86.25 Million Initial Public Offering', urlEn: '#' },
+        { titleEn: 'Chenghe Acquisition II Co. Announces the Separate Trading of Its Class A Ordinary Shares and Warrants, Commencing on July 29, 2024', urlEn: '#' }
+    ],
+    'Chenghe III': []
+};
 
 function switchSpacMainTab(tabName, updateUrl = true) {
     // 先切换页面（但不更新URL，因为后面会统一更新）
@@ -618,18 +642,20 @@ function renderSpacContent(subTab) {
             </div>`;
             }
         } else if (subTab === 'News') {
-            bodyHtml = `
-            <div class="news-item-horizontal">
-                <div class="news-img"><img src="" alt=""></div>
-                <div class="news-text">
-                    <h4>
-                        <span class="t-en">${currentSpacProject} Announces Merger Agreement</span>
-                        <span class="t-zh">${currentSpacProject} 宣布合并协议</span>
-                    </h4>
-                    <p class="t-en">Chenghe Capital is pleased to announce a definitive merger agreement...</p>
-                    <p class="t-zh">成和资本荣幸地宣布已达成最终合并协议...</p>
-                </div>
-            </div>`;
+            var newsList = SPAC_NEWS[currentSpacProject];
+            if (!newsList || newsList.length === 0) {
+                bodyHtml = '<div class="spac-news-empty" style="padding:40px; text-align:center; color:var(--color-grey);"><span class="t-en">News will be posted here.</span><span class="t-zh">新闻将在此更新。</span></div>';
+            } else {
+                bodyHtml = '<div class="spac-news-list" style="max-width:800px;">';
+                newsList.forEach(function(item) {
+                    var zhOnly = !(item.titleEn && item.urlEn);
+                    var rowClass = zhOnly ? 'spac-news-item spac-news-item--zh-only' : 'spac-news-item';
+                    var enHtml = (item.titleEn && item.urlEn) ? '<a href="' + item.urlEn + '" target="_blank" rel="noopener noreferrer">' + item.titleEn + '</a>' : '';
+                    var zhHtml = (item.titleZh && item.urlZh) ? '<a href="' + item.urlZh + '" target="_blank" rel="noopener noreferrer">' + item.titleZh + '</a>' : (item.titleEn && item.urlEn ? '<a href="' + item.urlEn + '" target="_blank" rel="noopener noreferrer">' + item.titleEn + '</a>' : '');
+                    bodyHtml += '<div class="' + rowClass + '" style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid #eee;"><span class="t-en">' + enHtml + '</span><span class="t-zh">' + zhHtml + '</span></div>';
+                });
+                bodyHtml += '</div>';
+            }
         } else {
             bodyHtml = `
             <div style="padding:40px; background:#f9f9f9; text-align:center; border:1px dashed #ccc; color:#999;">

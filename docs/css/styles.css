@@ -478,6 +478,9 @@ nav ul li:hover .dropdown-content { display: block; animation: slideUp 0.2s ease
 /* --- 7. SPAC 页面 --- */
 .spac-content { max-width: 1100px; margin: 60px auto; padding: 0 40px; }
 .spac-sub-tabs { display: flex; justify-content: center; gap: 0; margin-bottom: 50px; border-bottom: 1px solid #eee; }
+body.lang-en .spac-news-item--zh-only { display: none; }
+.spac-news-list a { color: var(--color-dark-blue); text-decoration: none; font-size: var(--font-body-size); line-height: var(--font-body-line); }
+.spac-news-list a:hover { color: var(--color-gold); text-decoration: underline; }
 .sub-tab-btn { 
     padding: 15px 40px; background: transparent; border: none; cursor: pointer; 
     font-size: 14px; font-weight: 600; color: var(--color-grey); 
