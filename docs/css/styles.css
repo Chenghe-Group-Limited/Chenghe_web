@@ -46,8 +46,10 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 
-/* HHL Overview 标题：关闭连字，并统一使用 Times New Roman（中英文保持一致） */
-.hhl-overview-section h3 {
+/* SPAC Overview 标题：关闭连字，并统一使用 Times New Roman（中英文保持一致） */
+.hhl-overview-section h3,
+.ch-overview h3,
+.ch1-overview h3 {
     font-variant-ligatures: none;
     font-feature-settings: "liga" 0, "clig" 0;
     font-family: "Times New Roman", Times, serif;
