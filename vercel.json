@@ -1,9 +1,4 @@
 {
   "version": 2,
-  "outputDirectory": "docs",
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "@vercel/edge"
-    }
-  }
+  "outputDirectory": "docs"
 }

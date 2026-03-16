@@ -15,7 +15,7 @@
 
 
 var contactDisplayEmail = "chenghe@chenghecap.com";  // 页面「办公地点」里展示的邮箱
-const CONTACT_FORM_WORKER_URL = 'https://project-n0ybn.vercel.app/api/contact';
+const CONTACT_FORM_WORKER_URL = '/api/contact';
 var CONTACT_FORMSPREE_ID = "mojngdba";  // Worker 未配置时使用的 Formspree Form ID
 
 function getContactPageHTML() {
