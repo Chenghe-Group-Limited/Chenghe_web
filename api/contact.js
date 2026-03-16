@@ -176,3 +176,4 @@ export const config = {
       }, 500, corsHeaders);
     }
   }
+  
