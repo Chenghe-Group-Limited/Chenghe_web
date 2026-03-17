@@ -135,7 +135,7 @@ export const config = {
 
       const emailBody = {
         from: `${FROM_NAME} <${FROM_EMAIL}>`,
-        to: [NOTIFY_EMAIL],
+        to: NOTIFY_EMAIL.split(',').map(function(e) { return e.trim(); }),
         subject,
         text: textLines.join('\n'),
         attachments: attachments.length ? attachments : undefined,
