@@ -50,7 +50,7 @@ function getAboutPageHTML() {
     <div class="about-hero-bg">
         <div class="about-floating-container">
             <div class="about-float-img">
-                <img src="" alt="About Chenghe">
+                <img src="#" alt="About Chenghe">
             </div>
             <div class="about-float-text">
                 <h2>
@@ -61,7 +61,7 @@ function getAboutPageHTML() {
                     <p>Chenghe Group is dedicated to connecting global capital markets with high-growth Asian enterprises. We integrate principal investing, capital markets advisory, and special purpose acquisition companies (SPACs) to provide comprehensive, end-to-end solutions for every stage of cross-border growth.</p>
                 </div>
                 <div class="t-zh">
-                    <p>集团致力于连接全球资本市场与高成长亚洲企业。我们整合私募股权投资、资本市场顾问及特殊目的收购公司（SPAC）业务，为企业跨境成长的每一阶段提供全面、端到端的综合解决方案。</p>
+                    <p>成和集团致力于连接全球资本市场与高成长亚洲企业。我们整合私募股权投资、资本市场顾问及特殊目的收购公司（SPAC）业务，为企业跨境成长的每一阶段提供全面、端到端的综合解决方案。</p>
                 </div>
             </div>
         </div>
