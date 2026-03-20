@@ -52,7 +52,7 @@ function getHomePageHTML() {
                 </h3>
                 <p class="biz-desc">
                     <span class="t-en">Chenghe is a leading player in the Asian SPAC market, with over $4.3 billion in transaction value closed.</span>
-                    <span class="t-zh">成和是亚洲 SPAC 市场的领先参与者，已累计完成逾 43 亿美元的交易总额。</span>
+                    <span class="t-zh">成和是亚洲 SPAC 市场的领先参与者，已累计完成逾 43 亿美元的交易总额了。</span>
                 </p>
                 <div style="margin-top: 0;">
                     <a class="biz-link" onclick="switchSpacMainTab('Overview')">
