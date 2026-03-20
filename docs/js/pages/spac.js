@@ -203,6 +203,28 @@ function renderSpacContent(subTab) {
                     </h2>
                     <p class="t-en" style="font-size:16px; color:var(--color-grey); line-height:1.85; margin-bottom:32px;">Chenghe has a leading SPAC team in Asia and has successfully sponsored multiple U.S.-listed SPACs. As of March 2026, one SPAC remains in search of a high-potential merger target. Overview of each SPAC:</p>
                     <p class="t-zh" style="font-size:16px; color:var(--color-grey); line-height:1.85; margin-bottom:32px;">成和拥有亚洲一流的 SPAC 团队，过去几年已成功在美国发行多个 SPAC。截至 2026 年 3 月，仍有 1 支在寻找具有高潜力合并标的。各个 SPAC 情况概览如下：</p>
+                    <div class="spac-overview-subprojects">
+                        <a href="javascript:void(0)" class="spac-overview-subproject" onclick="switchSpacMainTab('HHL')">
+                            <span class="t-en">HH&L Acquisition Co.</span>
+                            <span class="t-zh">HH&L Acquisition Co.</span>
+                        </a>
+                        <a href="javascript:void(0)" class="spac-overview-subproject" onclick="switchSpacMainTab('Chenghe')">
+                            <span class="t-en">Chenghe Acquisition Co.</span>
+                            <span class="t-zh">Chenghe Acquisition Co.</span>
+                        </a>
+                        <a href="javascript:void(0)" class="spac-overview-subproject" onclick="switchSpacMainTab('Chenghe I')">
+                            <span class="t-en">Chenghe Acquisition I Co.</span>
+                            <span class="t-zh">Chenghe Acquisition I Co.</span>
+                        </a>
+                        <a href="javascript:void(0)" class="spac-overview-subproject" onclick="switchSpacMainTab('Chenghe II')">
+                            <span class="t-en">Chenghe Acquisition II Co.</span>
+                            <span class="t-zh">Chenghe Acquisition II Co.</span>
+                        </a>
+                        <a href="javascript:void(0)" class="spac-overview-subproject" onclick="switchSpacMainTab('Chenghe III')">
+                            <span class="t-en">Chenghe Acquisition III Co.</span>
+                            <span class="t-zh">Chenghe Acquisition III Co.</span>
+                        </a>
+                    </div>
                     <div class="spac-overview-cards" style="display:flex; flex-direction:column; gap:24px;">
                         <a href="javascript:void(0)" onclick="switchSpacMainTab('HHL')" class="spac-overview-card" style="display:block; background:#fff; border-radius:12px; padding:24px 28px; box-shadow:0 4px 20px rgba(45,78,108,0.08); border-left:4px solid var(--color-gold); text-decoration:none; color:inherit; transition:box-shadow 0.25s, transform 0.2s;">
                             <div style="font-weight:700; font-size:18px; color:var(--color-dark-blue); margin-bottom:8px;">HH&L Acquisition Co.</div>
