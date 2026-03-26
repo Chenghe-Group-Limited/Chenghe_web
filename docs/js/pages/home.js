@@ -20,7 +20,7 @@ function getHomePageHTML() {
                 <span class="t-en">As our 5th successful SPAC, CHEC is now seeking industry leaders with disruptive technology and strong growth potential in the Asian region as merger targets.</span>
                 <span class="t-zh">作为我们成功发行的第五支SPAC，CHEC现面向亚洲地区寻找具有颠覆性技术和强劲增长潜力的行业领导者作为合并目标。</span>
             </p>
-            <a class="hero-news-link" onclick="switchSpacMainTab('Chenghe III')">
+            <a class="hero-news-link" onclick="window.open((document.body.className.indexOf('lang-zh') !== -1 ? 'https://lioncitylife.com/finance/chenghe-acquisition-iii-co-%e5%ae%a3%e5%b8%83%e5%85%b6a%e7%b1%bb%e6%99%ae%e9%80%9a%e8%82%a1%e5%92%8c%e8%ae%a4%e8%82%a1%e6%9d%83%e8%af%81%e5%b0%86%e4%ba%8e2025%e5%b9%b411%e6%9c%8811%e6%97%a5%e5%bc%80/' : 'https://www.globenewswire.com/news-release/2025/09/18/3152111/0/en/Chenghe-Acquisition-III-Co-Announces-Closing-of-126-5-Million-Initial-Public-Offering-Including-Full-Exercise-of-the-Underwriter-s-Overallotment-Option.html'), '_blank')">
                 <span class="t-en">Learn More about CHEC &rarr;</span>
                 <span class="t-zh">了解更多关于 CHEC &rarr;</span>
             </a>
