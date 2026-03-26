@@ -54,12 +54,34 @@ function getHomePageHTML() {
                     <span class="t-en">Chenghe is a leading player in the Asian SPAC market, with over $4.3 billion in transaction value closed.</span>
                     <span class="t-zh">成和是亚洲 SPAC 市场的领先参与者，已累计完成逾 43 亿美元的交易总额。</span>
                 </p>
-                <div style="margin-top: 0;">
-                    <a class="biz-link" onclick="switchSpacMainTab('Overview')">
-                        <span class="t-en">SPAC Overview</span>
-                        <span class="t-zh">SPAC 概览</span>
-                    </a>
-                </div>
+                    <div class="spac-home-nav" style="margin-top: 0;">
+                        <a class="spac-home-overview-bar" onclick="switchSpacMainTab('Overview')">
+                            <span class="t-en">SPAC Overview</span>
+                            <span class="t-zh">SPAC 概览</span>
+                        </a>
+                        <div class="spac-home-sub-grid">
+                            <a href="javascript:void(0)" class="spac-home-sub-link" onclick="switchSpacMainTab('HHL')">
+                                <span class="t-en">HH&L Acquisition Co.</span>
+                                <span class="t-zh">HH&L Acquisition Co.</span>
+                            </a>
+                            <a href="javascript:void(0)" class="spac-home-sub-link" onclick="switchSpacMainTab('Chenghe')">
+                                <span class="t-en">Chenghe Acquisition Co.</span>
+                                <span class="t-zh">Chenghe Acquisition Co.</span>
+                            </a>
+                            <a href="javascript:void(0)" class="spac-home-sub-link" onclick="switchSpacMainTab('Chenghe I')">
+                                <span class="t-en">Chenghe Acquisition I Co.</span>
+                                <span class="t-zh">Chenghe Acquisition I Co.</span>
+                            </a>
+                            <a href="javascript:void(0)" class="spac-home-sub-link" onclick="switchSpacMainTab('Chenghe II')">
+                                <span class="t-en">Chenghe Acquisition II Co.</span>
+                                <span class="t-zh">Chenghe Acquisition II Co.</span>
+                            </a>
+                            <a href="javascript:void(0)" class="spac-home-sub-link" onclick="switchSpacMainTab('Chenghe III')">
+                                <span class="t-en">Chenghe Acquisition III Co.</span>
+                                <span class="t-zh">Chenghe Acquisition III Co.</span>
+                            </a>
+                        </div>
+                    </div>
             </div>
 
             <div class="biz-box">
@@ -71,12 +93,12 @@ function getHomePageHTML() {
                     <span class="t-en">We partner with enterprises positioned for international growth, providing end-to-end guidance from securing financing and navigating restructuring to achieving a public listing. </span>
                     <span class="t-zh">我们与有国际增长潜力的企业合作，为其从获得融资到重构再到上市，提供全方位的咨询服务。</span>
                 </p>
-                <div style="margin-top: 0;">
-                    <a class="biz-link" onclick="switchFaTab('HK')">
+                <div class="spac-home-nav" style="margin-top: 0;">
+                    <a class="spac-home-overview-bar" onclick="switchFaTab('HK')">
                         <span class="t-en">Hong Kong – Chenghe Capital Management</span>
                         <span class="t-zh">香港 – 成和资本管理</span>
                     </a>
-                    <a class="biz-link" onclick="switchFaTab('US')">
+                    <a class="spac-home-overview-bar" onclick="switchFaTab('US')">
                         <span class="t-en">United States – CBC Securities</span>
                         <span class="t-zh">美国 – CBC 证券</span>
                     </a>
