@@ -48,13 +48,10 @@ function openAboutRecordByIndex(index) {
 function getAboutPageHTML() {
     return `
     <div class="about-hero-bg">
-        <div class="about-floating-container">
-            <div class="about-float-img">
-<<<<<<< HEAD
-                <img src="images/About us/Track Record/About_HK.jpg" alt="About Chenghe">
-=======
-                <img src="images/About us/Track Record/About_HK" alt="About Chenghe">
->>>>>>> e545da851711a4d3e87cf4e4b6d6eccdfbb02e8f
+    <div class="about-floating-container">
+        <div class="about-float-img">
+            <img src="images/About us/Track Record/About_HK.jpg" alt="About Chenghe">
+            
             </div>
             <div class="about-float-text">
                 <h2>
