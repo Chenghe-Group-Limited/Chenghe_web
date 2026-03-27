@@ -36,7 +36,7 @@ function getFaPageHTML() {
 
     <div id="fa-hk" class="fa-subpage active">
         <div class="fa-banner" id="fa-hk-banner">
-            <img src="" alt="Chenghe Capital Hong Kong" style="width:100%; height:100%; object-fit:cover; display:none;"
+            <img src="images/Hong Kong.jpg" alt="Chenghe Capital Hong Kong" style="width:100%; height:100%; object-fit:cover; display:none;"
                  onload="if(this.src && !this.src.endsWith('/'))this.style.display='block'">
             <span class="fa-banner-placeholder" style="display:flex; align-items:center; justify-content:center; height:100%; color:#aaa; font-size:16px;">
                 <span class="t-en">Office / Team Photo (Hong Kong)</span>
@@ -78,7 +78,7 @@ function getFaPageHTML() {
 
     <div id="fa-us" class="fa-subpage">
         <div class="fa-banner" style="background-color:var(--color-teal-muted);" id="fa-us-banner">
-            <img src="" alt="CBC Securities US" style="width:100%; height:100%; object-fit:cover; display:none;"
+            <img src="images/New York.jpg" alt="CBC Securities US" style="width:100%; height:100%; object-fit:cover; display:none;"
                  onload="if(this.src && !this.src.endsWith('/'))this.style.display='block'">
             <span class="fa-banner-placeholder" style="display:flex; align-items:center; justify-content:center; height:100%; color:#aaa; font-size:16px;">
                 <span class="t-en">US Market / NYSE Photo</span>
