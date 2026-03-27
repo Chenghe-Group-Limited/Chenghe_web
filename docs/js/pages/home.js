@@ -169,24 +169,35 @@ function getHomePageHTML() {
                     <a class="read-more t-en">Read More &rarr;</a>
                 </div>
 
-                <div class="news-card t-en" onclick="window.open('#', '_blank')">
+                <div class="news-card t-en" onclick="window.open('https://www.prnewswire.com/apac/news-releases/chenghe-acquisition-ii-co-announces-closing-of-86-25-million-initial-public-offering-302168830.html', '_blank')">
                     <h4>
-                        <span class="t-en">[English headline 2]</span>
+                        <span class="t-en">Chenghe Acquisition II Co. Announces Closing of $86.25 Million Initial Public Offering</span>
                     </h4>
-                    <p style="font-size:14px; color:#999; margin-bottom:8px;">[Month Day, Year]</p>
+                    <p style="font-size:14px; color:#999; margin-bottom:8px;">Jun, 2024</p>
                     <p style="color:var(--color-grey); font-size:14px;">
-                        <span class="t-en">[One or two lines of English summary for news 2.]</span>
+                        <span class="t-en">Chenghe Acquisition II Co. ("the Company") (NYSE:CHEB.U), a blank check company, announced today the closing of its initial public offering of 8,625,000 units, ...</span>
                     </p>
                     <a class="read-more t-en">Read More &rarr;</a>
                 </div>
 
-                <div class="news-card t-en" onclick="window.open('#', '_blank')">
+                <div class="news-card t-en" onclick="window.open('https://www.prnewswire.com/apac/news-releases/femco-steel-technology-co-ltd-to-be-publicly-listed-in-the-us-through-a-business-combination-with-chenghe-acquisition-i-co-302021622.html', '_blank')">
                     <h4>
-                        <span class="t-en">[English headline 3]</span>
+                        <span class="t-en">Femco Steel Technology Co., Ltd. to be Publicly Listed in the U.S. Through a Business Combination with Chenghe Acquisition I Co.</span>
                     </h4>
-                    <p style="font-size:14px; color:#999; margin-bottom:8px;">[Month Day, Year]</p>
+                    <p style="font-size:14px; color:#999; margin-bottom:8px;">Dec, 2023</p>
                     <p style="color:var(--color-grey); font-size:14px;">
-                        <span class="t-en">[One or two lines of English summary for news 3.]</span>
+                        <span class="t-en">Chenghe Acquisition I Co. (Nasdaq: LATG) ("Chenghe" or "SPAC") and Femco Steel Technology Co., Ltd. (TWO: 6731) ("FST" or the "Company"), ...</span>
+                    </p>
+                    <a class="read-more t-en">Read More &rarr;</a>
+                </div>
+
+                <div class="news-card t-en" onclick="window.open('https://www.paulhastings.com/news/chenghe-acquisition-company-completes-spac-ipo-on-nasdaq', '_blank')">
+                    <h4>
+                        <span class="t-en">Chenghe Acquisition Co. Completes SPAC IPO on NASDAQ</span>
+                    </h4>
+                    <p style="font-size:14px; color:#999; margin-bottom:8px;">Apr, 2022</p>
+                    <p style="color:var(--color-grey); font-size:14px;">
+                        <span class="t-en">Chenghe Acquisition Co. priced its IPO of 10,000,000 units at US$10.00 per unit. Each unit consists of one Class A ordinary share and one-half of one redeemable warrant, ...</span>
                     </p>
                     <a class="read-more t-en">Read More &rarr;</a>
                 </div>
@@ -202,16 +213,6 @@ function getHomePageHTML() {
                     <a class="read-more t-en">Read More &rarr;</a>
                 </div>
 
-                <div class="news-card t-en" onclick="window.open('#', '_blank')">
-                    <h4>
-                        <span class="t-en">[English headline 4]</span>
-                    </h4>
-                    <p style="font-size:14px; color:#999; margin-bottom:8px;">[Month Day, Year]</p>
-                    <p style="color:var(--color-grey); font-size:14px;">
-                        <span class="t-en">[One or two lines of English summary for news 4.]</span>
-                    </p>
-                    <a class="read-more t-en">Read More &rarr;</a>
-                </div>
             </div>
         </div>
         <div class="news-scrollbar-wrap">
