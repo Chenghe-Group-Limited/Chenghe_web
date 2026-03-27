@@ -202,17 +202,6 @@ function getHomePageHTML() {
                     <a class="read-more t-en">Read More &rarr;</a>
                 </div>
 
-                <div class="news-card t-en" onclick="window.open('#', '_blank')">
-                    <h4>
-                        <span class="t-en">[English headline 4]</span>
-                    </h4>
-                    <p style="font-size:14px; color:#999; margin-bottom:8px;">[Month Day, Year]</p>
-                    <p style="color:var(--color-grey); font-size:14px;">
-                        <span class="t-en">[One or two lines of English summary for news 4.]</span>
-                    </p>
-                    <a class="read-more t-en">Read More &rarr;</a>
-                </div>
-
             </div>
         </div>
         <div class="news-scrollbar-wrap">
