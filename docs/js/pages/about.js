@@ -50,7 +50,7 @@ function getAboutPageHTML() {
     <div class="about-hero-bg">
         <div class="about-floating-container">
             <div class="about-float-img">
-                <img src="#" alt="About Chenghe">
+                <img src="images/About us/Track Record/About_HK.jpg" alt="About Chenghe">
             </div>
             <div class="about-float-text">
                 <h2>
