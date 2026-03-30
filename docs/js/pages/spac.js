@@ -101,61 +101,20 @@ var SPAC_SEC_FILINGS = {
     ]
 };
 
-// 动态生成 SEC 文件描述文字（支持双语）
-function getSecFilingLinkText(form, dateF) {
-    // 英文描述
-    const formDescriptionsEn = {
-        'S-1': 'Initial Registration Statement',
-        'S-1/A': 'Amended Registration Statement',
-        'S-1MEF': '-',
+// 动态生成 SEC 文件描述文字
+function getSecFilingLinkText(form) {
+    const formDescriptions = {
+        'S-1': 'General form for registration securities under the Securities Act of 1933',
+        'S-1/A': 'General form for registration securities under the Securities Act of 1933 - Amendment',
+        'S-1MEF': 'Registration adding securities to prior Form S-1 registration',
         '10-Q': 'Quarterly Report',
         '10-K': 'Annual Report',
         '424B4': 'Prospectus',
         'DRS': 'DRS Filing',
-        '8-K': 'Current Report'
+        '8-K': 'Draft Registration Statement'
     };
     
-    // 中文描述
-    const formDescriptionsZh = {
-        'S-1': '首次上市申请文件',
-        'S-1/A': '首次上市申请修订文件',
-        'S-1MEF': '-',
-        '10-Q': '季度财报',
-        '10-K': '年度财报',
-        '424B4': '招股说明书',
-        'DRS': 'DRS文件',
-        '8-K': '重大事件公告'
-    };
-    
-    // 获取基础描述
-    let baseTextEn = formDescriptionsEn[form] || `${form} Filing`;
-    let baseTextZh = formDescriptionsZh[form] || `${form}格式文件`;
-    
-    // 如果有日期，添加到描述中
-    if (dateF && dateF !== '') {
-        const dateParts = dateF.split('/');
-        if (dateParts.length === 3) {
-            const year = dateParts[2];
-            const month = parseInt(dateParts[0]);
-            const quarter = Math.ceil(month / 3);
-            
-            if (form === '10-Q') {
-                baseTextEn = `${year} Q${quarter} ${baseTextEn}`;
-                baseTextZh = `${year}年第${quarter}季度${baseTextZh}`;
-            } else if (form === '10-K') {
-                baseTextEn = `${year} ${baseTextEn}`;
-                baseTextZh = `${year}年度${baseTextZh}`;
-            } else {
-                baseTextEn = `${baseTextEn} (${month}/${year})`;
-                baseTextZh = `${baseTextZh} (${year}年${month}月)`;
-            }
-        }
-    }
-    
-    return {
-        en: baseTextEn,
-        zh: baseTextZh
-    };
+    return formDescriptions[form] || `${form} Filing`;
 }
 
 function switchSpacMainTab(tabName, updateUrl = true) {
