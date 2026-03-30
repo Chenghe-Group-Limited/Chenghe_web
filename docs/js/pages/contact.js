@@ -61,7 +61,7 @@ function getContactPageHTML() {
         </form>
         <div class="contact-info">
             <h2 style="margin-bottom:20px; color:var(--color-dark-blue); font-size:32px;">
-                <span class="t-en">Office Address</span>
+                <span class="t-en">Address</span>
                 <span class="t-zh">办公地址</span>
             </h2>
             <div class="contact-item">
@@ -70,7 +70,7 @@ function getContactPageHTML() {
                 <p class="t-zh">香港港岛金钟道 89 号力宝中心一座 2307 室</p>
             </div>
             <h2 style="margin-bottom:20px; color:var(--color-dark-blue); font-size:32px;">
-                <span class="t-en">Contact Information</span>
+                <span class="t-en">Contact</span>
                 <span class="t-zh">联系方式</span>
             </h2>
             <div class="contact-item">
