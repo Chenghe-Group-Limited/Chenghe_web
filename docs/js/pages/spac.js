@@ -110,8 +110,8 @@ function getSecFilingLinkText(form) {
         '10-Q': 'Quarterly Report',
         '10-K': 'Annual Report',
         '424B4': 'Prospectus',
-        'DRS': 'DRS Filing',
-        '8-K': 'Draft Registration Statement'
+        'DRS': 'Draft Registration Statement',
+        '8-K': 'Current Report'
     };
     
     return formDescriptions[form] || `${form} Filing`;
@@ -776,31 +776,22 @@ function renderSpacContent(subTab) {
                 '<th style="padding:12px; text-align:left;"><span class="t-en">Form Description</span><span class="t-zh">报告简述</span></th>' +
                 '<th style="width:130px; padding:12px; text-align:left;"><span class="t-en">Filing Date</span><span class="t-zh">披露日期</span></th>' +
                 '<th style="width:130px; padding:12px; text-align:left;"><span class="t-en">Reporting Date</span><span class="t-zh">报告日期</span></th>' +
-                '</tr></thead><tbody>';
+                ' </tr></thead><tbody>';
             
             filings.forEach(function(f) {
-                // 动态生成双语描述文字
-                var linkTexts = getSecFilingLinkText(f.form, f.dateF);
+                // 获取英文描述文字
+                var linkText = getSecFilingLinkText(f.form);
                 
-                // 创建链接单元格：有URL则显示为双语链接，否则显示为普通文字
-                var descCell = '';
-                if (f.url && f.url !== '') {
-                    descCell = '<a href="' + f.url + '" target="_blank" style="color: #0366d6; text-decoration: none; font-weight:500;">' +
-                        '<span class="t-en">' + linkTexts.en + '</span>' +
-                        '<span class="t-zh">' + linkTexts.zh + '</span>' +
-                        '</a>';
-                } else {
-                    descCell = '<span style="color: #586069;">' +
-                        '<span class="t-en">' + linkTexts.en + '</span>' +
-                        '<span class="t-zh">' + linkTexts.zh + '</span>' +
-                        '</span>';
-                }
+                // 创建链接单元格：有URL则显示为链接，否则显示为普通文字
+                var descCell = f.url && f.url !== ''
+                    ? '<a href="' + f.url + '" target="_blank" style="color: #0366d6; text-decoration: none; font-weight:500;">' + linkText + '</a>'
+                    : '<span style="color: #586069;">' + linkText + '</span>';
                 
                 bodyHtml += '<tr style="border-bottom:1px solid #e1e4e8;">' +
-                    '<td style="padding:12px;"><span style="display:inline-block; background:#e1e4e8; padding:2px 8px; border-radius:3px; font-size:12px; font-weight:500; font-family:monospace;">' + f.form + '</span></td>' +
-                    '<td style="padding:12px;" class="sec-filings-desc">' + descCell + '</td>' +
-                    '<td style="padding:12px; color:#586069; font-size:14px;">' + (f.dateF || '-') + '</td>' +
-                    '<td style="padding:12px; color:#586069; font-size:14px;">' + (f.dateR || '-') + '</td>' +
+                    '<td style="padding:12px;"><span style="display:inline-block; background:#e1e4e8; padding:2px 8px; border-radius:3px; font-size:12px; font-weight:500; font-family:monospace;">' + f.form + '</span> </td>' +
+                    '<td style="padding:12px;" class="sec-filings-desc">' + descCell + ' </td>' +
+                    '<td style="padding:12px; color:#586069; font-size:14px;">' + (f.dateF || '-') + ' </td>' +
+                    '<td style="padding:12px; color:#586069; font-size:14px;">' + (f.dateR || '-') + ' </td>' +
                     '</tr>';
             });
             
@@ -812,6 +803,8 @@ function renderSpacContent(subTab) {
                 '.sec-filings-desc a { display: inline-block; padding: 4px 0; }' +
                 '</style>';
         }
+    }
+
         } else {
             bodyHtml = `
             <div style="padding:40px; background:#f9f9f9; text-align:center; border:1px dashed #ccc; color:#999;">
