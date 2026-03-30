@@ -76,21 +76,27 @@ var SPAC_NEWS = {
 
 var SPAC_SEC_FILINGS = {
     'HHL': [
-        { date: '02/12/2021', form: 'S-1/A', url: '' },
-        { date: '01/19/2021', form: 'S-1', url: '' }
+        { form: 'S-1/A', url: 'https://www.sec.gov/Archives/edgar/data/1824185/000110465921009820/tm2030280-7_s1a.htm', dateF: '', dateR: '' },
+        { form: '10-Q', url: 'https://www.sec.gov/ix?doc=/Archives/edgar/data/0001824185/000141057821000140/hhla-20210930x10q.htm', dateF: '11/12/2021', dateR: '' },
+        { form: '10-Q', url: 'https://www.sec.gov/ix?doc=/Archives/edgar/data/0001824185/000110465921100546/hhla-20210630x10q.htm', dateF: '08/05/2021', dateR: '' },
+        { form: '10-Q', url: 'https://www.sec.gov/ix?doc=/Archives/edgar/data/0001824185/000110465921071365/hhla-20210331x10q.htm', dateF: '05/24/2021', dateR: '' },
+        { form: '424B4', url: 'https://www.sec.gov/Archives/edgar/data/1824185/000110465921013544/tm2030280-10_424b4.htm', dateF: '02/08/2021', dateR: '' },
+        { form: 'S-1MEF', url: 'https://www.sec.gov/Archives/edgar/data/1824185/000110465921012479/tm215385d1_s1mef.htm', dateF: '02/04/2021', dateR: '' },
+        { form: 'S-1/A', url: 'https://www.sec.gov/Archives/edgar/data/1824185/000110465921009820/tm2030280-7_s1a.htm', dateF: '02/01/2021', dateR: '' },
+        { form: 'S-1', url: 'https://www.sec.gov/Archives/edgar/data/1824185/000110465921005777/tm2030280-5_s1.htm', dateF: '01/20/2021', dateR: '' }
     ],
     'Chenghe': [
-        { date: '04/01/2022', form: 'S-1', url: '' }
+        { form: 'S-1', url: '', dateR: '', dateF: '' }
     ],
     'Chenghe I': [
-        { date: '01/01/2023', form: 'S-1', url: '' }
+        { form: 'S-1', url: '', dateR: '', dateF: '' }
     ],
     'Chenghe II': [
-        { date: '05/13/2024', form: 'S-1', url: '' },
-        { date: '04/03/2024', form: 'DRS', url: '' }
+        { form: 'S-1', url: '', dateR: '', dateF: '' },
+        { form: 'DRS', url: '', dateR: '', dateF: '' }
     ],
     'Chenghe III': [
-        { date: '09/01/2025', form: 'S-1', url: '' }
+        { form: 'S-1', url: '', dateR: '', dateF: '' }
     ]
 };
 
@@ -749,18 +755,20 @@ function renderSpacContent(subTab) {
                 bodyHtml = '<div class="sec-filings-table-wrap" style="max-width:1000px; margin:0 auto;">' +
                     '<table class="sec-filings-table">' +
                     '<thead><tr>' +
-                    '<th style="width:130px;"><span class="t-en">Date</span><span class="t-zh">日期</span></th>' +
-                    '<th style="width:100px;"><span class="t-en">Form</span><span class="t-zh">名称</span></th>' +
-                    '<th><span class="t-en">Link</span><span class="t-zh">链接</span></th>' +
+                    '<th style="width:100px;"><span class="t-en">Form Type</span><span class="t-zh">报告类型</span></th>' +
+                    '<th><span class="t-en">Form Description</span><span class="t-zh">报告简述</span></th>' +
+                    '<th style="width:130px;"><span class="t-en">Filing Date</span><span class="t-zh">披露日期</span></th>' +
+                    '<th style="width:130px;"><span class="t-en">Reporting Date</span><span class="t-zh">报告日期</span></th>' +
                     '</tr></thead><tbody>';
                 filings.forEach(function(f) {
                     var urlCell = f.url
                         ? '<a href="' + f.url + '" target="_blank">' + f.url + '</a>'
                         : '<span style="color:#bbb;">\u2014</span>';
                     bodyHtml += '<tr>' +
-                        '<td>' + f.date + '</td>' +
                         '<td>' + f.form + '</td>' +
                         '<td class="sec-filings-url">' + urlCell + '</td>' +
+                        '<td>' + f.dateF + '</td>' +
+                        '<td>' + f.dateR + '</td>' +
                         '</tr>';
                 });
                 bodyHtml += '</tbody></table></div>';
