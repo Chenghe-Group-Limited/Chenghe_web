@@ -121,7 +121,7 @@ function getSecFilingLinkText(form) {
         '424B4': 'Prospectus',
         'DRS': 'Draft Registration Statement',
         '8-K': 'Current Report',
-        '8-K/A': 'Current Report - Amendment'
+        '8-K/A': 'Current Report - Amendment',
         'EDGAR': 'See SEC website for all filings.'
     };
     
