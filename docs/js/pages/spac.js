@@ -101,61 +101,20 @@ var SPAC_SEC_FILINGS = {
     ]
 };
 
-// 动态生成 SEC 文件描述文字（支持双语）
-function getSecFilingLinkText(form, dateF) {
-    // 英文描述
-    const formDescriptionsEn = {
-        'S-1': 'Initial Registration Statement',
-        'S-1/A': 'Amended Registration Statement',
-        'S-1MEF': '-',
+// 动态生成 SEC 文件描述文字
+function getSecFilingLinkText(form) {
+    const formDescriptions = {
+        'S-1': 'General form for registration securities under the Securities Act of 1933',
+        'S-1/A': 'General form for registration securities under the Securities Act of 1933 - Amendment',
+        'S-1MEF': 'Registration adding securities to prior Form S-1 registration',
         '10-Q': 'Quarterly Report',
         '10-K': 'Annual Report',
         '424B4': 'Prospectus',
-        'DRS': 'DRS Filing',
+        'DRS': 'Draft Registration Statement',
         '8-K': 'Current Report'
     };
     
-    // 中文描述
-    const formDescriptionsZh = {
-        'S-1': '首次上市申请文件',
-        'S-1/A': '首次上市申请修订文件',
-        'S-1MEF': '-',
-        '10-Q': '季度财报',
-        '10-K': '年度财报',
-        '424B4': '招股说明书',
-        'DRS': 'DRS文件',
-        '8-K': '重大事件公告'
-    };
-    
-    // 获取基础描述
-    let baseTextEn = formDescriptionsEn[form] || `${form} Filing`;
-    let baseTextZh = formDescriptionsZh[form] || `${form}格式文件`;
-    
-    // 如果有日期，添加到描述中
-    if (dateF && dateF !== '') {
-        const dateParts = dateF.split('/');
-        if (dateParts.length === 3) {
-            const year = dateParts[2];
-            const month = parseInt(dateParts[0]);
-            const quarter = Math.ceil(month / 3);
-            
-            if (form === '10-Q') {
-                baseTextEn = `${year} Q${quarter} ${baseTextEn}`;
-                baseTextZh = `${year}年第${quarter}季度${baseTextZh}`;
-            } else if (form === '10-K') {
-                baseTextEn = `${year} ${baseTextEn}`;
-                baseTextZh = `${year}年度${baseTextZh}`;
-            } else {
-                baseTextEn = `${baseTextEn} (${month}/${year})`;
-                baseTextZh = `${baseTextZh} (${year}年${month}月)`;
-            }
-        }
-    }
-    
-    return {
-        en: baseTextEn,
-        zh: baseTextZh
-    };
+    return formDescriptions[form] || `${form} Filing`;
 }
 
 function switchSpacMainTab(tabName, updateUrl = true) {
@@ -805,54 +764,42 @@ function renderSpacContent(subTab) {
                 });
                 bodyHtml += '</div>';
             }
-       } else if (subTab === 'SEC Filings') {
-    var filings = SPAC_SEC_FILINGS[currentSpacProject];
-    if (!filings || filings.length === 0) {
-        bodyHtml = '<div style="padding:40px; text-align:center; color:var(--color-grey);"><span class="t-en">SEC Filings will be posted here.</span><span class="t-zh">SEC 文件将在此更新。</span></div>';
-        } else {
-            bodyHtml = '<div class="sec-filings-table-wrap" style="max-width:1000px; margin:0 auto; overflow-x:auto;">' +
-                '<table class="sec-filings-table" style="width:100%; border-collapse:collapse;">' +
-                '<thead><tr style="border-bottom:2px solid #e1e4e8; background:#f6f8fa;">' +
-                '<th style="width:100px; padding:12px; text-align:left;"><span class="t-en">Form Type</span><span class="t-zh">报告类型</span></th>' +
-                '<th style="padding:12px; text-align:left;"><span class="t-en">Form Description</span><span class="t-zh">报告简述</span></th>' +
-                '<th style="width:130px; padding:12px; text-align:left;"><span class="t-en">Filing Date</span><span class="t-zh">披露日期</span></th>' +
-                '<th style="width:130px; padding:12px; text-align:left;"><span class="t-en">Reporting Date</span><span class="t-zh">报告日期</span></th>' +
-                '</tr></thead><tbody>';
-            
-            filings.forEach(function(f) {
-                // 动态生成双语描述文字
-                var linkTexts = getSecFilingLinkText(f.form, f.dateF);
+        } else if (subTab === 'SEC Filings') {
+            var filings = SPAC_SEC_FILINGS[currentSpacProject];
+            if (!filings || filings.length === 0) {
+                bodyHtml = '<div style="padding:40px; text-align:center; color:var(--color-grey);"><span class="t-en">SEC Filings will be posted here.</span><span class="t-zh">SEC 文件将在此更新。</span></div>';
+            } else {
+                bodyHtml = '<div class="sec-filings-table-wrap" style="max-width:1000px; margin:0 auto; overflow-x:auto;">' +
+                    '<table class="sec-filings-table" style="width:100%; border-collapse:collapse;">' +
+                    '<thead><tr style="border-bottom:2px solid #e1e4e8; background:#f6f8fa;">' +
+                    '<th style="width:100px; padding:12px; text-align:left;"><span class="t-en">Form Type</span><span class="t-zh">报告类型</span></th>' +
+                    '<th style="padding:12px; text-align:left;"><span class="t-en">Form Description</span><span class="t-zh">报告简述</span></th>' +
+                    '<th style="width:130px; padding:12px; text-align:left;"><span class="t-en">Filing Date</span><span class="t-zh">披露日期</span></th>' +
+                    '<th style="width:130px; padding:12px; text-align:left;"><span class="t-en">Reporting Date</span><span class="t-zh">报告日期</span></th>' +
+                    '  </tr></thead><tbody>';
                 
-                // 创建链接单元格：有URL则显示为双语链接，否则显示为普通文字
-                var descCell = '';
-                if (f.url && f.url !== '') {
-                    descCell = '<a href="' + f.url + '" target="_blank" style="color: #0366d6; text-decoration: none; font-weight:500;">' +
-                        '<span class="t-en">' + linkTexts.en + '</span>' +
-                        '<span class="t-zh">' + linkTexts.zh + '</span>' +
-                        '</a>';
-                } else {
-                    descCell = '<span style="color: #586069;">' +
-                        '<span class="t-en">' + linkTexts.en + '</span>' +
-                        '<span class="t-zh">' + linkTexts.zh + '</span>' +
-                        '</span>';
-                }
+                filings.forEach(function(f) {
+                    var linkText = getSecFilingLinkText(f.form);
+                    
+                    var descCell = f.url && f.url !== ''
+                        ? '<a href="' + f.url + '" target="_blank" style="color: #0366d6; text-decoration: none; font-weight:500;">' + linkText + '</a>'
+                        : '<span style="color: #586069;">' + linkText + '</span>';
+                    
+                    bodyHtml += '<tr style="border-bottom:1px solid #e1e4e8;">' +
+                        '<td style="padding:12px;"><span style="display:inline-block; background:#e1e4e8; padding:2px 8px; border-radius:3px; font-size:12px; font-weight:500; font-family:monospace;">' + f.form + '</span></td>' +
+                        '<td style="padding:12px;" class="sec-filings-desc">' + descCell + '</td>' +
+                        '<td style="padding:12px; color:#586069; font-size:14px;">' + (f.dateF || '-') + '</td>' +
+                        '<td style="padding:12px; color:#586069; font-size:14px;">' + (f.dateR || '-') + '</td>' +
+                        '</tr>';
+                });
                 
-                bodyHtml += '<tr style="border-bottom:1px solid #e1e4e8;">' +
-                    '<td style="padding:12px;"><span style="display:inline-block; background:#e1e4e8; padding:2px 8px; border-radius:3px; font-size:12px; font-weight:500; font-family:monospace;">' + f.form + '</span></td>' +
-                    '<td style="padding:12px;" class="sec-filings-desc">' + descCell + '</td>' +
-                    '<td style="padding:12px; color:#586069; font-size:14px;">' + (f.dateF || '-') + '</td>' +
-                    '<td style="padding:12px; color:#586069; font-size:14px;">' + (f.dateR || '-') + '</td>' +
-                    '</tr>';
-            });
-            
-            bodyHtml += '</tbody></table></div>';
-            
-            // 添加简单的CSS样式
-            bodyHtml += '<style>' +
-                '.sec-filings-table a:hover { text-decoration: underline !important; }' +
-                '.sec-filings-desc a { display: inline-block; padding: 4px 0; }' +
-                '</style>';
-        }
+                bodyHtml += '</tbody></table></div>';
+                
+                bodyHtml += '<style>' +
+                    '.sec-filings-table a:hover { text-decoration: underline !important; }' +
+                    '.sec-filings-desc a { display: inline-block; padding: 4px 0; }' +
+                    '</style>';
+            }
         } else {
             bodyHtml = `
             <div style="padding:40px; background:#f9f9f9; text-align:center; border:1px dashed #ccc; color:#999;">
@@ -860,9 +807,12 @@ function renderSpacContent(subTab) {
                 <span class="t-zh">${subTabMap[subTab]} 内容即将上线。</span>
             </div>`;
         }
-    }
+    }  
+    
     contentDiv.innerHTML = subNavHtml + bodyHtml;
-}
+}  
+
+
 
 // 从 team.js 的 TEAM_MEMBERS 复用人物信息，但自定义 HH&L 职位文案，且不展示公司行
 function openHhlMgmtModalFromSpac(index, roleEn, roleZh) {
