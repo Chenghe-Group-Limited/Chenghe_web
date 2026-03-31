@@ -116,11 +116,11 @@ function getSecFilingLinkText(form) {
         'S-1/A': 'General form for registration securities under the Securities Act of 1933 - Amendment',
         'S-1MEF': 'Registration adding securities to prior Form S-1 registration',
         '10-Q': 'Quarterly Report',
-        '10-Q/A': 'Quaterly Report - Amendment'
+        '10-Q/A': 'Quaterly Report - Amendment',
         '10-K': 'Annual Report',
         '424B4': 'Prospectus',
         'DRS': 'Draft Registration Statement',
-        '8-K': 'Current Report'
+        '8-K': 'Current Report',
         '8-K/A': 'Current Report - Amendment'
         'EDGAR': 'See SEC website for all filings.'
     };
