@@ -91,7 +91,7 @@ var SPAC_SEC_FILINGS = {
         { form: '424B4', url: 'https://www.sec.gov/Archives/edgar/data/1824185/000110465921013544/tm2030280-10_424b4.htm', dateF: '02/08/2021', dateR: '' },
         { form: 'S-1MEF', url: 'https://www.sec.gov/Archives/edgar/data/1824185/000110465921012479/tm215385d1_s1mef.htm', dateF: '02/04/2021', dateR: '' },
         { form: 'S-1/A', url: 'https://www.sec.gov/Archives/edgar/data/1824185/000110465921009820/tm2030280-7_s1a.htm', dateF: '02/01/2021', dateR: '' },
-        { form: 'S-1', url: 'https://www.sec.gov/Archives/edgar/data/1824185/000110465921005777/tm2030280-5_s1.htm', dateF: '01/20/2021', dateR: '' }
+        { form: 'S-1', url: 'https://www.sec.gov/Archives/edgar/data/1824185/000110465921005777/tm2030280-5_s1.htm', dateF: '01/20/2021', dateR: '' },
         { form: 'DRS', url: 'https://www.sec.gov/Archives/edgar/data/1824185/000110465920105640/filename1.htm', dateF: '09/16/2021', dateR: '' }
     ],
     'Chenghe': [
