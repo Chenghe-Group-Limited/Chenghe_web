@@ -77,14 +77,22 @@ var SPAC_NEWS = {
 //SPAC Filing Section Code
 var SPAC_SEC_FILINGS = {
     'HHL': [
-        { form: 'S-1/A', url: 'https://www.sec.gov/Archives/edgar/data/1824185/000110465921009820/tm2030280-7_s1a.htm', dateF: '', dateR: '' },
-        { form: '10-Q', url: 'https://www.sec.gov/ix?doc=/Archives/edgar/data/0001824185/000141057821000140/hhla-20210930x10q.htm', dateF: '11/12/2021', dateR: '' },
-        { form: '10-Q', url: 'https://www.sec.gov/ix?doc=/Archives/edgar/data/0001824185/000110465921100546/hhla-20210630x10q.htm', dateF: '08/05/2021', dateR: '' },
-        { form: '10-Q', url: 'https://www.sec.gov/ix?doc=/Archives/edgar/data/0001824185/000110465921071365/hhla-20210331x10q.htm', dateF: '05/24/2021', dateR: '' },
+        { form: 'EDGAR', url: 'https://www.sec.gov/edgar/browse/?CIK=0001824185', dateF: '', dateR: '' },
+        { form: '10-K', url: 'https://www.sec.gov/ix?doc=/Archives/edgar/data/0001824185/000141057822000639/hhla-20211231x10k.htm', dateF: '03/30/2022', dateR: '12/31/2021' },
+        { form: '8-K/A', url: 'https://www.sec.gov/ix?doc=/Archives/edgar/data/0001824185/000110465922029770/tm222443d1_8ka.htm', dateF: '03/03/2022', dateR: '02/09/2021' },
+        { form: '10-Q/A', url: 'https://www.sec.gov/ix?doc=/Archives/edgar/data/0001824185/000141057821000562/hhla-20210930x10qa.htm', dateF: '12/20/2021', dateR: '09/30/2021' },
+        { form: '8-K', url: 'https://www.sec.gov/ix?doc=/Archives/edgar/data/0001824185/000110465921145637/tm2134057d1_8k.htm', dateF: '12/02/2021', dateR: '12/02/2021' },
+        { form: '10-Q', url: 'https://www.sec.gov/ix?doc=/Archives/edgar/data/0001824185/000141057821000140/hhla-20210930x10q.htm', dateF: '11/12/2021', dateR: '09/30/2021' },
+        { form: '10-Q', url: 'https://www.sec.gov/ix?doc=/Archives/edgar/data/0001824185/000110465921100546/hhla-20210630x10q.htm', dateF: '08/05/2021', dateR: '06/30/2021' },
+        { form: '10-Q', url: 'https://www.sec.gov/ix?doc=/Archives/edgar/data/0001824185/000110465921071365/hhla-20210331x10q.htm', dateF: '05/24/2021', dateR: '03/31/2021' },
+        { form: '8-K', url: 'https://www.sec.gov/Archives/edgar/data/1824185/000110465921042018/tm2111029d1_8k.htm', dateF: '03/26/2021', dateR: '03/26/2021' },
+        { form: '8-K', url: 'https://www.sec.gov/Archives/edgar/data/1824185/000110465921023528/tm216858d1_8k.htm', dateF: '02/16/2021', dateR: '02/09/2021' },
+        { form: '8-K', url: 'https://www.sec.gov/Archives/edgar/data/1824185/000110465921016512/tm215675d1_8k.htm', dateF: '02/09/2021', dateR: '02/04/2021' },
         { form: '424B4', url: 'https://www.sec.gov/Archives/edgar/data/1824185/000110465921013544/tm2030280-10_424b4.htm', dateF: '02/08/2021', dateR: '' },
         { form: 'S-1MEF', url: 'https://www.sec.gov/Archives/edgar/data/1824185/000110465921012479/tm215385d1_s1mef.htm', dateF: '02/04/2021', dateR: '' },
         { form: 'S-1/A', url: 'https://www.sec.gov/Archives/edgar/data/1824185/000110465921009820/tm2030280-7_s1a.htm', dateF: '02/01/2021', dateR: '' },
         { form: 'S-1', url: 'https://www.sec.gov/Archives/edgar/data/1824185/000110465921005777/tm2030280-5_s1.htm', dateF: '01/20/2021', dateR: '' }
+        { form: 'DRS', url: 'https://www.sec.gov/Archives/edgar/data/1824185/000110465920105640/filename1.htm', dateF: '09/16/2021', dateR: '' }
     ],
     'Chenghe': [
         { form: 'S-1', url: '', dateR: '', dateF: '' }
@@ -108,10 +116,13 @@ function getSecFilingLinkText(form) {
         'S-1/A': 'General form for registration securities under the Securities Act of 1933 - Amendment',
         'S-1MEF': 'Registration adding securities to prior Form S-1 registration',
         '10-Q': 'Quarterly Report',
+        '10-Q/A': 'Quaterly Report - Amendment'
         '10-K': 'Annual Report',
         '424B4': 'Prospectus',
         'DRS': 'Draft Registration Statement',
         '8-K': 'Current Report'
+        '8-K/A': 'Current Report - Amendment'
+        'EDGAR': 'See SEC website for all filings.'
     };
     
     return formDescriptions[form] || `${form} Filing`;
