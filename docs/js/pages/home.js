@@ -13,16 +13,16 @@ function getHomePageHTML() {
                 <span class="t-zh">最新动态</span>
             </span>
             <h3>
-                <span class="t-en">Chenghe Acquisition III Co. (NASDAQ: CHEC) Officially Launches Target Search</span>
-                <span class="t-zh">Chenghe Acquisition III Co. (NASDAQ: CHEC) 正式启动目标搜寻</span>
+                <span class="t-en">Chenghe Acquisition III Co. Announces Closing of $126.5 Million Initial Public Offering</span>
+                <span class="t-zh">Chenghe Acquisition III Co. 宣布完成1.265亿美元首次公开募股</span>
             </h3>
             <p>
-                <span class="t-en">As our 5th successful SPAC, CHEC is now seeking industry leaders with disruptive technology and strong growth potential in the Asian region as merger targets.</span>
-                <span class="t-zh">作为我们成功发行的第五支SPAC，CHEC现面向亚洲地区寻找具有颠覆性技术和强劲增长潜力的行业领导者作为合并目标。</span>
+                <span class="t-en">Chenghe Acquisition III Co. (“the Company”), a newly organized special purpose acquisition company formed as a Cayman Islands exempted company, announced today the closing of its initial public offering of 12,650,000 units at a price of $10.00 per unit...</span>
+                <span class="t-zh">Chenghe Acquisition III Co.（“公司”），一家新成立的特殊目的收购公司，根据开曼群岛豁免公司法成立，今日宣布其首次公开发行已完成，以每单位10.00美元的价格发行12,650,000个单位...</span>
             </p>
             <a class="hero-news-link" onclick="window.open((document.body.className.indexOf('lang-zh') !== -1 ? 'https://lioncitylife.com/finance/chenghe-acquisition-iii-co-%e5%ae%a3%e5%b8%83%e5%85%b6a%e7%b1%bb%e6%99%ae%e9%80%9a%e8%82%a1%e5%92%8c%e8%ae%a4%e8%82%a1%e6%9d%83%e8%af%81%e5%b0%86%e4%ba%8e2025%e5%b9%b411%e6%9c%8811%e6%97%a5%e5%bc%80/' : 'https://www.globenewswire.com/news-release/2025/09/18/3152111/0/en/Chenghe-Acquisition-III-Co-Announces-Closing-of-126-5-Million-Initial-Public-Offering-Including-Full-Exercise-of-the-Underwriter-s-Overallotment-Option.html'), '_blank')">
-                <span class="t-en">Learn More about CHEC &rarr;</span>
-                <span class="t-zh">了解更多关于 CHEC &rarr;</span>
+                <span class="t-en">READ MORE &rarr;</span>
+                <span class="t-zh">了解更多 &rarr;</span>
             </a>
         </div>
 
