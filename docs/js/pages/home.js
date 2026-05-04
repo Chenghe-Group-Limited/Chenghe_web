@@ -9,7 +9,7 @@ function getHomePageHTML() {
     <div class="hero">
         <div class="hero-news-box" id="hero-news-alert">
             <span class="news-badge">
-                <span class="t-en">Latest Update</span>
+                <span class="t-en">Latest</span>
                 <span class="t-zh">最新动态</span>
             </span>
             <h3>
@@ -28,7 +28,7 @@ function getHomePageHTML() {
 
         <div class="hero-overlay-box">
             <h2>
-                <span class="t-en">Principal Investing<br>Capital Markets Advisory<br>SPAC</span>
+                <span class="t-en">Principal Investing<br>Capital Markets Advisory<br>SPACs</span>
                 <span class="t-zh">私募股权投资<br>资本市场顾问<br>SPAC</span>
             </h2>
             <p>
@@ -47,11 +47,11 @@ function getHomePageHTML() {
         <div class="biz-container">
             <div class="biz-box">
                 <h3>
-                    <span class="t-en">SPAC Sponsor</span>
+                    <span class="t-en">SPACs</span>
                     <span class="t-zh">SPAC 发起人</span>
                 </h3>
                 <p class="biz-desc">
-                    <span class="t-en">Chenghe is a leading player in the Asian SPAC market, with over $4.3 billion in transaction value closed.</span>
+                    <span class="t-en">Chenghe is one of Asia's leading SPAC sponsors, having closed over USD 4.3 billion in de-SPAC transaction value.</span>
                     <span class="t-zh">成和是亚洲 SPAC 市场的领先参与者，已累计完成逾 43 亿美元的交易总额。</span>
                 </p>
                     <div class="spac-home-nav" style="margin-top: 0;">
@@ -90,7 +90,7 @@ function getHomePageHTML() {
                     <span class="t-zh">顾问服务</span>
                 </h3>
                 <p class="biz-desc">
-                    <span class="t-en">We partner with enterprises positioned for international growth, providing end-to-end guidance from securing financing and navigating restructuring to achieving a public listing. </span>
+                    <span class="t-en">We partner with enterprises targeting international growth, providing end-to-end guidance from financing and restructuring to public listing. </span>
                     <span class="t-zh">我们与有国际增长潜力的企业合作，为其从获得融资到重构再到上市，提供全方位的咨询服务。</span>
                 </p>
                 <div class="spac-home-nav" style="margin-top: 0;">
