@@ -29,8 +29,8 @@ function getFaPageHTML() {
     return `
     <div class="tab-container">
         <div class="tab-list" id="fa-tabs">
-            <div class="tab-btn active" onclick="switchFaTab('HK')"><span class="t-en">HK - Chenghe Capital</span><span class="t-zh">香港 - 成和资本</span></div>
-            <div class="tab-btn" onclick="switchFaTab('US')"><span class="t-en">US - CBC Securities</span><span class="t-zh">美国 - CBC 证券</span></div>
+            <div class="tab-btn active" onclick="switchFaTab('HK')"><span class="t-en">Hong Kong - Chenghe Capital Management</span><span class="t-zh">香港 - 成和资本</span></div>
+            <div class="tab-btn" onclick="switchFaTab('US')"><span class="t-en">United States - CBC Securities</span><span class="t-zh">美国 - CBC 证券</span></div>
         </div>
     </div>
 
@@ -42,19 +42,18 @@ function getFaPageHTML() {
         </div>
         <div class="fa-content-container">
             <h1 style="margin-bottom:30px; color:var(--color-dark-blue); border-left: 5px solid var(--color-gold); padding-left: 20px;">
-                <span class="t-en">HK - Chenghe Capital Management</span>
-                <span class="t-zh">香港 - 成和资本</span>
+                <span class="t-en">Hong Kong</span>
+                <span class="t-zh">香港</span>
             </h1>
             <div class="hk-grid-wrap">
                 <div class="hk-left-img"><img src="images/FA_HK_Licence.png" alt="HK SFC Licence"></div>
                 <div class="hk-right-text">
                     <h3 style="color:var(--color-dark-blue); margin-bottom:15px;">
-                        <span class="t-en">Regulatory Information</span>
-                        <span class="t-zh">合规信息</span>
+                        <span class="t-en">Chenghe Capital Management</span>
+                        <span class="t-zh">成和资本</span>
                     </h3>
-                    <p class="t-en" style="margin-bottom:14px;">Chenghe Capital is a subsidiary of Chenghe Group and holds Type 1 (Dealing in Securities), Type 4 (Advising on Securities), and Type 9 (Asset Management) licences issued by the Hong Kong Securities and Futures Commission (SFC). The company has built an extensive network of strategic partnerships globally and maintains close strategic cooperation with a number of top-tier US investment banks.</p>
+                    <p class="t-en" style="margin-bottom:14px;">Chenghe Capital Management, a subsidiary of Chenghe Group, holds Type 1 (Dealing in Securities), Type 4 (Advising on Securities), and Type 9 (Asset Management) licenses issued by the Hong Kong Securities and Futures Commission (SFC). The firm provides a range of services, including underwriting, securities placement, mergers & acquisition advisory, public listing advisory, investment advisory, and discretionary portfolio management. With a comprehensive suite of end-to-end solutions, Chenghe is committed to being a trusted partner for companies at every stage of growth.</p>
                     <p class="t-zh" style="margin-bottom:14px;">成和资本是成和集团的子公司，持有香港证监会（SFC）颁发的 1 号（证券交易）、4 号（就证券提供意见）及 9 号（资产管理）牌照。公司在全球建立了广泛的战略合作网络，并与美国多家顶级投资银行形成了紧密的战略合作关系。</p>
-                    <p class="t-en" style="margin-bottom:20px;">Chenghe Capital provides a range of financial services to clients, including marketing, underwriting and placement of securities, as well as investment advisory and discretionary portfolio management services. With comprehensive solutions, Chenghe Capital is committed to being a trusted partner for corporate financing needs.</p>
                     <p class="t-zh" style="margin-bottom:20px;">成和资本为客户提供一系列的金融服务，包括证券的营销、承销与配售，以及投资顾问和全权委托投资组合管理服务。成和资本凭借全面的解决方案，致力于成为企业融资需求可信赖的合作伙伴。</p>
                 </div>
                 <div class="hk-license-block">
