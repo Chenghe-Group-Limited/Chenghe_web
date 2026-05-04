@@ -37,7 +37,7 @@ function getTeamPageHTML() {
         </h1>
     </div>
     <div class="team-level-title">
-        <span class="t-en">Core Management</span>
+        <span class="t-en">Key Management</span>
         <span class="t-zh">核心管理层</span>
     </div>
     <div class="team-grid team-grid--cols-3">
@@ -122,6 +122,21 @@ function getTeamPageHTML() {
         <span class="t-zh">团队核心成员</span>
     </div>
     <div class="team-grid">
+        <div class="team-card" onclick="openTeamModalByIndex(6)">
+            <div class="team-photo team-photo--headshot"><img src="images/Team/Erin.jpg" alt="Erin Baskett / Erin Baskett"></div>
+            <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
+                <span class="t-en">Erin Baskett</span>
+                <span class="t-zh">Erin Baskett</span>
+            </h3>
+            <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
+                <span class="t-en">Chief Financial Officer</span>
+                <span class="t-zh">首席财务官</span>
+            </p>
+            <p class="team-company" style="font-size:15px; font-style:italic; font-weight:600; margin-top:6px;">
+                <span class="t-en">CBC Securities</span>
+                <span class="t-zh">CBC证券有限公司</span>
+            </p>
+        </div>
         <div class="team-card" onclick="openTeamModalByIndex(5)">
             <div class="team-photo"><img src="images/Team/Remington.jpg" alt="Remington / 徐睿旻"></div>
             <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
@@ -161,21 +176,6 @@ function getTeamPageHTML() {
             <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
                 <span class="t-en">Associate</span>
                 <span class="t-zh">经理</span>
-            </p>
-            <p class="team-company" style="font-size:15px; font-style:italic; font-weight:600; margin-top:6px;">
-                <span class="t-en">CBC Securities</span>
-                <span class="t-zh">CBC证券有限公司</span>
-            </p>
-        </div>
-        <div class="team-card" onclick="openTeamModalByIndex(6)">
-            <div class="team-photo team-photo--headshot"><img src="images/Team/Erin.jpg" alt="Erin Baskett / Erin Baskett"></div>
-            <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
-                <span class="t-en">Erin Baskett</span>
-                <span class="t-zh">Erin Baskett</span>
-            </h3>
-            <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
-                <span class="t-en">Chief Financial Officer</span>
-                <span class="t-zh">首席财务官</span>
             </p>
             <p class="team-company" style="font-size:15px; font-style:italic; font-weight:600; margin-top:6px;">
                 <span class="t-en">CBC Securities</span>
