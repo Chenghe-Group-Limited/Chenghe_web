@@ -54,7 +54,7 @@ function getContactPageHTML() {
                 <textarea name="message" placeholder="" style="height:120px;"></textarea>
             </div>
             <div class="form-row">
-                <label><span class="t-en">Supporting Materials (PDF only, max 50MB)</span><span class="t-zh">辅助材料（仅限 PDF，最大 50MB）</span></label>
+                <label><span class="t-en">Attachments (PDF only, Max 50MB)</span><span class="t-zh">附件（仅限 PDF，最大 50MB）</span></label>
                 <input type="file" name="attachment" accept=".pdf" style="padding:10px; background:#fcfcfc; border:1px solid #ddd; border-radius:2px; width:100%; font-size:14px;">
             </div>
             <button type="submit" class="submit-btn"><span class="t-en">Submit</span><span class="t-zh">提交咨询</span></button>
@@ -65,7 +65,7 @@ function getContactPageHTML() {
                 <span class="t-zh">办公地址</span>
             </h2>
             <div class="contact-item">
-                <h4><span class="t-en">Hong Kong Office: </span><span class="t-zh">香港办公室：</span></h4>
+                <h4><span class="t-en">Hong Kong: </span><span class="t-zh">香港：</span></h4>
                 <p class="t-en">Unit 2307, Tower One, Lippo Centre,<br>89 Queensway, Admiralty, Hong Kong</p>
                 <p class="t-zh">香港港岛金钟道 89 号力宝中心一座 2307 室</p>
             </div>
