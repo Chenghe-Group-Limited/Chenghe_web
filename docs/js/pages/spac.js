@@ -694,15 +694,15 @@ function renderSpacContent(subTab) {
                             <span class="t-zh">首席财务官</span>
                         </p>
                     </div>
-                    <div class="team-card" onclick="openChenghe3MgmtModalFromSpac(8, 'Senior Advisor', '高级顾问')">
+                    <div class="team-card" onclick="openChenghe3MgmtModalFromSpac(8, 'Chief Operating Officer', '首席运营官')">
                         <div class="team-photo"><img src="images/Team/Houston.jpg" alt="Houston Li / 李泽原"></div>
                         <h3 class="team-name" style="font-size:22px; font-weight:700; margin-top:12px;">
                             <span class="t-en">Houston Li</span>
                             <span class="t-zh">李泽原</span>
                         </h3>
                         <p class="team-title" style="font-size:13px; font-style:italic; margin-top:8px;">
-                            <span class="t-en">Senior Advisor</span>
-                            <span class="t-zh">高级顾问</span>
+                            <span class="t-en">Chief Operating Officer</span>
+                            <span class="t-zh">首席运营官</span>
                         </p>
                     </div>
                 </div>`;
