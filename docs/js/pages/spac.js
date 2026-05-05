@@ -330,7 +330,7 @@ function renderSpacContent(subTab) {
                             <span class="t-zh">发行规模约 1.15 亿美元</span>
                         </h3>
                         <p style="color:var(--color-grey); font-size:18px; margin:0;">
-                            <span class="t-en">Business combination with Taiwan Color Optoelectronics Co., Ltd completed on 15 February 2024</span>
+                            <span class="t-en">Completed business combination with Taiwan Color Optics, Inc on February 15, 2024</span>
                             <span class="t-zh">与台湾彩光科技股份有限公司于 2024 年 2 月 15 日完成并购上市</span>
                         </p>
                     </div>
@@ -367,7 +367,7 @@ function renderSpacContent(subTab) {
                             <span class="t-zh">发行规模约 1.3 亿美元</span>
                         </h3>
                         <p style="color:var(--color-grey); font-size:18px; margin:0;">
-                            <span class="t-en">Business combination with Qikang Technology Co., Ltd completed on 15 January 2025</span>
+                            <span class="t-en">Completed business combination with Femco Steel Technology Co.,Ltd. on January 15, 2025</span>
                             <span class="t-zh">与启坤科技股份有限公司于 2025 年 1 月 15 日完成并购上市</span>
                         </p>
                     </div>
@@ -404,7 +404,7 @@ function renderSpacContent(subTab) {
                             <span class="t-zh">发行规模约 8,625 万美元</span>
                         </h3>
                         <p style="color:var(--color-grey); font-size:18px; margin:0;">
-                            <span class="t-en">Business combination with Polibeli Group Ltd completed on 8 August 2025</span>
+                            <span class="t-en">Completed business combination with Polibeli Group Ltd on August 8, 2025</span>
                             <span class="t-zh">与 Polibeli Group Ltd 于 2025 年 8 月 8 日完成并购上市</span>
                         </p>
                     </div>
@@ -441,7 +441,7 @@ function renderSpacContent(subTab) {
                             <span class="t-zh">发行规模约 1.265 亿美元</span>
                         </h3>
                         <p style="color:var(--color-grey); font-size:18px; margin:0;">
-                            <span class="t-en">Successfully listed on Nasdaq Global Market in September 2025</span>
+                            <span class="t-en">Successfully listed on the Nasdaq Global Market on September 16, 2025</span>
                             <span class="t-zh">于 2025 年 9 月在纳斯达克全球市场成功上市</span>
                         </p>
                     </div>
