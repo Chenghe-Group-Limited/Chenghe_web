@@ -74,14 +74,17 @@ function getFaPageHTML() {
 
     <div id="fa-us" class="fa-subpage">
         <div class="fa-banner" style="background-color:var(--color-teal-muted);" id="fa-us-banner">
-            <img src="images/CBC_NY" alt="CBC Securities US" style="width:100%; height:100%; object-fit:cover; display:none;"
+            <img src="docs/images/CBC_NY" alt="CBC Securities US" style="width:100%; height:100%; object-fit:cover; display:none;"
                  onload="if(this.src && !this.src.endsWith('/'))this.style.display='block'">
             <span class="fa-banner-placeholder" style="display:flex; align-items:center; justify-content:center; height:100%; color:#aaa; font-size:16px;">
+        <h3 style="color:var(--color-dark-blue); margin-bottom:15px;">
+                        <span class="t-en">CBC Securities</span>
+                        <span class="t-zh">CBC证券公司</span>
+                    </h3>
         </div>
         <div class="fa-content-container">
-            <h1 style="margin-bottom:30px; color:var(--color-dark-blue); border-left: 5px solid var(--color-red); padding-left: 20px;"><span class="t-en">US - CBC Securities</span><span class="t-zh">美国 - CBC 证券</span></h1>
-            <div class="us-text-block">
-                <h3 style="color:var(--color-dark-blue); margin-bottom:15px;">Overview</h3>
+            <h1 style="margin-bottom:30px; color:var(--color-dark-blue); border-left: 5px solid var(--color-red); padding-left: 20px;"><span class="t-en">United States</span><span class="t-zh">美国 - CBC 证券</span></h1>
+            <div class="us-text-block">                
                 <p class="t-en" style="font-size:16px; line-height:1.8;">CBC Securities is a registered broker-dealer with the U.S. Securities and Exchange Commission and a member of FINRA. </p>
                 <p class="t-zh" style="font-size:16px; line-height:1.8;">CBC 证券有限公司是在美国证券交易委员会（SEC）及美国金融业监管局（FINRA）注册的经纪交易商</p>
                 <a href="https://brokercheck.finra.org/firm/summary/46153" target="_blank" class="broker-check-btn">
