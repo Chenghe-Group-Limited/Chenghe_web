@@ -9,7 +9,7 @@ function getHomePageHTML() {
     <div class="hero">
         <div class="hero-news-box" id="hero-news-alert">
             <span class="news-badge">
-                <span class="t-en">Latest</span>
+                <span class="t-en">Latest Update</span>
                 <span class="t-zh">最新动态</span>
             </span>
             <h3>
@@ -51,7 +51,7 @@ function getHomePageHTML() {
                     <span class="t-zh">SPAC 发起人</span>
                 </h3>
                 <p class="biz-desc">
-                    <span class="t-en">Chenghe is one of Asia's leading SPAC sponsors, having closed over USD 4.3 billion in de-SPAC transaction value.</span>
+                    <span class="t-en">Chenghe is one of Asia's leading SPAC sponsor teams, having closed over USD 4.3 billion in de-SPAC transaction value.</span>
                     <span class="t-zh">成和是亚洲 SPAC 市场的领先参与者，已累计完成逾 43 亿美元的交易总额。</span>
                 </p>
                     <div class="spac-home-nav" style="margin-top: 0;">
@@ -90,7 +90,7 @@ function getHomePageHTML() {
                     <span class="t-zh">顾问服务</span>
                 </h3>
                 <p class="biz-desc">
-                    <span class="t-en">We partner with enterprises targeting international growth, providing end-to-end guidance from financing and restructuring to public listing. </span>
+                    <span class="t-en">We partner with enterprises targeting international growth, providing end-to-end guidance from financing and restructuring to achieving a public listing. </span>
                     <span class="t-zh">我们与有国际增长潜力的企业合作，为其从获得融资到重构再到上市，提供全方位的咨询服务。</span>
                 </p>
                 <div class="spac-home-nav" style="margin-top: 0;">
@@ -160,9 +160,9 @@ function getHomePageHTML() {
 
                 <div class="news-card t-en" onclick="window.open('https://www.globenewswire.com/news-release/2025/09/18/3152111/0/en/Chenghe-Acquisition-III-Co-Announces-Closing-of-126-5-Million-Initial-Public-Offering-Including-Full-Exercise-of-the-Underwriter-s-Overallotment-Option.html', '_blank')">
                     <h4>
-                        <span class="t-en">Chenghe Acquisition III Co. Announces Closing of $126.5 Million Initial Public Offering, Including Full Exercise of the Underwriter’s Overallotment Option</span>
+                        <span class="t-en">Chenghe Acquisition III Co. Announces Closing of $126.5 Million Initial Public Offering</span>
                     </h4>
-                    <p style="font-size:14px; color:#999; margin-bottom:8px;">Sep, 2025</p>
+                    <p style="font-size:14px; color:#999; margin-bottom:8px;">September 17, 2025</p>
                     <p style="color:var(--color-grey); font-size:14px;">
                         <span class="t-en">Chenghe Acquisition III Co. (“the Company”), a newly organized special purpose acquisition company formed as a Cayman Islands exempted company, ...</span>
                     </p>
@@ -173,7 +173,7 @@ function getHomePageHTML() {
                     <h4>
                         <span class="t-en">Chenghe Acquisition II Co. Announces Closing of $86.25 Million Initial Public Offering</span>
                     </h4>
-                    <p style="font-size:14px; color:#999; margin-bottom:8px;">Jun, 2024</p>
+                    <p style="font-size:14px; color:#999; margin-bottom:8px;">June 11, 2024</p>
                     <p style="color:var(--color-grey); font-size:14px;">
                         <span class="t-en">Chenghe Acquisition II Co. ("the Company") (NYSE:CHEB.U), a blank check company, announced today the closing of its initial public offering of 8,625,000 units, ...</span>
                     </p>
@@ -184,7 +184,7 @@ function getHomePageHTML() {
                     <h4>
                         <span class="t-en">Femco Steel Technology Co., Ltd. to be Publicly Listed in the U.S. Through a Business Combination with Chenghe Acquisition I Co.</span>
                     </h4>
-                    <p style="font-size:14px; color:#999; margin-bottom:8px;">Dec, 2023</p>
+                    <p style="font-size:14px; color:#999; margin-bottom:8px;">December 22, 2023</p>
                     <p style="color:var(--color-grey); font-size:14px;">
                         <span class="t-en">Chenghe Acquisition I Co. (Nasdaq: LATG) ("Chenghe" or "SPAC") and Femco Steel Technology Co., Ltd. (TWO: 6731) ("FST" or the "Company"), ...</span>
                     </p>
@@ -195,7 +195,7 @@ function getHomePageHTML() {
                     <h4>
                         <span class="t-en">Chenghe Acquisition Co. Completes SPAC IPO on NASDAQ</span>
                     </h4>
-                    <p style="font-size:14px; color:#999; margin-bottom:8px;">Apr, 2022</p>
+                    <p style="font-size:14px; color:#999; margin-bottom:8px;">April 29, 2022</p>
                     <p style="color:var(--color-grey); font-size:14px;">
                         <span class="t-en">Chenghe Acquisition Co. priced its IPO of 10,000,000 units at US$10.00 per unit. Each unit consists of one Class A ordinary share and one-half of one redeemable warrant, ...</span>
                     </p>
