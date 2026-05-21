@@ -73,17 +73,27 @@ function getFaPageHTML() {
     </div>
 
     <div id="fa-us" class="fa-subpage">
-        <div class="fa-banner" id="fa-us-banner">
+        <div class="fa-banner" id="fa-us-banner" style="position: relative; height: 300px; overflow: hidden;"> <!-- 注意：确保你的 banner 有固定高度 -->
+            
+            <!-- 1. 图片元素：添加了一个兄弟元素转圈逻辑，加载成功时将 placeholder 设为 display: none -->
             <img src="images/CBC_NY.jpg" alt="CBC Securities US" style="width:100%; height:100%; object-fit:cover; display:none;"
-                 onload="if(this.src && !this.src.endsWith('/'))this.style.display='block'">
-            <span class="fa-banner-placeholder" style="display:flex; align-items:center; justify-content:center; height:100%; color:#aaa; font-size:16px;">
-        <h3 style="color:var(--color-dark-blue); margin-bottom:15px;">
-                        <span class="t-en">CBC Securities</span>
-                        <span class="t-zh">CBC证券公司</span>
-                    </h3>
+                 onload="this.style.display='block'; document.getElementById('fa-us-placeholder').style.display='none';">
+            
+            <!-- 2. Placeholder 区域：给它加了一个 id，并修正了标签闭合问题 -->
+            <div id="fa-us-placeholder" class="fa-banner-placeholder" style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; width:100%; background:#f5f5f5; color:#aaa; font-size:16px;">
+                <h3 style="color:var(--color-dark-blue); margin-bottom:15px; text-align:center;">
+                    <span class="t-en" style="display:block;">CBC Securities</span>
+                    <span class="t-zh" style="display:block;">CBC证券公司</span>
+                </h3>
+            </div>
+    
         </div>
+    
         <div class="fa-content-container">
-            <h1 style="margin-bottom:30px; color:var(--color-dark-blue); border-left: 5px solid var(--color-red); padding-left: 20px;"><span class="t-en">United States</span><span class="t-zh">美国 - CBC 证券</span></h1>
+            <h1 style="margin-bottom:30px; color:var(--color-dark-blue); border-left: 5px solid var(--color-red); padding-left: 20px;">
+                <span class="t-en">United States</span>
+                <span class="t-zh">美国 - CBC 证券</span>
+            </h1>
             <div class="us-text-block">                
                 <p class="t-en" style="font-size:16px; line-height:1.8;">CBC Securities is a registered broker-dealer with the U.S. Securities and Exchange Commission and a member of FINRA. </p>
                 <p class="t-zh" style="font-size:16px; line-height:1.8;">CBC 证券有限公司是在美国证券交易委员会（SEC）及美国金融业监管局（FINRA）注册的经纪交易商</p>
