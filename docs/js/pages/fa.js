@@ -73,7 +73,7 @@ function getFaPageHTML() {
     </div>
 
     <div id="fa-us" class="fa-subpage">
-        <div class="fa-banner" id="fa-us-banner" style="position: relative; height: 400px; overflow: hidden;"> <!-- 注意：确保你的 banner 有固定高度 -->
+        <div class="fa-banner" id="fa-us-banner" style="position: relative; height: 450px; overflow: hidden;"> <!-- 注意：确保你的 banner 有固定高度 -->
             
             <!-- 1. 图片元素：添加了一个兄弟元素转圈逻辑，加载成功时将 placeholder 设为 display: none -->
             <img src="images/CBC_NY.jpg" alt="CBC Securities US" style="width:100%; height:100%; object-fit:cover; display:none;"
