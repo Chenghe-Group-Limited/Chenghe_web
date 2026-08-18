@@ -17,27 +17,32 @@ var SPAC_NEWS = {
     ],
     'Chenghe': [
         { 
-            titleEn: 'Chenghe Acquisition Co. Announces Pricing of $100 Million Initial Public Offering - PR Newswire APAC', 
+            titleEn: 'Chenghe Acquisition Co. Announces Pricing of $100 Million Initial Public Offering', 
             urlEn: 'https://en.prnasia.com/releases/apac/chenghe-acquisition-co-announces-pricing-of-100-million-initial-public-offering-359555.shtml',
             summaryEn: 'Chenghe Acquisition Co. prices its US$100 million SPAC IPO of 10,000,000 units on Nasdaq under the symbol CHEAU.'
         },
         { 
-            titleEn: 'Chenghe Acquisition Co. Announces Closing of $115 Million Initial Public Offering and Exercise of Underwriters\' Over-Allotment Option in Full - PR Newswire APAC', 
+            titleEn: 'Chenghe Acquisition Co. Announces Closing of $115 Million Initial Public Offering and Exercise of Underwriters\' Over-Allotment Option in Full', 
             urlEn: 'http://enold.prnasia.com/releases/apac/chenghe-acquisition-co-announces-closing-of-115-million-initial-public-offering-and-exercise-of-underwriters-over-allotment-option-in-full-360009.shtml',
             summaryEn: 'Chenghe Acquisition Co. closes its upsized US$115 million IPO as underwriters fully exercise their over‑allotment option.'
         },
         { 
-            titleZh: 'Chenghe Acquisition Co.宣布完成1.15亿美元的首次公开募股-美通社PR-Newswire', 
-            urlZh: 'https://www.prnasia.com/story/360007-1.shtml',
-            summaryZh: '成和并购公司宣布完成总额1.15亿美元的首次公开募股，包括承销商完全行使超额配股权。' 
-        },
-        { 
-            titleEn: 'Chenghe Acquisition Co. Announces the Separate Trading of its Class A Ordinary Shares and Warrants Commencing June 23, 2022 - PR Newswire APAC', 
+            titleEn: 'Chenghe Acquisition Co. Announces the Separate Trading of its Class A Ordinary Shares and Warrants Commencing June 23, 2022', 
             urlEn: 'http://enold.prnasia.com/releases/apac/chenghe-acquisition-co-announces-the-separate-trading-of-its-class-a-ordinary-shares-and-warrants-commencing-june-23-2022-365601.shtml',
             summaryEn: 'Beginning June 23, 2022, holders of Chenghe Acquisition Co. units may separately trade the Class A ordinary shares and warrants on Nasdaq.'
         },
         { 
-            titleZh: 'Chenghe Acquisition宣布其A类普通股和权证自6月23日起分开交易-美通社PR-Newswire', 
+            titleEn: 'Semilux International Ltd. and Taiwan Color Optics, Inc., a Taiwan-based provider of LiDAR and ADB components and solutions, together with Chenghe Acquisition Co. Announce Closing of Business Combination', 
+            urlEn: 'https://www.globenewswire.com/news-release/2024/02/15/2830425/0/en/semilux-international-ltd-and-taiwan-color-optics-inc-a-taiwan-based-provider-of-lidar-and-adb-components-and-solutions-together-with-chenghe-acquisition-co-announce-closing-of-bus.html',
+            summaryEn: 'Chenghe Acquisition Co., a special purpose acquisition company, today announced the completion of its previously announced business combination, with Taiwan Color Optics, Inc., a Taiwan-based provider of LiDAR and ADB components and solutions, and their newly formed holding company, Semilux International Ltd., a Cayman Islands exempted company with limited liability.'
+        },
+        { 
+            titleZh: 'Chenghe Acquisition Co.宣布完成1.15亿美元的首次公开募股', 
+            urlZh: 'https://www.prnasia.com/story/360007-1.shtml',
+            summaryZh: '成和并购公司宣布完成总额1.15亿美元的首次公开募股，包括承销商完全行使超额配股权。' 
+        },
+        { 
+            titleZh: 'Chenghe Acquisition宣布其A类普通股和权证自6月23日起分开交易', 
             urlZh: 'https://www.prnasia.com/story/365602-1.shtml',
             summaryZh: '自2022年6月23日起，成和并购公司首次公开发行所含A类普通股和权证可在纳斯达克分别交易。'
         }
@@ -69,6 +74,11 @@ var SPAC_NEWS = {
             titleEn: 'Chenghe Acquisition II Co. Announces the Separate Trading of Its Class A Ordinary Shares and Warrants, Commencing on July 29, 2024', 
             urlEn: 'https://www.prnewswire.com/news-releases/chenghe-acquisition-ii-co-announces-the-separate-trading-of-its-class-a-ordinary-shares-and-warrants-commencing-on-july-29-2024-302207817.html',
             summaryEn: 'From July 29, 2024, investors can separately trade Chenghe Acquisition II Co.’s Class A ordinary shares and warrants under tickers CHEB and CHEB WS.'
+        }
+        { 
+            titleEn: 'Polibeli Group Ltd Acquired Chenghe Acquisition II Co. in a Reverse Merger Transaction.', 
+            urlEn: 'https://hk.marketscreener.com/news/polibeli-group-ltd-acquired-chenghe-acquisition-ii-co-in-a-reverse-merger-transaction-ce7c5edcdd8bf02d',
+            summaryEn: 'Polibeli Group Ltd completed the acquisition of Chenghe Acquisition II Co. in a reverse merger transaction on August 7, 2025.'
         }
     ],
     'Chenghe III': []
